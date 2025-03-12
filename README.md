@@ -1,1 +1,3 @@
 # CharityDonationProject
+
+Dự án là một website quyên góp từ thiện giúp kết nối những người quyên góp với các chiến dịch từ thiện. Người dùng có thể đăng ký tài khoản, tham gia các đợt quyên góp, và thực hiện quyên góp thông qua các phương thức thanh toán trực tuyến như PayPal, VNPay, hoặc ví Momo. Quản trị viên (ADMIN) có quyền quản lý người dùng, tạo và theo dõi các đợt quyên góp, gửi thông báo và xuất báo cáo. Hệ thống hỗ trợ phân quyền rõ ràng cho ba nhóm người dùng chính: người dùng chưa đăng nhập (NO_USER), người dùng đã đăng nhập (USER), và người quản trị (ADMIN). Dự án sử dụng ASP.NET API cho backend và Angular cho frontend, kết hợp với Entity Framework để quản lý cơ sở dữ liệu và ASP.NET Identity cho quản lý người dùng và phân quyền.
