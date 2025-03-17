@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\api",
+    "\\api\\CharityDonationAPI",
+    "\\api\\CharityDonationAPI\\CharityDonationAPI",
+    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Controllers",
+    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Helpers",
+    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Models",
+    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Repositories",
+    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Services"
+  ],
+  "SelectedNode": "\\api\\CharityDonationAPI\\CharityDonationAPI\\Services\\NewFile",
+  "PreviewInSolutionExplorer": false
+}
