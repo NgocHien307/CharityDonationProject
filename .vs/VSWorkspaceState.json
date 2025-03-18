@@ -4,12 +4,9 @@
     "\\api",
     "\\api\\CharityDonationAPI",
     "\\api\\CharityDonationAPI\\CharityDonationAPI",
-    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Controllers",
-    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Helpers",
-    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Models",
-    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Repositories",
-    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Services"
+    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Data",
+    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Models"
   ],
-  "SelectedNode": "\\api\\CharityDonationAPI\\CharityDonationAPI\\Services\\NewFile",
+  "SelectedNode": "\\api\\CharityDonationAPI\\CharityDonationAPI\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
