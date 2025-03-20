@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wTphSvgAtN0=",
+  "dgSpecHash": "Uj4M7h0dSQqsP/Q9ug0sRVnicGSNSxXWOPCITnc5DE6UihSxpghXaJ2UTJwsaHYnZOYr5WfH60luOSfn8lWF3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationAPI\\CharityDonationAPI.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationAPI\\CharityDonationAPI.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
