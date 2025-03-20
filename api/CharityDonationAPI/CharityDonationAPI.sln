@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharityDonationAPI", "CharityDonationAPI\CharityDonationAPI.csproj", "{D487A02E-C70B-49BC-8A7C-DD417CF0E41F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharityDonationApi", "CharityDonationApi.csproj", "{98A158D7-E17E-47FC-8415-AFB51618C53C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D487A02E-C70B-49BC-8A7C-DD417CF0E41F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D487A02E-C70B-49BC-8A7C-DD417CF0E41F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D487A02E-C70B-49BC-8A7C-DD417CF0E41F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D487A02E-C70B-49BC-8A7C-DD417CF0E41F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A158D7-E17E-47FC-8415-AFB51618C53C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A158D7-E17E-47FC-8415-AFB51618C53C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A158D7-E17E-47FC-8415-AFB51618C53C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A158D7-E17E-47FC-8415-AFB51618C53C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {367E6A1E-B42F-49AB-9DCA-625CD5BEFAEC}
+		SolutionGuid = {6597BE7A-EB9F-409E-93D1-52C4E74899D8}
 	EndGlobalSection
 EndGlobal
