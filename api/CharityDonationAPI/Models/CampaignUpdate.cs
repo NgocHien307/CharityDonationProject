@@ -25,6 +25,6 @@ namespace CharityDonationApi.Models
 		public DateTime UpdateDate { get; set; } = DateTime.UtcNow;
 
 		[MaxLength(500)]
-		public string MediaUrl { get; set; } // URL hình ảnh hoặc video
+		public string MediaUrl { get; set; } 
 	}
 }

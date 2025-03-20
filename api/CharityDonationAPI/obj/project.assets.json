@@ -5238,11 +5238,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ojt\\test\\CharityDonationProject\\api\\CharityDonationApi\\CharityDonationApi.csproj",
+      "projectUniqueName": "D:\\ojt\\test\\api\\CharityDonationApi\\CharityDonationApi.csproj",
       "projectName": "CharityDonationApi",
-      "projectPath": "D:\\ojt\\test\\CharityDonationProject\\api\\CharityDonationApi\\CharityDonationApi.csproj",
+      "projectPath": "D:\\ojt\\test\\api\\CharityDonationApi\\CharityDonationApi.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\ojt\\test\\CharityDonationProject\\api\\CharityDonationApi\\obj\\",
+      "outputPath": "D:\\ojt\\test\\api\\CharityDonationApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

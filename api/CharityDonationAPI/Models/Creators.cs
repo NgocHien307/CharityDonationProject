@@ -34,17 +34,14 @@ namespace CharityDonationApi.Models
 
 		[Required]
 		[MaxLength(50)]
-		public string Type { get; set; } // "Individual", "Organization", "Foundation", etc.
+		public string Type { get; set; } // "Individual", "Organization", "Foundation"
 
-		// Nếu Creator là một User, có thể liên kết với bảng User
 		[ForeignKey("User")]
 		public int? UserId { get; set; }
 		public Users User { get; set; }
 
-		// Chiến dịch do Creator tạo
 		public ICollection<Campaigns> Campaigns { get; set; } = new List<Campaigns>();
 
-		// Thông tin xác minh
 		[MaxLength(500)]
 		public string VerificationDocumentUrl { get; set; }
 

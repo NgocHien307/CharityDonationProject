@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z326FVPl/eK5oFz/qBSQPqtNSwQflEIQIAbq/7hhof/opwdz/i0u+fqvvpUO0sRlOP600LQEOeXMAp+Di62VJw==",
+  "dgSpecHash": "JmeB5IProHrqcNJnX8PFKxs5D18CVxfiPU58TN6ruDsAYGgleh02Zh0oJZI8XEbilGtm9j/W9BoFLmr4yfjaaw==",
   "success": true,
-  "projectFilePath": "D:\\ojt\\test\\CharityDonationProject\\api\\CharityDonationApi\\CharityDonationApi.csproj",
+  "projectFilePath": "D:\\ojt\\test\\api\\CharityDonationApi\\CharityDonationApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

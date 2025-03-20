@@ -16,16 +16,14 @@ namespace CharityDonationApi.Models
 		public DateTime Date { get; set; } = DateTime.UtcNow;
 
 		[MaxLength(500)]
-		public string Message { get; set; } // Lời nhắn từ người quyên góp
+		public string Message { get; set; } 
 
 		public bool IsAnonymous { get; set; } = false; // Quyên góp ẩn danh
 
-		// Liên kết với User (có thể null nếu không có tài khoản)
 		[ForeignKey("User")]
 		public int? UserId { get; set; }
 		public Users User { get; set; }
 
-		// Liên kết với Campaign (bắt buộc)
 		[Required]
 		[ForeignKey("Campaign")]
 		public int CampaignId { get; set; }

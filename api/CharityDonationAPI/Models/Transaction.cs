@@ -9,7 +9,7 @@ namespace CharityDonationApi.Models
 
 		[Required]
 		[MaxLength(50)]
-		public string PaymentMethod { get; set; } // Phương thức thanh toán ("Credit Card", "Bank Transfer", "E-Wallet", ...)
+		public string PaymentMethod { get; set; } // Phương thức thanh toán ("Credit Card", "Bank Transfer", "E-Wallet" ...)
 
 		[Required]
 		[MaxLength(20)]

@@ -35,7 +35,6 @@ namespace CharityDonationApi.Models
 		public ICollection<CampaignUpdate> Updates { get; set; } = new List<CampaignUpdate>();
 
 
-		// Thêm trường cho người tạo chiến dịch
 		public int CreatorId { get; set; }
 		public Creators Creator { get; set; }
 
