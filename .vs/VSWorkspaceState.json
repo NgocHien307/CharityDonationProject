@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\api",
-    "\\api\\CharityDonationAPI",
-    "\\api\\CharityDonationAPI\\CharityDonationAPI",
-    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Data",
-    "\\api\\CharityDonationAPI\\CharityDonationAPI\\Models"
+    ""
   ],
-  "SelectedNode": "\\api\\CharityDonationAPI\\CharityDonationAPI\\Program.cs",
+  "SelectedNode": "\\CharityDonationAPI.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -74,14 +74,37 @@ namespace CharityDonationApi.Controllers
         }
 
         // POST: api/Campaigns
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Campaigns>> PostCampaigns(Campaigns campaigns)
+        public async Task<ActionResult<Campaigns>> PostCampaigns(CampaignCreateDto campaignDto)
         {
-            _context.Campaigns.Add(campaigns);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var campaign = new Campaigns
+            {
+                Title = campaignDto.Title,
+                Description = campaignDto.Description,
+                GoalAmount = campaignDto.GoalAmount,
+                CollectedAmount = campaignDto.CollectedAmount,
+                IsActive = campaignDto.IsActive,
+                StartDate = campaignDto.StartDate,
+                EndDate = campaignDto.EndDate,
+                FeaturedImageUrl = campaignDto.FeaturedImageUrl,
+                CreatorId = campaignDto.CreatorId,
+                CategoryId = campaignDto.CategoryId,
+                Status = campaignDto.Status,
+                Updates = new List<CampaignUpdate>(),
+                Donations = new List<Donation>(),
+                Feedbacks = new List<Feedback>(),
+                Subscriptions = new List<CampaignSubscription>()
+            };
+
+            _context.Campaigns.Add(campaign);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCampaigns", new { id = campaigns.Id }, campaigns);
+            return CreatedAtAction("GetCampaigns", new { id = campaign.Id }, campaign);
         }
 
         // DELETE: api/Campaigns/5
