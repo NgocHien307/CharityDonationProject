@@ -131,7 +131,8 @@ namespace CharityDonationApi.Data
 			modelBuilder.Entity<Role>().HasData(
 				new Role { Id = 1, Name = "Admin", Description = "Quản trị viên hệ thống" },
 				new Role { Id = 2, Name = "User", Description = "Người dùng thông thường" },
-				new Role { Id = 3, Name = "Creator", Description = "Người tạo chiến dịch" }
+				new Role { Id = 3, Name = "No-User", Description = "Người dùng thông thường" },
+				new Role { Id = 4, Name = "Creator", Description = "Người tạo chiến dịch" }
 			);
 
 			modelBuilder.Entity<Category>().HasData(

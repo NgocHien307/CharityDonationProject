@@ -458,9 +458,12 @@ D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\staticwebassets\msbuild.buil
 D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.CharityDonationApi.props
 D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\staticwebassets.pack.json
 D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\scopedcss\bundle\CharityDonationApi.styles.css
-D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\CharityDonationApi.csproj.CopyComplete
 D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\CharityDonationApi.dll
 D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\refint\CharityDonationApi.dll
 D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\CharityDonationApi.pdb
 D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\CharityDonationApi.genruntimeconfig.cache
 D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\ref\CharityDonationApi.dll
+D:\ojt\test\api\CharityDonationAPI\bin\Debug\net8.0\CharityDonationApi.staticwebassets.endpoints.json
+D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\staticwebassets\msbuild.CharityDonationApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\ojt\test\api\CharityDonationAPI\obj\Debug\net8.0\CharityD.AF4C9DB2.Up2Date
