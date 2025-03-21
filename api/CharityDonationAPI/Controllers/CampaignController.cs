@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication;
 using CharityDonationApi.IRepositoties;
 using CharityDonationApi.ViewModels;
@@ -8,7 +7,7 @@ using CharityDonationApi.Repositories;
 namespace CharityDonationApi.Controllers
 {
 
-	[Microsoft.AspNetCore.Components.Route("api/campaign")]
+	[Route("api/campaign")]
 	[ApiController]
 	public class CampaignController : ControllerBase
 	{

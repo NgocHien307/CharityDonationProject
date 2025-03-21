@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ojt\\test\\api\\CharityDonationApi\\CharityDonationApi.csproj": {}
+    "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {}
   },
   "projects": {
-    "D:\\ojt\\test\\api\\CharityDonationApi\\CharityDonationApi.csproj": {
+    "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ojt\\test\\api\\CharityDonationApi\\CharityDonationApi.csproj",
+        "projectUniqueName": "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
         "projectName": "CharityDonationApi",
-        "projectPath": "D:\\ojt\\test\\api\\CharityDonationApi\\CharityDonationApi.csproj",
+        "projectPath": "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\ojt\\test\\api\\CharityDonationApi\\obj\\",
+        "outputPath": "D:\\ojt\\test\\api\\CharityDonationAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

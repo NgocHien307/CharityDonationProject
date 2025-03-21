@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CharityDonationApi.Controllers
 {
-	[Microsoft.AspNetCore.Components.Route("api/campaign")]
+	[Route("api/campaign")]
 	[ApiController]
 	public class CategoryController : ControllerBase
 	{
