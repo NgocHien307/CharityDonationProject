@@ -1,13 +1,13 @@
 ﻿using CharityDonationApi.Data;
-using CharityDonationApi.Repositories;
+using CharityDonationApi.IRepositoties;
 using CharityDonationApi.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CharityDonationApi.Controllers
 {
-	//[Authorize]
-	[Route("api/user")]
+    //[Authorize]
+    [Route("api/user")]
 	[ApiController]
 	public class UserController : ControllerBase
 	{

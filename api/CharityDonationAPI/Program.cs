@@ -1,4 +1,5 @@
 ﻿using CharityDonationApi.Data;
+using CharityDonationApi.IRepositoties;
 using CharityDonationApi.Models;
 using CharityDonationApi.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -68,8 +69,16 @@ builder.Services
 // Database configuration
 builder.Services.AddDbContext<CharityDbContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddScoped<IUserRepository, UserRepository>();
 
+// addScoped
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ICampaignRepository, CampaignRepository>();
+
+
+
+
+
+//Build app
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

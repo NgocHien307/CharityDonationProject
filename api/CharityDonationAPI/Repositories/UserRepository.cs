@@ -1,11 +1,12 @@
 ﻿using CharityDonationApi.Data;
+using CharityDonationApi.IRepositoties;
 using CharityDonationApi.Models;
 using CharityDonationApi.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace CharityDonationApi.Repositories
 {
-	public class UserRepository : IUserRepository
+    public class UserRepository : IUserRepository
 	{
 		private readonly CharityDbContext _context;
 
@@ -66,7 +67,7 @@ namespace CharityDonationApi.Repositories
 
 			if (user == null)
 			{
-				throw new KeyNotFoundException($"Post with id {id} not found");
+				throw new KeyNotFoundException($"User with id {id} not found");
 			}
 
 			user.FullName = userVm.FullName;
