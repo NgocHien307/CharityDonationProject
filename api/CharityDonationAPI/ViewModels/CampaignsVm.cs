@@ -22,11 +22,11 @@
 
 		public int CreatorId { get; set; }
 
-		public string CreatorName { get; set; } // Hiển thị tên Creator thay vì đối tượng Creator
+		public string CreatorName { get; set; } 
 
 		public int? CategoryId { get; set; }
 
-		public string CategoryName { get; set; } // Hiển thị tên danh mục thay vì đối tượng Category
+		public string CategoryName { get; set; } 
 
 		public string Status { get; set; }
 	}

@@ -73,6 +73,8 @@ builder.Services.AddDbContext<CharityDbContext>(options =>
 // addScoped
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICampaignRepository, CampaignRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
 
 
 

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication;
 using CharityDonationApi.IRepositoties;
 using CharityDonationApi.ViewModels;
+using CharityDonationApi.Repositories;
 
 namespace CharityDonationApi.Controllers
 {
@@ -35,7 +36,7 @@ namespace CharityDonationApi.Controllers
 		}
 
 		[HttpGet("Get-Campaign-by-Id")]
-		public async Task<IActionResult> GetCampaign(int id)
+		public async Task<IActionResult> GetCampaignById(int id)
 		{
 			try
 			{
@@ -54,7 +55,7 @@ namespace CharityDonationApi.Controllers
 			}
 		}
 
-		[HttpPost("Add-user")]
+		[HttpPost("Add-campaign")]
 		public async Task<IActionResult> CreateCampaign([FromBody] CampaignsVm campaignsVm)
 		{
 			try
@@ -69,7 +70,43 @@ namespace CharityDonationApi.Controllers
 			}
 		}
 
+		[HttpPut("Update-campaign/{id}")]
+		public async Task<IActionResult> UpdateCampaign(int id,[FromBody] CampaignsVm campaignsVm)
+		{
+			if(id != campaignsVm.Id)
+			{
+				return BadRequest("Campaign Id isn't match");
+			}
 
-		
+			try
+			{
+				await _campaignRepository.updateCampaign(id, campaignsVm);
+
+				return Ok();
+			} catch(Exception ex)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError,
+					$"Error updating post: {ex.Message}");
+			}
+		}
+
+		[HttpDelete("delete-campaign/{id}")]
+		public async Task<IActionResult> DeleteCampaign(int id)
+		{
+			try
+			{
+				await _campaignRepository.deleteCampaign(id);
+
+				return Ok();
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(StatusCodes.Status500InternalServerError,
+					$"Error deleting post: {ex.Message}");
+			}
+		}
+
+
+
 	}
 }

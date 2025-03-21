@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eAaCZ3G2zIFF0IBF3S6KxUzHvHS9M4PIIM9S/OxLLrk=",
+  "Hash": "B2CE7sBjRN43WqMN7IERD8JBRtgevPCqCJfeXx8lXfI=",
   "Source": "CharityDonationApi",
   "BasePath": "_content/CharityDonationApi",
   "Mode": "Default",
@@ -47,10 +47,10 @@
       "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "D:\\ojt\\test\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
+      "Identity": "D:\\ojt\\test\\api\\CharityDonationApi\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
       "SourceId": "CharityDonationApi",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\ojt\\test\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\ojt\\test\\api\\CharityDonationApi\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/CharityDonationApi",
       "RelativePath": "CharityDonationApi.styles.css",
       "AssetKind": "All",
@@ -63,7 +63,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\ojt\\test\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css"
+      "OriginalItemSpec": "D:\\ojt\\test\\api\\CharityDonationApi\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css"
     }
   ]
 }

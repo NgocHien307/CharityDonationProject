@@ -19,7 +19,7 @@ namespace CharityDonationApi.Repositories
 
 		public async Task<List<Campaigns>> GetAllCampaigns()
 		{
-			return await _context.Campaigns.Include(c => c.Creator).Include(c => c.Category).ToListAsync();
+			return await _context.Campaigns.ToListAsync();
 		}
 
 		public async Task<CampaignsVm> GetCampaignById(int id)
