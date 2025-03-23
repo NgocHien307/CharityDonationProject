@@ -74,9 +74,9 @@ builder.Services.AddDbContext<CharityDbContext>(options =>
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICampaignRepository, CampaignRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-
-
-
+builder.Services.AddScoped<IDonationRepository, DonationRepository>();
+builder.Services.AddScoped<IFeedbackRepository, FeedBackRepository>();
+builder.Services.AddScoped<ICampaignSubscriptionRepository, CampaignSubscriptionRepository>();
 
 
 
@@ -90,11 +90,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-// ✅ Đảm bảo gọi Authentication trước Authorization
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+
+
