@@ -1,0 +1,22 @@
+.donation-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  .donation-item {
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+  }
+  .donation-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .donation-info {
+    padding: 15px;
+  }
+  
