@@ -16,7 +16,7 @@ namespace CharityDonationApi.Controllers
 		public WeatherForecastController(ILogger<WeatherForecastController> logger)
 		{
 			_logger = logger;
-		}
+		} 
 
 		[HttpGet(Name = "GetWeatherForecast")]
 		public IEnumerable<WeatherForecast> Get()

@@ -1,9 +1,9 @@
 ﻿using CharityDonationApi.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
 namespace CharityDonationApi.Data
 {
-	public class CharityDbContext : DbContext
+	public class CharityDbContext : IdentityDbContext<ApplicationUser> 
 	{
 		public CharityDbContext(DbContextOptions<CharityDbContext> options) : base(options)
 		{

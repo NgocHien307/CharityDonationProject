@@ -41,7 +41,7 @@ namespace CharityDonationApi.Models
 		public ICollection<Donation> Donations { get; set; }
 
 		public ICollection<Feedback> Feedbacks { get; set; }
-
+			
 		public ICollection<CampaignSubscription> Subscriptions { get; set; } = new List<CampaignSubscription>(); // Thêm dòng này
 
 
