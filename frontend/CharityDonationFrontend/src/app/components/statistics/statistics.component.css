@@ -1,0 +1,18 @@
+.statistics {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f9f9f9;
+    padding: 20px 0;
+  }
+  .stat-item {
+    text-align: center;
+  }
+  .stat-item h2 {
+    color: #ff4081;
+    margin: 0;
+  }
+  .stat-item p {
+    margin: 5px 0 0;
+    color: #666;
+  }
+  
