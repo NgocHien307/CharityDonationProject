@@ -28,8 +28,10 @@ namespace CharityDonationApi.Repositories
 					Date = d.Date,
 					Message = d.Message,
 					IsAnonymous = d.IsAnonymous,
-					DonorName = d.IsAnonymous ? "Anonymous" : d.User.Creator.Name,
-					CampaignName = d.Campaign.Title
+					DonorName = d.IsAnonymous ? "Anonymous" : d.User.FullName,
+					CampaignName = d.Campaign.Title,
+					UserId = d.UserId,
+					CampaignId = d.Campaign.Id,
 				})
 				.ToListAsync();
 		}
@@ -47,8 +49,10 @@ namespace CharityDonationApi.Repositories
 					Date = d.Date,
 					Message = d.Message,
 					IsAnonymous = d.IsAnonymous,
-					DonorName = d.IsAnonymous ? "Anonymous" : d.User.Creator.Name,
-					CampaignName = d.Campaign.Title
+					DonorName = d.IsAnonymous ? "Anonymous" : d.User.FullName,
+					CampaignName = d.Campaign.Title,
+					UserId = d.UserId,
+					CampaignId = d.Campaign.Id,
 				})
 				.FirstOrDefaultAsync();
 		}
@@ -64,7 +68,7 @@ namespace CharityDonationApi.Repositories
 					Date = d.Date,
 					Message = d.Message,
 					IsAnonymous = d.IsAnonymous,
-					DonorName = d.IsAnonymous ? "Anonymous" : d.User.Creator.Name,
+					DonorName = d.IsAnonymous ? "Anonymous" : d.User.FullName,
 					CampaignName = d.Campaign.Title
 				})
 				.ToListAsync();
@@ -81,7 +85,7 @@ namespace CharityDonationApi.Repositories
 					Date = d.Date,
 					Message = d.Message,
 					IsAnonymous = d.IsAnonymous,
-					DonorName = d.IsAnonymous ? "Anonymous" : d.User.Creator.Name,
+					DonorName = d.IsAnonymous ? "Anonymous" : d.User.FullName,
 					CampaignName = d.Campaign.Title
 				})
 				.ToListAsync();

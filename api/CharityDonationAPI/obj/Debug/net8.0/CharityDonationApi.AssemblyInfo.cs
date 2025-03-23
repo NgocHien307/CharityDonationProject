@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CharityDonationApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40ecca4bf9637296af91934b013d2ea8c89ac268")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebd7ddf5deb4b39c8973f54be094507100f54fa8")]
 [assembly: System.Reflection.AssemblyProductAttribute("CharityDonationApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CharityDonationApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

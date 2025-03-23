@@ -24,7 +24,7 @@ namespace CharityDonationApi.Controllers
 		}
 
 		// Lấy một donation theo ID
-		[HttpGet("Get-Campaign/Id/{id}")]
+		[HttpGet("Get-DonationById/{id}")]
 		public async Task<IActionResult> GetById(int id)
 		{
 			var donation = await _donationRepository.GetDonationById(id);
