@@ -74,7 +74,7 @@ builder.Services.AddDbContext<CharityDbContext>(options =>
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICampaignRepository, CampaignRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-
+builder.Services.AddScoped<IDonationRepository, DonationRepository>();
 
 
 
@@ -98,3 +98,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
