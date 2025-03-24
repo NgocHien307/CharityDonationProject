@@ -1,0 +1,23 @@
+<section class="partners-section">
+  <h2 class="partners-title">Các đối tác đồng hành</h2>
+  <div class="partners-list">
+    <div *ngFor="let partner of partners" class="partner-card">
+      <div class="partner-content">
+        <div class="partner-logo-container">
+          <img 
+            [alt]="partner.title"
+            [src]="partner.logo" 
+            class="partner-logo"
+          />
+        </div>
+        <div class="partner-details">
+          <h4 class="partner-title">
+            <a [href]="partner.link" class="partner-link" target="_blank" rel="noreferrer">{{ partner.title }}</a>
+          </h4>
+          <p class="partner-description">{{ partner.description }}</p>
+          <a [href]="partner.link" class="details-link" target="_blank" rel="noreferrer">Xem chi tiết &gt;&gt;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
