@@ -1,24 +1,48 @@
-.navbar {
-    background-color: #fff;
-    border-bottom: 1px solid #eaeaea;
-  }
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  .logo img {
-    height: 40px;
-  }
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-  }
+.form-control {
+  border: 2px solid #e91e63 !important;
+  border-radius: 25px !important;
+  background-color: white !important;
+  padding: 8px 15px;
+}
+
+.btn-outline-success {
+  color: #e91e63 !important;
+  border-color: #e91e63 !important;
+  border-radius: 25px !important;
+  background-color: white !important;
+  padding: 8px 15px;
+}
+
+.btn-outline-success:hover {
+  background-color: #e91e63 !important;
+  color: white !important;
+}
+
+.navbar-brand {
+  color: black !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: black !important;
   
+}
+
+.navbar-nav .btn {
+  border-radius: 25px !important;
+  padding: 8px 15px;
+  color: black !important;
+}
+
+.navbar-nav .btn-primary,
+.navbar-nav .btn-success {
+  background-color: #e91e63 !important;
+  border: 2px solid #e91e63 !important;
+  color: white !important;
+}
+
+.navbar-nav .btn-primary:hover,
+.navbar-nav .btn-success:hover {
+  background-color: white !important;
+  color: #e91e63 !important;
+}
