@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {}
+    "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {
+    "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
+        "projectUniqueName": "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
         "projectName": "CharityDonationApi",
-        "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\obj\\",
+        "projectPath": "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\ojt\\test\\api\\CharityDonationAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -42,7 +42,7 @@ namespace CharityDonationApi.Models
 
 		public ICollection<Feedback> Feedbacks { get; set; }
 			
-		public ICollection<CampaignSubscription> Subscriptions { get; set; } = new List<CampaignSubscription>(); // Thêm dòng này
+		public ICollection<CampaignSubscription> Subscriptions { get; set; } = new List<CampaignSubscription>(); 
 
 
 		public int? CategoryId { get; set; }
