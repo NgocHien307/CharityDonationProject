@@ -10,7 +10,7 @@ import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, BannerComponent, StatisticsComponent, DonationListComponent, DonationCardComponent, PartnerComponent, FooterComponent],
+  imports: [BannerComponent, StatisticsComponent, DonationListComponent, PartnerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

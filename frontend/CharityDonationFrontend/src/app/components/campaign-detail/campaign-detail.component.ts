@@ -4,7 +4,7 @@ import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-campaign-detail',
-  imports: [HeaderComponent, FooterComponent],
+  imports: [],
   standalone: true,
   templateUrl: './campaign-detail.component.html',
   styleUrl: './campaign-detail.component.css'

@@ -5,7 +5,7 @@ import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-patner',
   standalone:true,
-  imports: [HeaderComponent, FooterComponent],
+  imports: [],
   templateUrl: './patner.component.html',
   styleUrl: './patner.component.css'
 })
