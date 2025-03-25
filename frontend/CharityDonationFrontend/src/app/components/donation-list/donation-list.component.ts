@@ -12,8 +12,8 @@ import { DonationCardComponent } from '../donation-card/donation-card.component'
 })
 export class DonationListComponent {
   donations = [
-    { title: "Hỗ trợ trẻ em nghèo", amount: 50000000 },
-    { title: "Cứu trợ lũ lụt miền Trung", amount: 100000000 },
-    { title: "Giúp đỡ bệnh nhân ung thư", amount: 70000000 }
+    { title: "Hỗ trợ trẻ em nghèo", amount: 5000000, goal: 10000000 },
+    { title: "Cứu trợ lũ lụt miền Trung", amount: 10000000, goal: 20000000 },
+    { title: "Giúp đỡ bệnh nhân ung thư", amount: 7000000, goal: 15000000 }
   ];
 }

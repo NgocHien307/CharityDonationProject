@@ -10,6 +10,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { DonationListComponent } from './components/donation-list/donation-list.component';
 import { CampaignDetailComponent } from './components/campaign-detail/campaign-detail.component';
+import { PartnerComponent } from "./components/partner/partner.component";
 
 @Component({
   selector: 'app-root',
@@ -21,8 +22,9 @@ import { CampaignDetailComponent } from './components/campaign-detail/campaign-d
     BannerComponent,
     StatisticsComponent,
     DonationListComponent,
-    CampaignDetailComponent
-  ],
+    CampaignDetailComponent,
+    PartnerComponent
+],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

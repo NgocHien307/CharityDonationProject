@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .navbar {
   background-color: #fff;
   border-bottom: 1px solid #eaeaea;
@@ -34,3 +35,53 @@
 body {
   padding-top: 60px; 
 }
+=======
+.form-control {
+  border: 2px solid #e91e63 !important;
+  border-radius: 25px !important;
+  background-color: white !important;
+  padding: 8px 15px;
+}
+
+.btn-outline-success {
+  color: #e91e63 !important;
+  border-color: #e91e63 !important;
+  border-radius: 25px !important;
+  background-color: white !important;
+  padding: 8px 15px;
+}
+
+.btn-outline-success:hover {
+  background-color: #e91e63 !important;
+  color: white !important;
+}
+
+.navbar-brand {
+  color: black !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: black !important;
+  
+}
+
+.navbar-nav .btn {
+  border-radius: 25px !important;
+  padding: 8px 15px;
+  color: black !important;
+}
+
+.navbar-nav .btn-primary,
+.navbar-nav .btn-success {
+  background-color: #e91e63 !important;
+  border: 2px solid #e91e63 !important;
+  color: white !important;
+}
+
+.navbar-nav .btn-primary:hover,
+.navbar-nav .btn-success:hover {
+  background-color: white !important;
+  color: #e91e63 !important;
+}
+>>>>>>> 72b213c283b8cde235756a5cb620c228a4ab8777
