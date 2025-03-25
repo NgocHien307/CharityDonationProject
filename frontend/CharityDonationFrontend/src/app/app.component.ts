@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { SharedService } from './shared.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -11,6 +11,7 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
 import { DonationListComponent } from './components/donation-list/donation-list.component';
 import { CampaignDetailComponent } from './components/campaign-detail/campaign-detail.component';
 import { PartnerComponent } from "./components/partner/partner.component";
+import { PatnerComponent } from './components/patner/patner.component';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,9 @@ import { PartnerComponent } from "./components/partner/partner.component";
     StatisticsComponent,
     DonationListComponent,
     CampaignDetailComponent,
-    PartnerComponent
+    PartnerComponent,
+    PatnerComponent, 
+    RouterLink
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
