@@ -80,6 +80,18 @@ builder.Services.AddScoped<ICampaignSubscriptionRepository, CampaignSubscription
 
 
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+	options.AddPolicy(name: MyAllowSpecificOrigins,
+		policy =>
+		{
+			policy.WithOrigins("http://localhost:4200") 
+				  .AllowAnyHeader()
+				  .AllowAnyMethod();
+		});
+});
+
 //Build app
 var app = builder.Build();
 
@@ -88,7 +100,7 @@ if (app.Environment.IsDevelopment())
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
-
+app.UseCors(MyAllowSpecificOrigins);
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

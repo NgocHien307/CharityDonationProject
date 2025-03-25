@@ -14,7 +14,7 @@ namespace CharityDonationApi.Models
 		public string Title { get; set; }
 
 		[Required]
-		[MaxLength(1000)]
+		[MaxLength(10000)]
 		public string Description { get; set; }
 
 		[Required]

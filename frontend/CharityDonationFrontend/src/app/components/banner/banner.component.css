@@ -17,3 +17,8 @@
     border-radius: 10px;
   }
   
+  .carousel-inner img {
+    max-height: 400px; /* Điều chỉnh chiều cao theo ý muốn */
+    width: auto; /* Đảm bảo giữ nguyên tỉ lệ */
+    object-fit: cover;
+  }

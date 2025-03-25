@@ -3,6 +3,9 @@
     justify-content: space-around;
     background-color: #f9f9f9;
     padding: 20px 0;
+    max-width: 1200px; /* Giới hạn chiều rộng nội dung */
+    margin: 0 auto; /* Căn giữa nội dung */
+    padding: 0 20px; 
   }
   .stat-item {
     text-align: center;
@@ -16,3 +19,8 @@
     color: #666;
   }
   
+  .container {
+    max-width: 1200px; /* Giới hạn chiều rộng nội dung */
+    margin: 0 auto; /* Căn giữa nội dung */
+    padding: 0 20px; /* Thêm padding hai bên để không bị sát mép */
+}
