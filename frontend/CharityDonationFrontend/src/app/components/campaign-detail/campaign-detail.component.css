@@ -1,0 +1,6 @@
+@media (min-width: 1024px) {
+  .lg\:px-12 {
+      padding-left: 8rem;
+      padding-right: 8rem; 
+  }
+}

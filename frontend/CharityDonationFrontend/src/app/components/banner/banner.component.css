@@ -55,4 +55,13 @@
   .banner-image {
     width: 180px;
   }
+<<<<<<< HEAD
+  
+  .carousel-inner img {
+    max-height: 400px; /* Điều chỉnh chiều cao theo ý muốn */
+    width: auto; /* Đảm bảo giữ nguyên tỉ lệ */
+    object-fit: cover;
+  }
+=======
 }
+>>>>>>> 72b213c283b8cde235756a5cb620c228a4ab8777
