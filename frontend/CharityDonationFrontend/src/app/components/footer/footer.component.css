@@ -1,5 +1,4 @@
 .footer {
-<<<<<<< HEAD
     background-color: #f5f5f5;
     text-align: center;
     position: relative;
@@ -11,10 +10,6 @@
   .footer p {
     margin: 0;
     color: #666;
-  }
-
-  
-=======
   background-color: #2d2d2d;
   color: white;
   padding: 20px 0;
@@ -57,4 +52,3 @@
   padding-top: 10px;
   font-size: 14px;
 }
->>>>>>> 72b213c283b8cde235756a5cb620c228a4ab8777
