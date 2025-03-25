@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { CommonModule } from '@angular/common'; // Import CommonModule để dùng *ngFor
+import { CommonModule } from '@angular/common'; 
 
 interface Campaign {
   id: number;
@@ -11,7 +11,7 @@ interface Campaign {
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule, CommonModule], // Thêm CommonModule
+  imports: [RouterModule, CommonModule], 
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
