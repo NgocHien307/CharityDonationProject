@@ -1,0 +1,54 @@
+<h2 class="page-title">{{ pageTitle }}</h2>
+
+<!-- Thanh tìm kiếm + Thêm mới -->
+<div class="campaign-list-controls">
+  <input
+    type="text"
+    placeholder="Tìm kiếm chiến dịch"
+    [(ngModel)]="search"
+    class="search-input"
+  />
+  <button (click)="campaignSearch()" class="btn-search">Tìm kiếm</button>
+
+  <!-- Nút Thêm Mới -->
+  <button (click)="navigateToCreate()" class="btn-add">
+    Thêm Mới
+  </button>
+</div>
+
+<!-- Lưới các chiến dịch -->
+<div class="campaign-grid">
+  <div class="campaign-card" *ngFor="let campaign of paginatedCampaigns">
+
+    <!-- Hiển thị ảnh nếu có featuredImageUrl -->
+    <img
+      *ngIf="campaign.featuredImageUrl"
+      [src]="campaign.featuredImageUrl"
+      alt="Campaign Image"
+      class="campaign-image"
+    />
+
+    <h3 class="campaign-title">{{ campaign.title }}</h3>
+    <p class="campaign-desc">{{ campaign.description }}</p>
+
+    <!-- Nút hành động -->
+    <div class="campaign-actions">
+      <button (click)="navigateToEdit(campaign.id!)" class="btn-action">
+        Cập nhật
+      </button>
+      <button (click)="deleteCampaign(campaign.id!)" class="btn-action">
+        Xóa
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Phân trang -->
+<div class="pagination">
+  <button
+    *ngFor="let page of [].constructor(totalPages); let i = index"
+    (click)="goToPage(i + 1)"
+  >
+    {{ i + 1 }}
+  </button>
+</div>

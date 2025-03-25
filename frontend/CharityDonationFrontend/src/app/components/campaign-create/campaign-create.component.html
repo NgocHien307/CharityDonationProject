@@ -1,0 +1,83 @@
+<h2 class="page-title">Tạo Chiến Dịch Mới</h2>
+
+<div class="create-campaign-container">
+  <!-- Cột trái: Form tạo chiến dịch -->
+  <div class="left-column">
+    <form (ngSubmit)="createCampaign()" class="create-form">
+      <!-- Tên chiến dịch -->
+      <div class="form-group">
+        <label>Tên chiến dịch:</label>
+        <input type="text" [(ngModel)]="campaign.title" name="title" required />
+      </div>
+
+      <!-- Mục tiêu quyên góp -->
+      <div class="form-group">
+        <label>Con số muốn ủng hộ (Mục tiêu quyên góp):</label>
+        <input type="number" [(ngModel)]="campaign.goalAmount" name="goalAmount" required />
+      </div>
+
+      <!-- Upload ảnh -->
+      <div class="form-group">
+        <label>Thêm ảnh:</label>
+        <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+      </div>
+      <!-- Preview ảnh nếu có -->
+      <div *ngIf="previewUrl" class="preview-container">
+        <img [src]="previewUrl" alt="Preview" />
+      </div>
+
+      <!-- Mô tả -->
+      <div class="form-group">
+        <label>Thêm các thông tin (Mô tả):</label>
+        <textarea [(ngModel)]="campaign.description" name="description" required></textarea>
+      </div>
+
+      <!-- Danh mục -->
+      <div class="form-group">
+        <label>Danh mục:</label>
+        <select [(ngModel)]="campaign.categoryId" name="categoryId" required>
+          <option value="1">Y tế</option>
+          <option value="2">Giáo dục</option>
+          <option value="3">Thiên tai</option>
+          <option value="4">Trẻ em</option>
+          <option value="5">Người già</option>
+        </select>
+      </div>
+
+      <!-- Ngày kết thúc -->
+      <div class="form-group">
+        <label>Ngày kết thúc (optional):</label>
+        <input type="datetime-local" [(ngModel)]="formattedEndDate" name="endDate" />
+      </div>
+
+      <!-- Nút tạo chiến dịch -->
+      <button type="submit" class="btn-create">Tạo Chiến Dịch</button>
+    </form>
+  </div>
+
+  <!-- Cột phải: Box thông tin Quỹ (Creator) -->
+  <div class="right-column">
+    <div class="info-box">
+      <h3>Thông tin Quỹ</h3>
+      <!-- Dropdown chọn Quỹ -->
+      <div class="info-item">
+        <label>Chọn Quỹ:</label>
+        <select [(ngModel)]="selectedCreatorId" (change)="onCreatorChange()" name="creatorId">
+          <option value="">-- Chọn Quỹ --</option>
+          <option *ngFor="let creator of creators" [value]="creator.id">{{ creator.name }}</option>
+        </select>
+      </div>
+      <!-- Hiển thị thông tin Quỹ nếu có -->
+      <div *ngIf="selectedCreator">
+        <div class="info-item">
+          <label>Tên Quỹ:</label>
+          <input type="text" [value]="selectedCreator.name" disabled />
+        </div>
+        <div class="info-item">
+          <label>Email:</label>
+          <input type="email" [value]="selectedCreator.email" disabled />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {}
+    "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {}
   },
   "projects": {
-    "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {
+    "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
         "projectName": "CharityDonationApi",
-        "projectPath": "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\ojt\\test\\api\\CharityDonationAPI\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\CharityDonationProject\\api\\CharityDonationAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,7 +38,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -47,6 +57,10 @@
             "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
               "target": "Package",
               "version": "[8.0.11, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.3.0, )"
             },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
@@ -102,7 +116,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,7 @@
+<h2>Xác nhận Thanh Toán</h2>
+<p>Transaction ID: {{ transactionId }}</p>
+<button (click)="confirmPayment()">Xác nhận thanh toán</button>
+<div *ngIf="transaction">
+  <p>Trạng thái thanh toán: {{ transaction.paymentStatus }}</p>
+  <p>Số tiền: {{ transaction.amount }} {{ transaction.currency }}</p>
+</div>

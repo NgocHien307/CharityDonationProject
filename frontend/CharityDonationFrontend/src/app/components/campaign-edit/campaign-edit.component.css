@@ -1,0 +1,98 @@
+/* Tiêu đề trang */
+.page-title {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0;
+  color: #333;
+}
+
+/* Container bọc 2 cột */
+.update-campaign-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px; /* hoặc tuỳ ý */
+  margin: 0 auto;    /* canh giữa trang */
+  padding: 0 20px;
+}
+
+/* Cột trái (Form) */
+.left-column {
+  flex: 1;
+}
+
+/* Form update */
+.update-form .form-group {
+  margin-bottom: 15px;
+}
+.update-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.update-form input,
+.update-form textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Nút submit */
+.btn-update {
+  padding: 10px 20px;
+  background-color: #4caf50; /* hoặc #ff4081 nếu muốn đồng bộ với màu hồng */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-update:hover {
+  background-color: #43a047; /* nếu là xanh lá */
+  /* hoặc #e83675 nếu là màu hồng */
+}
+
+/* Cột phải (Hộp thông tin quỹ) */
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.info-box {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px; /* tuỳ chỉnh độ rộng box */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.info-item {
+  margin-bottom: 15px;
+}
+
+.info-item label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.info-item input,
+.info-item textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+

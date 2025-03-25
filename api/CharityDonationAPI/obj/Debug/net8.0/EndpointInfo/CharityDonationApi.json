@@ -1,14 +1,14 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "CharityDonationApi",
-    "version": "1.0"
+    "title": "MyAPI",
+    "version": "v1"
   },
   "paths": {
-    "/api/Campaigns": {
+    "/api/campaign/Get-all-campaigns": {
       "get": {
         "tags": [
-          "Campaigns"
+          "Campaign"
         ],
         "responses": {
           "200": {
@@ -18,7 +18,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Campaigns"
+                    "$ref": "#/components/schemas/CampaignsVm"
                   }
                 }
               },
@@ -26,7 +26,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Campaigns"
+                    "$ref": "#/components/schemas/CampaignsVm"
                   }
                 }
               },
@@ -34,54 +34,8 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Campaigns"
+                    "$ref": "#/components/schemas/CampaignsVm"
                   }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Campaigns"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CampaignCreateDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CampaignCreateDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CampaignCreateDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Campaigns"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Campaigns"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Campaigns"
                 }
               }
             }
@@ -89,16 +43,15 @@
         }
       }
     },
-    "/api/Campaigns/{id}": {
+    "/api/campaign/Get-Campaign-by-Id": {
       "get": {
         "tags": [
-          "Campaigns"
+          "Campaign"
         ],
         "parameters": [
           {
             "name": "id",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -107,57 +60,31 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Campaigns"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Campaigns"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Campaigns"
-                }
-              }
-            }
+            "description": "Success"
           }
         }
-      },
-      "put": {
+      }
+    },
+    "/api/campaign/Add-campaign": {
+      "post": {
         "tags": [
-          "Campaigns"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
+          "Campaign"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Campaigns"
+                "$ref": "#/components/schemas/CampaignsVm"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Campaigns"
+                "$ref": "#/components/schemas/CampaignsVm"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Campaigns"
+                "$ref": "#/components/schemas/CampaignsVm"
               }
             }
           }
@@ -167,10 +94,54 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/campaign/Update-campaign/{id}": {
+      "put": {
+        "tags": [
+          "Campaign"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignsVm"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignsVm"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CampaignsVm"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/campaign/delete-campaign/{id}": {
       "delete": {
         "tags": [
-          "Campaigns"
+          "Campaign"
         ],
         "parameters": [
           {
@@ -190,159 +161,27 @@
         }
       }
     },
-    "/api/CampaignUpdates": {
-      "get": {
-        "tags": [
-          "CampaignUpdates"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CampaignUpdate"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CampaignUpdate"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/CampaignUpdate"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
+    "/api/campaign/upload": {
       "post": {
         "tags": [
-          "CampaignUpdates"
+          "Campaign"
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/CampaignUpdate"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CampaignUpdate"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CampaignUpdate"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CampaignUpdate"
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
                 }
               },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CampaignUpdate"
+              "encoding": {
+                "file": {
+                  "style": "form"
                 }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CampaignUpdate"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/CampaignUpdates/{id}": {
-      "get": {
-        "tags": [
-          "CampaignUpdates"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CampaignUpdate"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CampaignUpdate"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CampaignUpdate"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "CampaignUpdates"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CampaignUpdate"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CampaignUpdate"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CampaignUpdate"
               }
             }
           }
@@ -352,14 +191,106 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/campaigns/{campaignId}/subscribe": {
+      "post": {
+        "tags": [
+          "CampaignSupscription"
+        ],
+        "parameters": [
+          {
+            "name": "campaignId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/campaigns/{campaignId}/unsubscribe": {
       "delete": {
         "tags": [
-          "CampaignUpdates"
+          "CampaignSupscription"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "campaignId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/campaigns/{campaignId}/subscribers": {
+      "get": {
+        "tags": [
+          "CampaignSupscription"
+        ],
+        "parameters": [
+          {
+            "name": "campaignId",
             "in": "path",
             "required": true,
             "schema": {
@@ -375,10 +306,10 @@
         }
       }
     },
-    "/api/Categories": {
+    "/api/campaign/Get-all-Category": {
       "get": {
         "tags": [
-          "Categories"
+          "Category"
         ],
         "responses": {
           "200": {
@@ -388,7 +319,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/CategoryVm"
                   }
                 }
               },
@@ -396,7 +327,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/CategoryVm"
                   }
                 }
               },
@@ -404,130 +335,57 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/CategoryVm"
                   }
                 }
               }
             }
           }
         }
-      },
+      }
+    },
+    "/api/campaign/Get-Category-by-Id": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/campaign/Add-category": {
       "post": {
         "tags": [
-          "Categories"
+          "Category"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Category"
+                "$ref": "#/components/schemas/CategoryVm"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Category"
+                "$ref": "#/components/schemas/CategoryVm"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Category"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Category"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Category"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Category"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Categories/{id}": {
-      "get": {
-        "tags": [
-          "Categories"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Category"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Category"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Category"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Categories"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Category"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Category"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Category"
+                "$ref": "#/components/schemas/CategoryVm"
               }
             }
           }
@@ -537,10 +395,54 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/campaign/Update-category/{id}": {
+      "put": {
+        "tags": [
+          "Category"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryVm"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryVm"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoryVm"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/campaign/delete-category/{id}": {
       "delete": {
         "tags": [
-          "Categories"
+          "Category"
         ],
         "parameters": [
           {
@@ -560,7 +462,7 @@
         }
       }
     },
-    "/api/Creators": {
+    "/api/creators/Get-all-creators": {
       "get": {
         "tags": [
           "Creators"
@@ -573,7 +475,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Creators"
+                    "$ref": "#/components/schemas/CreatorsVm"
                   }
                 }
               },
@@ -581,7 +483,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Creators"
+                    "$ref": "#/components/schemas/CreatorsVm"
                   }
                 }
               },
@@ -589,54 +491,8 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Creators"
+                    "$ref": "#/components/schemas/CreatorsVm"
                   }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Creators"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Creators"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Creators"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Creators"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Creators"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Creators"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Creators"
                 }
               }
             }
@@ -644,7 +500,7 @@
         }
       }
     },
-    "/api/Creators/{id}": {
+    "/api/creators/Get-creator-by-Id": {
       "get": {
         "tags": [
           "Creators"
@@ -652,8 +508,7 @@
         "parameters": [
           {
             "name": "id",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -662,27 +517,43 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Creators"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Creators"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Creators"
-                }
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/creators/Add-creator": {
+      "post": {
+        "tags": [
+          "Creators"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatorsVm"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatorsVm"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatorsVm"
               }
             }
           }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
         }
-      },
+      }
+    },
+    "/api/creators/Update-creator/{id}": {
       "put": {
         "tags": [
           "Creators"
@@ -702,17 +573,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Creators"
+                "$ref": "#/components/schemas/CreatorsVm"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Creators"
+                "$ref": "#/components/schemas/CreatorsVm"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Creators"
+                "$ref": "#/components/schemas/CreatorsVm"
               }
             }
           }
@@ -722,7 +593,9 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/creators/Delete-creator/{id}": {
       "delete": {
         "tags": [
           "Creators"
@@ -745,159 +618,84 @@
         }
       }
     },
-    "/api/Donations": {
+    "/api/campaign/Get-all-Donation": {
       "get": {
         "tags": [
-          "Donations"
+          "Donation"
         ],
         "responses": {
           "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Donation"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Donation"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Donation"
-                  }
-                }
-              }
-            }
+            "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/campaign/Get-DonationById/{id}": {
+      "get": {
+        "tags": [
+          "Donation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/campaign/Get-Donation/campaign/{campaignId}": {
+      "get": {
+        "tags": [
+          "Donation"
+        ],
+        "parameters": [
+          {
+            "name": "campaignId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/campaign/Create-Donation": {
       "post": {
         "tags": [
-          "Donations"
+          "Donation"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Donation"
+                "$ref": "#/components/schemas/DonationVm"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Donation"
+                "$ref": "#/components/schemas/DonationVm"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Donation"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Donation"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Donation"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Donation"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Donations/{id}": {
-      "get": {
-        "tags": [
-          "Donations"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Donation"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Donation"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Donation"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Donations"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Donation"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Donation"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Donation"
+                "$ref": "#/components/schemas/DonationVm"
               }
             }
           }
@@ -907,10 +705,47 @@
             "description": "Success"
           }
         }
-      },
-      "delete": {
+      }
+    },
+    "/get-all": {
+      "get": {
         "tags": [
-          "Donations"
+          "FeedBack"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/get-by-campaign/{campaignId}": {
+      "get": {
+        "tags": [
+          "FeedBack"
+        ],
+        "parameters": [
+          {
+            "name": "campaignId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/get/{id}": {
+      "get": {
+        "tags": [
+          "FeedBack"
         ],
         "parameters": [
           {
@@ -930,132 +765,41 @@
         }
       }
     },
-    "/api/Feedbacks": {
-      "get": {
-        "tags": [
-          "Feedbacks"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Feedback"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Feedback"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Feedback"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
+    "/add": {
       "post": {
         "tags": [
-          "Feedbacks"
+          "FeedBack"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Feedback"
+                "$ref": "#/components/schemas/FeedBackVm"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Feedback"
+                "$ref": "#/components/schemas/FeedBackVm"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Feedback"
+                "$ref": "#/components/schemas/FeedBackVm"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feedback"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feedback"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feedback"
-                }
-              }
-            }
+            "description": "Success"
           }
         }
       }
     },
-    "/api/Feedbacks/{id}": {
-      "get": {
-        "tags": [
-          "Feedbacks"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feedback"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feedback"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Feedback"
-                }
-              }
-            }
-          }
-        }
-      },
+    "/update/{id}": {
       "put": {
         "tags": [
-          "Feedbacks"
+          "FeedBack"
         ],
         "parameters": [
           {
@@ -1072,17 +816,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Feedback"
+                "$ref": "#/components/schemas/FeedBackVm"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Feedback"
+                "$ref": "#/components/schemas/FeedBackVm"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Feedback"
+                "$ref": "#/components/schemas/FeedBackVm"
               }
             }
           }
@@ -1092,10 +836,12 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/delete/{id}": {
       "delete": {
         "tags": [
-          "Feedbacks"
+          "FeedBack"
         ],
         "parameters": [
           {
@@ -1115,132 +861,10 @@
         }
       }
     },
-    "/api/QuickDonations": {
-      "get": {
-        "tags": [
-          "QuickDonations"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/QuickDonation"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/QuickDonation"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/QuickDonation"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
+    "/api/transaction/confirm/{id}": {
       "post": {
         "tags": [
-          "QuickDonations"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/QuickDonation"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/QuickDonation"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/QuickDonation"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/QuickDonation"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QuickDonation"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QuickDonation"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/QuickDonations/{id}": {
-      "get": {
-        "tags": [
-          "QuickDonations"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/QuickDonation"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QuickDonation"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QuickDonation"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "QuickDonations"
+          "Transaction"
         ],
         "parameters": [
           {
@@ -1257,17 +881,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/QuickDonation"
+                "$ref": "#/components/schemas/ConfirmPaymentVm"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/QuickDonation"
+                "$ref": "#/components/schemas/ConfirmPaymentVm"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/QuickDonation"
+                "$ref": "#/components/schemas/ConfirmPaymentVm"
               }
             }
           }
@@ -1277,182 +901,28 @@
             "description": "Success"
           }
         }
-      },
-      "delete": {
-        "tags": [
-          "QuickDonations"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
       }
     },
-    "/api/Transactions": {
-      "get": {
-        "tags": [
-          "Transactions"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Transaction"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Transaction"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Transaction"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
+    "/api/transaction/create": {
       "post": {
         "tags": [
-          "Transactions"
+          "Transaction"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Transaction"
+                "$ref": "#/components/schemas/TransactionVm"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Transaction"
+                "$ref": "#/components/schemas/TransactionVm"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Transaction"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Transaction"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Transaction"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Transaction"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Transactions/{id}": {
-      "get": {
-        "tags": [
-          "Transactions"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Transaction"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Transaction"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Transaction"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Transactions"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Transaction"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Transaction"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Transaction"
+                "$ref": "#/components/schemas/TransactionVm"
               }
             }
           }
@@ -1462,10 +932,50 @@
             "description": "Success"
           }
         }
-      },
-      "delete": {
+      }
+    },
+    "/api/user/get-all-user": {
+      "get": {
         "tags": [
-          "Transactions"
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserVm"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserVm"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserVm"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/user/get-user-by-id/{id}": {
+      "get": {
+        "tags": [
+          "User"
         ],
         "parameters": [
           {
@@ -1485,159 +995,26 @@
         }
       }
     },
-    "/api/Users": {
-      "get": {
-        "tags": [
-          "Users"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Users"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Users"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Users"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
+    "/api/user/add-user": {
       "post": {
         "tags": [
-          "Users"
+          "User"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Users"
+                "$ref": "#/components/schemas/UserVm"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Users"
+                "$ref": "#/components/schemas/UserVm"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Users"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Users/{id}": {
-      "get": {
-        "tags": [
-          "Users"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Users"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Users"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Users"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Users"
+                "$ref": "#/components/schemas/UserVm"
               }
             }
           }
@@ -1647,10 +1024,54 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/user/update-user/{id}": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserVm"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserVm"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserVm"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/user/delete-user/{id}": {
       "delete": {
         "tags": [
-          "Users"
+          "User"
         ],
         "parameters": [
           {
@@ -1712,25 +1133,20 @@
   },
   "components": {
     "schemas": {
-      "CampaignCreateDto": {
-        "required": [
-          "creatorId",
-          "description",
-          "featuredImageUrl",
-          "goalAmount",
-          "title"
-        ],
+      "CampaignsVm": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
           "title": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "description": {
-            "maxLength": 1000,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "goalAmount": {
             "type": "number",
@@ -1753,17 +1169,24 @@
             "nullable": true
           },
           "featuredImageUrl": {
-            "minLength": 1,
             "type": "string",
-            "format": "uri"
+            "nullable": true
           },
           "creatorId": {
             "type": "integer",
             "format": "int32"
           },
+          "creatorName": {
+            "type": "string",
+            "nullable": true
+          },
           "categoryId": {
             "type": "integer",
             "format": "int32",
+            "nullable": true
+          },
+          "categoryName": {
+            "type": "string",
             "nullable": true
           },
           "status": {
@@ -1773,186 +1196,7 @@
         },
         "additionalProperties": false
       },
-      "CampaignSubscription": {
-        "required": [
-          "campaignId",
-          "subscriptionDate",
-          "userId"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "user": {
-            "$ref": "#/components/schemas/Users"
-          },
-          "campaignId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "campaign": {
-            "$ref": "#/components/schemas/Campaigns"
-          },
-          "subscriptionDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "isActive": {
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "CampaignUpdate": {
-        "required": [
-          "campaignId",
-          "content",
-          "title",
-          "updateDate"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "campaignId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "campaigns": {
-            "$ref": "#/components/schemas/Campaigns"
-          },
-          "title": {
-            "maxLength": 200,
-            "minLength": 1,
-            "type": "string"
-          },
-          "content": {
-            "maxLength": 5000,
-            "minLength": 1,
-            "type": "string"
-          },
-          "updateDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "mediaUrl": {
-            "maxLength": 500,
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Campaigns": {
-        "required": [
-          "description",
-          "featuredImageUrl",
-          "goalAmount",
-          "title"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "description": {
-            "maxLength": 1000,
-            "minLength": 1,
-            "type": "string"
-          },
-          "goalAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "collectedAmount": {
-            "type": "number",
-            "format": "double"
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "startDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "endDate": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "featuredImageUrl": {
-            "minLength": 1,
-            "type": "string",
-            "format": "uri"
-          },
-          "updates": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CampaignUpdate"
-            },
-            "nullable": true
-          },
-          "creatorId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "creator": {
-            "$ref": "#/components/schemas/Creators"
-          },
-          "donations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Donation"
-            },
-            "nullable": true
-          },
-          "feedbacks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Feedback"
-            },
-            "nullable": true
-          },
-          "subscriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CampaignSubscription"
-            },
-            "nullable": true
-          },
-          "categoryId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "category": {
-            "$ref": "#/components/schemas/Category"
-          },
-          "status": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Category": {
-        "required": [
-          "name"
-        ],
+      "CategoryVm": {
         "type": "object",
         "properties": {
           "id": {
@@ -1960,31 +1204,31 @@
             "format": "int32"
           },
           "name": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
-          },
-          "description": {
-            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
-          "campaigns": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Campaigns"
-            },
+          "description": {
+            "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "Creators": {
-        "required": [
-          "email",
-          "name",
-          "type"
-        ],
+      "ConfirmPaymentVm": {
+        "type": "object",
+        "properties": {
+          "transactionReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentStatus": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatorsVm": {
         "type": "object",
         "properties": {
           "id": {
@@ -1992,68 +1236,11 @@
             "format": "int32"
           },
           "name": {
-            "maxLength": 200,
-            "minLength": 1,
-            "type": "string"
-          },
-          "description": {
-            "maxLength": 1000,
-            "type": "string",
-            "nullable": true
-          },
-          "logoUrl": {
-            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
           "email": {
-            "maxLength": 100,
-            "minLength": 1,
             "type": "string",
-            "format": "email"
-          },
-          "phoneNumber": {
-            "maxLength": 20,
-            "type": "string",
-            "format": "tel",
-            "nullable": true
-          },
-          "address": {
-            "maxLength": 500,
-            "type": "string",
-            "nullable": true
-          },
-          "isVerified": {
-            "type": "boolean"
-          },
-          "type": {
-            "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "user": {
-            "$ref": "#/components/schemas/Users"
-          },
-          "campaigns": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Campaigns"
-            },
-            "nullable": true
-          },
-          "verificationDocumentUrl": {
-            "maxLength": 500,
-            "type": "string",
-            "nullable": true
-          },
-          "verificationDate": {
-            "type": "string",
-            "format": "date-time",
             "nullable": true
           }
         },
@@ -2103,11 +1290,9 @@
         "type": "integer",
         "format": "int32"
       },
-      "Donation": {
+      "DonationVm": {
         "required": [
-          "amount",
-          "campaignId",
-          "date"
+          "campaignId"
         ],
         "type": "object",
         "properties": {
@@ -2116,7 +1301,6 @@
             "format": "int32"
           },
           "amount": {
-            "minimum": 0.01,
             "type": "number",
             "format": "double"
           },
@@ -2125,46 +1309,33 @@
             "format": "date-time"
           },
           "message": {
-            "maxLength": 500,
             "type": "string",
             "nullable": true
           },
           "isAnonymous": {
             "type": "boolean"
           },
+          "donorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "campaignName": {
+            "type": "string",
+            "nullable": true
+          },
           "userId": {
             "type": "integer",
             "format": "int32",
             "nullable": true
           },
-          "user": {
-            "$ref": "#/components/schemas/Users"
-          },
           "campaignId": {
             "type": "integer",
             "format": "int32"
-          },
-          "campaign": {
-            "$ref": "#/components/schemas/Campaigns"
-          },
-          "transactionId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "transaction": {
-            "$ref": "#/components/schemas/Transaction"
           }
         },
         "additionalProperties": false
       },
-      "Feedback": {
-        "required": [
-          "campaignId",
-          "comment",
-          "date",
-          "userId"
-        ],
+      "FeedBackVm": {
         "type": "object",
         "properties": {
           "id": {
@@ -2172,13 +1343,10 @@
             "format": "int32"
           },
           "comment": {
-            "maxLength": 1000,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "rating": {
-            "maximum": 5,
-            "minimum": 1,
             "type": "integer",
             "format": "int32"
           },
@@ -2190,148 +1358,48 @@
             "type": "integer",
             "format": "int32"
           },
-          "user": {
-            "$ref": "#/components/schemas/Users"
+          "userName": {
+            "type": "string",
+            "nullable": true
           },
           "campaignId": {
             "type": "integer",
             "format": "int32"
           },
-          "campaign": {
-            "$ref": "#/components/schemas/Campaigns"
-          }
-        },
-        "additionalProperties": false
-      },
-      "QuickDonation": {
-        "required": [
-          "amount",
-          "date",
-          "transactionId"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "amount": {
-            "minimum": 1,
-            "type": "number",
-            "format": "double"
-          },
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "userId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "user": {
-            "$ref": "#/components/schemas/Users"
-          },
-          "transactionId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "transaction": {
-            "$ref": "#/components/schemas/Transaction"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Role": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
-          },
-          "description": {
-            "maxLength": 255,
+          "campaignName": {
             "type": "string",
             "nullable": true
-          },
-          "users": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Users"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "Transaction": {
-        "required": [
-          "amount",
-          "currency",
-          "paymentGateway",
-          "paymentMethod",
-          "paymentStatus",
-          "transactionDate"
-        ],
+      "TransactionVm": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "paymentMethod": {
-            "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "paymentStatus": {
-            "maxLength": 20,
-            "minLength": 1,
-            "type": "string"
-          },
-          "transactionDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "amount": {
-            "minimum": 1,
-            "type": "number",
-            "format": "double"
-          },
-          "transactionReference": {
-            "maxLength": 100,
             "type": "string",
             "nullable": true
           },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
           "currency": {
-            "maxLength": 10,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "paymentGateway": {
-            "maxLength": 50,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "Users": {
-        "required": [
-          "email",
-          "fullName",
-          "passwordHash",
-          "registerDate",
-          "roleId"
-        ],
+      "UserVm": {
         "type": "object",
         "properties": {
           "id": {
@@ -2339,33 +1407,26 @@
             "format": "int32"
           },
           "fullName": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "email": {
-            "maxLength": 50,
-            "minLength": 1,
             "type": "string",
-            "format": "email"
+            "nullable": true
           },
           "passwordHash": {
-            "maxLength": 100,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "isActive": {
             "type": "boolean"
           },
           "phoneNumber": {
-            "maxLength": 15,
             "type": "string",
-            "format": "tel",
             "nullable": true
           },
           "avatarUrl": {
             "type": "string",
-            "format": "uri",
             "nullable": true
           },
           "registerDate": {
@@ -2380,40 +1441,6 @@
           "roleId": {
             "type": "integer",
             "format": "int32"
-          },
-          "role": {
-            "$ref": "#/components/schemas/Role"
-          },
-          "donations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Donation"
-            },
-            "nullable": true
-          },
-          "feedbacks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Feedback"
-            },
-            "nullable": true
-          },
-          "quickDonations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/QuickDonation"
-            },
-            "nullable": true
-          },
-          "subscriptions": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CampaignSubscription"
-            },
-            "nullable": true
-          },
-          "creator": {
-            "$ref": "#/components/schemas/Creators"
           }
         },
         "additionalProperties": false
@@ -2440,6 +1467,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "JWT Authorization header using the Bearer scheme. \r\n                        Enter 'Bearer' [space] and then your token.\r\n                        Example: 'Bearer 12345abcdef'",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
