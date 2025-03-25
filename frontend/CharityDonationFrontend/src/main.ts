@@ -12,11 +12,12 @@ import { HomeComponent } from './app/components/home/home.component';
 
 
 const router: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: '', component:   HomeComponent},
   {path: 'header', component:HeaderComponent},
   {path: 'footer', component:FooterComponent},
   {path: 'campaign-detail', component: CampaignDetailComponent },
-  {path: 'patner-detail', component: PatnerComponent}
+  {path: 'patner-detail', component: PatnerComponent},
 ];
 
 bootstrapApplication(AppComponent, {
