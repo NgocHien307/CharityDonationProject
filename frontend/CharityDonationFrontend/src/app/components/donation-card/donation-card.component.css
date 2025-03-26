@@ -1,36 +1,106 @@
 .donation-card {
-    border: 2px solid #e91e63; /* Viền hồng */
-    padding: 20px;
-    border-radius: 12px; /* Bo góc nhẹ */
-    text-align: center;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
-  }
-  
-  .donation-card h3 {
-    color: #e91e63; /* Màu hồng cho tiêu đề */
-    font-weight: bold;
-  }
-  
-  .donation-card p {
-    color: #333; /* Giữ màu chữ dễ đọc */
-    font-weight: bold;
-    font-size: 16px;
-  }
-  
-  .donation-card button {
-    background-color: #e91e63; /* Nền hồng */
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 24px; /* Bo góc nút */
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-top: 10px;
-  }
-  
-  .donation-card button:hover {
-    background-color: #d81b60; /* Màu hồng đậm hơn khi hover */
-  }
-  
+  border: 1px solid #f8bbd0; 
+  background-color: #fff; /* Đưa nền về lại màu trắng */
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Ảnh */
+.donation-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Tên chiến dịch */
+.donation-card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  align-self: flex-start;
+  width: 100%;
+  color: #000;
+}
+
+/* Thanh tiến trình */
+.progress-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: flex-start; /* Căn phải số tiền */
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.collected-amount {
+  font-weight: bold;
+  color: #000;
+  margin-right: 4px; /* Tạo khoảng cách nhỏ với số tiền mục tiêu */
+}
+
+.goal-amount {
+  color: #757575;
+  font-size: 14px;
+}
+
+.progress-container {
+  width: 100%;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #e91e63;
+  transition: width 0.5s ease;
+}
+
+/* Căn chỉnh phần đạt được, phần trăm và nút quyên góp */
+.progress-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Ô "Đạt được" và phần trăm */
+.progress-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #e91e63;
+}
+
+.progress-percentage {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Nút quyên góp */
+.donation-card button {
+  background-color: #e91e63;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}

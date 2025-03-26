@@ -1,23 +1,18 @@
-<footer class="footer">
+<footer class="footer bg-dark text-white">
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
         <h4>Hoàn cảnh</h4>
         <ul>
-          <li>Vì trẻ em</li>
-          <li>Người già neo đơn</li>
-          <li>Người khuyết tật</li>
-          <li>Bệnh hiểm nghèo</li>
-          <li>Cứu trợ động vật</li>
-          <li>Bảo vệ môi trường</li>
+          <li *ngFor="let category of categories">{{ category.description }}</li>
         </ul>
       </div>
       <div class="footer-section">
         <h4>Thông tin liên lạc</h4>
         <ul>
-          <li> Số điện thoại: 0123-456-789</li>
-          <li> Email: </li>
-          <li> Địa chỉ: 123 Đường Từ Thiện, TP. Hồ Chí Minh</li>
+          <li>Số điện thoại: 0123-456-789</li>
+          <li>Email: </li>
+          <li>Địa chỉ: 123 Đường Từ Thiện, TP. Hồ Chí Minh</li>
         </ul>
       </div>
     </div>

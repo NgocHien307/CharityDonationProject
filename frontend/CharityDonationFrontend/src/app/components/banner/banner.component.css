@@ -1,24 +1,29 @@
 .banner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px; /* Khoảng cách giữa nội dung và hình ảnh */
-  padding: 40px;
-  background-color: #fef4f8; /* Nền nhẹ để nổi bật nội dung */
+  justify-content: center;
+  gap: 50px; /* Khoảng cách giữa nội dung và hình ảnh */
+  padding: 100px 30px;
+  background-color: #ffffff;
 }
 
 .banner-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Căn chữ về bên trái */
+  max-width: 600px;
   text-align: left;
-  max-width: 400px;
 }
 
 .banner-title {
-  color: #e91e63; /* Màu hồng */
+  color: #e91e63;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 36px;
+  margin: 0;
+}
+
+.banner-description {
+  font-size: 22px;
+  color: #666;
+  font-style: italic;
+  margin-top: 15px;
 }
 
 .donate-button {
@@ -26,11 +31,11 @@
   color: white;
   font-weight: bold;
   border: none;
-  padding: 12px 24px;
-  border-radius: 24px;
+  padding: 8px 18px; /* Giảm kích thước nút */
+  font-size: 16px; /* Giảm chữ trên nút */
+  border-radius: 25px;
   cursor: pointer;
   transition: background 0.3s ease;
-  margin-top: 15px; /* Tạo khoảng cách giữa chữ và nút */
 }
 
 .donate-button:hover {
@@ -38,7 +43,7 @@
 }
 
 .banner-image {
-  width: 250px; /* Điều chỉnh kích thước ảnh */
+  width: 450px; /* Tăng kích thước ảnh */
   height: auto;
 }
 
@@ -49,16 +54,45 @@
   }
 
   .banner-content {
-    align-items: center;
+    max-width: 90%;
+    text-align: center;
   }
 
   .banner-image {
-    width: 180px;
-  }
-  
-  .carousel-inner img {
-    max-height: 400px; /* Điều chỉnh chiều cao theo ý muốn */
-    width: auto; /* Đảm bảo giữ nguyên tỉ lệ */
-    object-fit: cover;
+    width: 300px; /* Điều chỉnh ảnh trên màn hình nhỏ */
   }
 }
+
+#campaignCarousel {
+  width: 100%; /* Full chiều ngang */
+  max-height: 600px; /* Tăng chiều cao để cao hơn phần giới thiệu */
+  overflow: hidden; /* Tránh ảnh tràn */
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 600px; /* Điều chỉnh chiều cao ảnh */
+  object-fit: cover; /* Giữ ảnh đẹp, không méo */
+  border-radius: 10px; /* Bo góc nhẹ */
+}
+
+@media (max-width: 1024px) {
+  #campaignCarousel {
+    max-height: 500px; /* Giữ cân đối trên tablet */
+  }
+
+  .carousel-inner img {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  #campaignCarousel {
+    max-height: 450px; /* Giảm chiều cao trên màn hình nhỏ */
+  }
+
+  .carousel-inner img {
+    height: 450px;
+  }
+}
+
