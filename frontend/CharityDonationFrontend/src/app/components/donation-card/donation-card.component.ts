@@ -8,6 +8,7 @@ interface Campaign {
   title: string;
   collectedAmount: number;
   goalAmount: number;
+  featuredImageUrl: string;
 }
 
 @Component({

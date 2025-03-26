@@ -8,6 +8,7 @@ interface Campaign {
   title: string;
   collectedAmount: number; // API trả về collectedAmount
   goalAmount: number; // API trả về goalAmount
+  featuredImageUrl: string;
 }
 
 @Component({
@@ -33,14 +34,14 @@ export class DonationListComponent implements OnInit {
   private loadCampaigns() {
     this.campaignService.getCampaigns().subscribe({
       next: (data) => {
-        // Dữ liệu từ API đã có collectedAmount và goalAmount, không cần ánh xạ lại
         this.donations = data.map(c => ({
           id: c.id,
           title: c.title,
-          collectedAmount: c.collectedAmount ?? 0, 
-          goalAmount: c.goalAmount ?? 0
+          collectedAmount: c.collectedAmount ?? 0,
+          goalAmount: c.goalAmount ?? 0,
+          featuredImageUrl: c.featuredImageUrl || 'assets/images/default-donation.jpg' // 🛠 Thêm dòng này
         }));
-
+  
         this.isLoading = false;
       },
       error: (error) => {
@@ -50,6 +51,7 @@ export class DonationListComponent implements OnInit {
       }
     });
   }
+  
 
   
 }
