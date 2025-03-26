@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {}
+    "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {}
   },
   "projects": {
-    "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {
+    "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
+        "projectUniqueName": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
         "projectName": "CharityDonationApi",
-        "projectPath": "D:\\ojt\\test\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
+        "projectPath": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\ojt\\test\\api\\CharityDonationAPI\\obj\\",
+        "outputPath": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -102,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
