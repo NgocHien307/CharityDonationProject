@@ -10,6 +10,9 @@ import {RouterModule} from '@angular/router';
 import { PatnerComponent } from './app/components/patner/patner.component';
 import { HomeComponent } from './app/components/home/home.component';
 import { provideHttpClient } from '@angular/common/http';
+import { SearchResultsComponent } from './app/components/search-results/search-results.component';
+import { routes } from './app/app.routes';
+
 
 
 const router: Routes = [
@@ -19,7 +22,9 @@ const router: Routes = [
   {path: 'footer', component:FooterComponent},
   {path: 'campaign-detail/:id', component: CampaignDetailComponent },
   {path: 'patner-detail', component: PatnerComponent},
+  {path: 'search-results', component: SearchResultsComponent },
 ];
+export const AppRoutingModule = RouterModule.forRoot(routes);
 
 bootstrapApplication(AppComponent, {
   providers: [

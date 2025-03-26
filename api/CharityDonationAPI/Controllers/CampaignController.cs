@@ -105,7 +105,21 @@ namespace CharityDonationApi.Controllers
 			}
 		}
 
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchCampaigns([FromQuery] string title)
+        {
+            var campaigns = await _campaignRepository.SearchCampaigns(title);
+
+            if (!campaigns.Any())
+            {
+                return NotFound($"Không tìm thấy chiến dịch nào với từ khóa: {title}");
+            }
+
+            return Ok(campaigns);
+        }
 
 
-	}
+
+
+    }
 }
