@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { CommonModule } from '@angular/common'; 
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router'; 
 
 interface Campaign {
   id: number;
@@ -11,15 +13,17 @@ interface Campaign {
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule, CommonModule], 
+  imports: [RouterModule, CommonModule, FormsModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  campaigns: any[] = []; 
-  categories: any[] = []; 
+  campaigns: any[] = [];
+  categories: any[] = [];
+  searchQuery: string = '';
+  filteredCampaigns: Campaign[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private router: Router) { }
 
   ngOnInit(): void {
     this.getCampaigns();
@@ -41,5 +45,15 @@ export class HeaderComponent implements OnInit {
         error: (err) => console.error('Error fetching campaigns:', err)
       });
   }
-
+  searchCampaigns(event: Event): void {
+    event.preventDefault(); // Ngăn reload trang
+    
+    if (!this.searchQuery.trim()) {
+      return;
+    }
+  
+    this.router.navigate(['/search-results'], { queryParams: { query: this.searchQuery } });
+  }
+  
 }
+

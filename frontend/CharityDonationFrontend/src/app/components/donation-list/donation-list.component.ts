@@ -22,12 +22,14 @@ export class DonationListComponent implements OnInit {
   isLoading = true;
   errorMessage: string | null = null;
 
+
   constructor(private campaignService: CampaignService) {}
 
   ngOnInit() {
     this.loadCampaigns();
   }
 
+  
   private loadCampaigns() {
     this.campaignService.getCampaigns().subscribe({
       next: (data) => {
@@ -48,4 +50,8 @@ export class DonationListComponent implements OnInit {
       }
     });
   }
+
+  
 }
+
+

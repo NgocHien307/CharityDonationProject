@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\controllers\\campaigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:controllers\\campaigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\repositories\\campaignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:repositories\\campaignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\irepositoties\\icampaignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:irepositoties\\icampaignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\campaigns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\campaigns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\campaigncreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\campaigncreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\campaigns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\campaigns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -101,7 +113,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -133,32 +145,72 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CampaignRepository.cs",
+              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Repositories\\CampaignRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\CampaignRepository.cs",
+              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Repositories\\CampaignRepository.cs",
+              "RelativeToolTip": "Repositories\\CampaignRepository.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAiwIMAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T06:26:39.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICampaignRepository.cs",
+              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\IRepositoties\\ICampaignRepository.cs",
+              "RelativeDocumentMoniker": "IRepositoties\\ICampaignRepository.cs",
+              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\IRepositoties\\ICampaignRepository.cs",
+              "RelativeToolTip": "IRepositoties\\ICampaignRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T06:26:13.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CampaignController.cs",
+              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CampaignController.cs",
+              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignController.cs",
+              "RelativeToolTip": "Controllers\\CampaignController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAswGQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T05:52:58.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABRAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-03-20T08:23:55.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Campaigns.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Campaigns.cs",
               "RelativeDocumentMoniker": "Models\\Campaigns.cs",
               "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Campaigns.cs",
               "RelativeToolTip": "Models\\Campaigns.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwBsAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAcwCEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.769Z"
+              "WhenOpened": "2025-03-20T04:22:50.769Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "CampaignsController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignsController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignsController.cs",
@@ -168,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Users.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Users.cs",
               "RelativeDocumentMoniker": "Models\\Users.cs",
@@ -180,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\UsersController.cs",
@@ -190,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Category.cs",
               "RelativeDocumentMoniker": "Models\\Category.cs",
@@ -202,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "CampaignCreateDto.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\CampaignCreateDto.cs",
               "RelativeDocumentMoniker": "Models\\CampaignCreateDto.cs",
@@ -214,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Transaction.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Transaction.cs",
               "RelativeDocumentMoniker": "Models\\Transaction.cs",
@@ -226,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Role.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Role.cs",
               "RelativeDocumentMoniker": "Models\\Role.cs",
@@ -238,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "QuickDonation.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\QuickDonation.cs",
               "RelativeDocumentMoniker": "Models\\QuickDonation.cs",
@@ -250,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Feedback.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Feedback.cs",
               "RelativeDocumentMoniker": "Models\\Feedback.cs",
@@ -262,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Donation.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Donation.cs",
               "RelativeDocumentMoniker": "Models\\Donation.cs",
@@ -274,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "CampaignUpdatesController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignUpdatesController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignUpdatesController.cs",
@@ -284,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "CampaignSubscription.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\CampaignSubscription.cs",
               "RelativeDocumentMoniker": "Models\\CampaignSubscription.cs",
@@ -296,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "CampaignUpdate.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\CampaignUpdate.cs",
               "RelativeDocumentMoniker": "Models\\CampaignUpdate.cs",
@@ -308,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Creators.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Creators.cs",
               "RelativeDocumentMoniker": "Models\\Creators.cs",
@@ -320,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CategoriesController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CategoriesController.cs",
@@ -330,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "CreatorsController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CreatorsController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CreatorsController.cs",
@@ -340,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "QuickDonationsController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\QuickDonationsController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\QuickDonationsController.cs",
@@ -350,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "TransactionsController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\TransactionsController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\TransactionsController.cs",
@@ -360,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "FeedbacksController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\FeedbacksController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\FeedbacksController.cs",
@@ -370,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "DonationsController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\DonationsController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\DonationsController.cs",
@@ -380,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
@@ -392,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -404,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "CharityDonationApi",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
               "RelativeDocumentMoniker": "CharityDonationApi.csproj",
