@@ -49,10 +49,13 @@ body {
   padding: 8px 15px;
 }
 
+
 .btn-outline-success:hover {
   background-color: #e91e63 !important;
   color: white !important;
 }
+
+
 
 .navbar-brand {
   color: black !important;
@@ -83,3 +86,27 @@ body {
   color: #e91e63 !important;
 }
 
+.form-control {
+  border: 2px solid #e91e63 !important;
+  border-radius: 50px !important;
+  background-color: white !important;
+  padding: 8px 15px;
+}
+
+.btn-outline-primary,
+.btn-primary,
+.btn-success {
+  border: 2px solid #e91e63 !important;
+  color: black !important;
+  background-color: transparent !important;
+  border-radius: 50px !important;
+  padding: 8px 15px;
+  transition: 0.3s;
+}
+
+.btn-outline-primary:hover,
+.btn-primary:hover,
+.btn-success:hover {
+  background-color: #e91e63 !important;
+  color: black !important;
+}

@@ -3,6 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
+interface Campaign {
+  id: number;
+  title: string;
+  collectedAmount: number;
+  goalAmount: number;
+}
+
 @Component({
   selector: 'app-donation-card',
   standalone: true,
@@ -11,11 +18,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./donation-card.component.css']
 })
 export class DonationCardComponent {
-  @Input() data: { title: string; amount: number; goal?: number } | undefined;
+  @Input() data: Campaign | undefined;
 
   get formattedGoal(): string {
     if (!this.data) return '';
-    const goal = this.data.goal ?? 0; 
-    return `${this.data.amount.toLocaleString()} / ${goal.toLocaleString()} VNĐ`;
+    return `${this.data.collectedAmount.toLocaleString()} / ${this.data.goalAmount.toLocaleString()} VNĐ`;
   }
 }

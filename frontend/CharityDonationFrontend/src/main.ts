@@ -9,6 +9,7 @@ import { CampaignDetailComponent } from './app/components/campaign-detail/campai
 import {RouterModule} from '@angular/router';
 import { PatnerComponent } from './app/components/patner/patner.component';
 import { HomeComponent } from './app/components/home/home.component';
+import { provideHttpClient } from '@angular/common/http';
 
 
 const router: Routes = [
@@ -16,13 +17,14 @@ const router: Routes = [
   {path: '', component:   HomeComponent},
   {path: 'header', component:HeaderComponent},
   {path: 'footer', component:FooterComponent},
-  {path: 'campaign-detail', component: CampaignDetailComponent },
+  {path: 'campaign-detail/:id', component: CampaignDetailComponent },
   {path: 'patner-detail', component: PatnerComponent},
 ];
 
 bootstrapApplication(AppComponent, {
   providers: [
     ...appConfig.providers,
-    provideRouter(router) 
+    provideRouter(router), 
+    provideHttpClient()
   ]
 }).catch((err) => console.error(err));
