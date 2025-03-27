@@ -100,11 +100,7 @@ builder.Services.AddCors(options =>
 //Build app
 var app = builder.Build();
 
-//var passwordHasher = new PasswordHasher<ApplicationUser>();
-//string password = "Admin@123"; // Đổi mật khẩu nếu cần
-//string hashedPassword = passwordHasher.HashPassword(null, password);
 
-//Console.WriteLine($"PasswordHash: {hashedPassword}");
 
 if (app.Environment.IsDevelopment())
 {

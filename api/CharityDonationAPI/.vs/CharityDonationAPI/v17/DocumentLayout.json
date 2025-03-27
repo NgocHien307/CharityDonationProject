@@ -3,27 +3,27 @@
   "WorkspaceRootPath": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\services\\qrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:services\\qrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\repositories\\quickdonationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:repositories\\quickdonationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\controllers\\quickdonationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:controllers\\quickdonationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\services\\qrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:services\\qrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\repositories\\quickdonationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:repositories\\quickdonationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\controllers\\quickdonationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:controllers\\quickdonationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "QuickDonationController.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\QuickDonationController.cs",
               "RelativeDocumentMoniker": "Controllers\\QuickDonationController.cs",
@@ -74,12 +74,11 @@
               "RelativeToolTip": "Controllers\\QuickDonationController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T04:16:50.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T04:16:50.968Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "QuickDonationRepository.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Repositories\\QuickDonationRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\QuickDonationRepository.cs",
@@ -87,18 +86,17 @@
               "RelativeToolTip": "Repositories\\QuickDonationRepository.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAUwCYAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T04:16:38.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T04:16:38.128Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAiwEoAAAA+AAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAiwHEAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T03:44:24.453Z",
               "EditorCaption": ""
@@ -113,12 +111,11 @@
               "RelativeToolTip": "Models\\Role.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T03:35:49.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T03:35:49.643Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Users.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Users.cs",
               "RelativeDocumentMoniker": "Models\\Users.cs",
@@ -126,12 +123,11 @@
               "RelativeToolTip": "Models\\Users.cs",
               "ViewState": "AQIAAC0AAAAAAAAAAAAuwDwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T03:35:44.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T03:35:44.432Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "QRService.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Services\\QRService.cs",
               "RelativeDocumentMoniker": "Services\\QRService.cs",
