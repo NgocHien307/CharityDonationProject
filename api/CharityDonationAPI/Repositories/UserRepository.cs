@@ -93,7 +93,13 @@ namespace CharityDonationApi.Repositories
 			_context.Users.Remove(user);
 			await _context.SaveChangesAsync();
 		}
+        public async Task<Users> GetAdminAccount()
+        {
+            return await _context.Users
+                .AsNoTracking()
+                .FirstOrDefaultAsync(u => u.Role.Name == "Admin");
+        }
 
 
-	}
+    }
 }

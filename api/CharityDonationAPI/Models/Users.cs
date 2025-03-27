@@ -51,5 +51,18 @@ namespace CharityDonationApi.Models
 
 		// Liên kết với Creator nếu User là người tạo chiến dịch
 		public Creators Creator { get; set; }
-	}
+
+        // Thông tin tài khoản ngân hàng
+        [MaxLength(50)]
+        public string BankName { get; set; } // Ví dụ: Vietcombank
+
+        [MaxLength(50)]
+        public string BankAccountNumber { get; set; } // Số tài khoản
+
+        [MaxLength(100)]
+        public string BankAccountName { get; set; } // Tên chủ tài khoản
+
+        [MaxLength(10)]
+        public string BankCode { get; set; }
+    }
 }

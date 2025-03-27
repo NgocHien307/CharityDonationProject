@@ -10,5 +10,7 @@ namespace CharityDonationApi.IRepositoties
         Task AddUser(UserVm userVm);
         Task UpdateUser(int id, UserVm userVm);
         Task DeleteUser(int id);
+
+        Task<Users> GetAdminAccount();
     }
 }

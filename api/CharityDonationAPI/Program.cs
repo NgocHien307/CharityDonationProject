@@ -2,6 +2,7 @@
 using CharityDonationApi.IRepositoties;
 using CharityDonationApi.Models;
 using CharityDonationApi.Repositories;
+using CharityDonationApi.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -77,6 +78,10 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IDonationRepository, DonationRepository>();
 builder.Services.AddScoped<IFeedbackRepository, FeedBackRepository>();
 builder.Services.AddScoped<ICampaignSubscriptionRepository, CampaignSubscriptionRepository>();
+builder.Services.AddScoped<IQuickDonationRepository, QuickDonationRepository>();
+
+
+builder.Services.AddSingleton<QRService>();
 
 
 
@@ -95,6 +100,12 @@ builder.Services.AddCors(options =>
 //Build app
 var app = builder.Build();
 
+//var passwordHasher = new PasswordHasher<ApplicationUser>();
+//string password = "Admin@123"; // Đổi mật khẩu nếu cần
+//string hashedPassword = passwordHasher.HashPassword(null, password);
+
+//Console.WriteLine($"PasswordHash: {hashedPassword}");
+
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
@@ -104,7 +115,7 @@ app.UseCors(MyAllowSpecificOrigins);
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseStaticFiles();
 app.MapControllers();
 
 app.Run();

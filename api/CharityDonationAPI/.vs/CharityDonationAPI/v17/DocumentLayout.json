@@ -3,107 +3,28 @@
   "WorkspaceRootPath": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\repositories\\campaignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:repositories\\campaignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\services\\qrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:services\\qrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\controllers\\campaigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:controllers\\campaigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\repositories\\quickdonationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:repositories\\quickdonationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\campaigns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\campaigns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\controllers\\quickdonationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:controllers\\quickdonationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\campaigncreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\campaigncreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\irepositoties\\icampaignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:irepositoties\\icampaignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\quickdonation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\quickdonation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\donation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\donation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\creators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\creators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\campaignupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\campaignupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\models\\campaignsubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\campaignsubscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\charitydonationapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:charitydonationapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\admin\\onedrive\\desktop\\charitydonationproject\\api\\charitydonationapi\\controllers\\campaignscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\admin\\onedrive\\desktop\\charitydonationproject\\api\\charitydonationapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\admin\\onedrive\\desktop\\charitydonationproject\\api\\charitydonationapi\\controllers\\campaignupdatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\admin\\onedrive\\desktop\\charitydonationproject\\api\\charitydonationapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\admin\\onedrive\\desktop\\charitydonationproject\\api\\charitydonationapi\\controllers\\creatorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\admin\\onedrive\\desktop\\charitydonationproject\\api\\charitydonationapi\\controllers\\quickdonationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\admin\\onedrive\\desktop\\charitydonationproject\\api\\charitydonationapi\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\admin\\onedrive\\desktop\\charitydonationproject\\api\\charitydonationapi\\controllers\\feedbackscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\admin\\onedrive\\desktop\\charitydonationproject\\api\\charitydonationapi\\controllers\\donationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|d:\\documents\\fptu\\ky6\\mock project\\charityweb\\charitydonationproject\\api\\charitydonationapi\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -113,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -145,324 +66,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CampaignRepository.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Repositories\\CampaignRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\CampaignRepository.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Repositories\\CampaignRepository.cs",
-              "RelativeToolTip": "Repositories\\CampaignRepository.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAwwIUAAAAmAAAA",
+              "DocumentIndex": 2,
+              "Title": "QuickDonationController.cs",
+              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\QuickDonationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\QuickDonationController.cs",
+              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\QuickDonationController.cs",
+              "RelativeToolTip": "Controllers\\QuickDonationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T06:26:39.336Z",
+              "WhenOpened": "2025-03-27T04:16:50.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuickDonationRepository.cs",
+              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Repositories\\QuickDonationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\QuickDonationRepository.cs",
+              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Repositories\\QuickDonationRepository.cs",
+              "RelativeToolTip": "Repositories\\QuickDonationRepository.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAUwCYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T04:16:38.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ICampaignRepository.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\IRepositoties\\ICampaignRepository.cs",
-              "RelativeDocumentMoniker": "IRepositoties\\ICampaignRepository.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\IRepositoties\\ICampaignRepository.cs",
-              "RelativeToolTip": "IRepositoties\\ICampaignRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T06:26:13.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CampaignController.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CampaignController.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignController.cs",
-              "RelativeToolTip": "Controllers\\CampaignController.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAADwv2cAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T05:52:58.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-20T08:23:55.434Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Campaigns.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Campaigns.cs",
-              "RelativeDocumentMoniker": "Models\\Campaigns.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Campaigns.cs",
-              "RelativeToolTip": "Models\\Campaigns.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAcwDUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.769Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CampaignsController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignsController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignsController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAwEkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Users.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Users.cs",
-              "RelativeDocumentMoniker": "Models\\Users.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Users.cs",
-              "RelativeToolTip": "Models\\Users.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAIwCcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.765Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAmwFAAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.654Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.76Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CampaignCreateDto.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\CampaignCreateDto.cs",
-              "RelativeDocumentMoniker": "Models\\CampaignCreateDto.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\CampaignCreateDto.cs",
-              "RelativeToolTip": "Models\\CampaignCreateDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T07:47:24.591Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Transaction.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Transaction.cs",
-              "RelativeDocumentMoniker": "Models\\Transaction.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Transaction.cs",
-              "RelativeToolTip": "Models\\Transaction.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.764Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Role.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "Models\\Role.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Role.cs",
-              "RelativeToolTip": "Models\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.656Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "QuickDonation.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\QuickDonation.cs",
-              "RelativeDocumentMoniker": "Models\\QuickDonation.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\QuickDonation.cs",
-              "RelativeToolTip": "Models\\QuickDonation.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA4wBYAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.762Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Feedback.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Feedback.cs",
-              "RelativeDocumentMoniker": "Models\\Feedback.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Feedback.cs",
-              "RelativeToolTip": "Models\\Feedback.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAiwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.761Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Donation.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Donation.cs",
-              "RelativeDocumentMoniker": "Models\\Donation.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Donation.cs",
-              "RelativeToolTip": "Models\\Donation.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAcwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.757Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CampaignUpdatesController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignUpdatesController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CampaignUpdatesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.754Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CampaignSubscription.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\CampaignSubscription.cs",
-              "RelativeDocumentMoniker": "Models\\CampaignSubscription.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\CampaignSubscription.cs",
-              "RelativeToolTip": "Models\\CampaignSubscription.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAcwBEAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.768Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CampaignUpdate.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\CampaignUpdate.cs",
-              "RelativeDocumentMoniker": "Models\\CampaignUpdate.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\CampaignUpdate.cs",
-              "RelativeToolTip": "Models\\CampaignUpdate.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAiwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.766Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Creators.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Creators.cs",
-              "RelativeDocumentMoniker": "Models\\Creators.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Creators.cs",
-              "RelativeToolTip": "Models\\Creators.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAcwDIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCwAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.556Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "CreatorsController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CreatorsController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\CreatorsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.753Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "QuickDonationsController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\QuickDonationsController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\QuickDonationsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.752Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "TransactionsController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\TransactionsController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\TransactionsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "FeedbacksController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\FeedbacksController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\FeedbacksController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.747Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "DonationsController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\DonationsController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\DonationsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.77Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAABAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAiwEoAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T04:22:50.771Z"
+              "WhenOpened": "2025-03-27T03:44:24.453Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CharityDonationApi",
-              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
-              "RelativeDocumentMoniker": "CharityDonationApi.csproj",
-              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\CharityDonationApi.csproj",
-              "RelativeToolTip": "CharityDonationApi.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-20T04:22:50.774Z"
+              "DocumentIndex": 5,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "Models\\Role.cs",
+              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Role.cs",
+              "RelativeToolTip": "Models\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T03:35:49.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Users.cs",
+              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "Models\\Users.cs",
+              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Models\\Users.cs",
+              "RelativeToolTip": "Models\\Users.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAuwDwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T03:35:44.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QRService.cs",
+              "DocumentMoniker": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Services\\QRService.cs",
+              "RelativeDocumentMoniker": "Services\\QRService.cs",
+              "ToolTip": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\Services\\QRService.cs",
+              "RelativeToolTip": "Services\\QRService.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAiwCcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T03:25:29.34Z",
+              "EditorCaption": ""
             }
           ]
         },

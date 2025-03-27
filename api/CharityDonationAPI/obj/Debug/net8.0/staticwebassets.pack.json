@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\wwwroot\\qrcodes\\08a03e34-5818-47c3-ae23-9fe937106e55.png",
+      "PackagePath": "staticwebassets\\qrcodes\\08a03e34-5818-47c3-ae23-9fe937106e55.png"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\wwwroot\\qrcodes\\1885627f-e9d4-4014-96c6-4cfb5d39b5c9.png",
+      "PackagePath": "staticwebassets\\qrcodes\\1885627f-e9d4-4014-96c6-4cfb5d39b5c9.png"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\wwwroot\\qrcodes\\32d68dba-5d2b-45d9-8ffe-69fe7189a689.png",
+      "PackagePath": "staticwebassets\\qrcodes\\32d68dba-5d2b-45d9-8ffe-69fe7189a689.png"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\wwwroot\\qrcodes\\4312d481-9aee-49ad-94de-a24855f41ec6.png",
+      "PackagePath": "staticwebassets\\qrcodes\\4312d481-9aee-49ad-94de-a24855f41ec6.png"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\wwwroot\\qrcodes\\444d68d4-c8a7-4a62-bffd-0edb92892270.png",
+      "PackagePath": "staticwebassets\\qrcodes\\444d68d4-c8a7-4a62-bffd-0edb92892270.png"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\wwwroot\\qrcodes\\4d1208e9-292b-4b90-84a9-c2acfe6f9773.png",
+      "PackagePath": "staticwebassets\\qrcodes\\4d1208e9-292b-4b90-84a9-c2acfe6f9773.png"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\wwwroot\\qrcodes\\b6423f46-25e7-403e-b2fd-646e115bc13a.png",
+      "PackagePath": "staticwebassets\\qrcodes\\b6423f46-25e7-403e-b2fd-646e115bc13a.png"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\wwwroot\\qrcodes\\cf664966-7f2a-4a65-a5a3-36ecda115421.png",
+      "PackagePath": "staticwebassets\\qrcodes\\cf664966-7f2a-4a65-a5a3-36ecda115421.png"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\wwwroot\\qrcodes\\e01e9de5-6ae9-4143-a04b-f21bc543bb88.png",
+      "PackagePath": "staticwebassets\\qrcodes\\e01e9de5-6ae9-4143-a04b-f21bc543bb88.png"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\wwwroot\\qrcodes\\f9120ef8-afea-47b2-92c2-cf69a763e34d.png",
+      "PackagePath": "staticwebassets\\qrcodes\\f9120ef8-afea-47b2-92c2-cf69a763e34d.png"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\CharityWeb\\CharityDonationProject\\api\\CharityDonationAPI\\wwwroot\\qrcodes\\ffdc7c2e-5fd1-407f-b226-f0e17f9ed04c.png",
+      "PackagePath": "staticwebassets\\qrcodes\\ffdc7c2e-5fd1-407f-b226-f0e17f9ed04c.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CharityDonationApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CharityDonationApi.props",
+      "PackagePath": "build\\CharityDonationApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CharityDonationApi.props",
+      "PackagePath": "buildMultiTargeting\\CharityDonationApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CharityDonationApi.props",
+      "PackagePath": "buildTransitive\\CharityDonationApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

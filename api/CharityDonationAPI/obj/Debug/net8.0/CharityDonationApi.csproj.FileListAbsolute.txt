@@ -561,6 +561,7 @@ D:\Documents\FPTU\KY6\Mock Project\CharityWeb\CharityDonationProject\api\Charity
 D:\Documents\FPTU\KY6\Mock Project\CharityWeb\CharityDonationProject\api\CharityDonationAPI\bin\Debug\net8.0\NuGet.ProjectModel.dll
 D:\Documents\FPTU\KY6\Mock Project\CharityWeb\CharityDonationProject\api\CharityDonationAPI\bin\Debug\net8.0\NuGet.Protocol.dll
 D:\Documents\FPTU\KY6\Mock Project\CharityWeb\CharityDonationProject\api\CharityDonationAPI\bin\Debug\net8.0\NuGet.Versioning.dll
+D:\Documents\FPTU\KY6\Mock Project\CharityWeb\CharityDonationProject\api\CharityDonationAPI\bin\Debug\net8.0\QRCoder.dll
 D:\Documents\FPTU\KY6\Mock Project\CharityWeb\CharityDonationProject\api\CharityDonationAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Documents\FPTU\KY6\Mock Project\CharityWeb\CharityDonationProject\api\CharityDonationAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Documents\FPTU\KY6\Mock Project\CharityWeb\CharityDonationProject\api\CharityDonationAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
