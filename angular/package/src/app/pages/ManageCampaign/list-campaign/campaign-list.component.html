@@ -1,0 +1,65 @@
+<mat-card class="cardWithShadow theme-card">
+    <mat-card-header>
+      <mat-card-title class="m-b-0">
+        Danh Sách Chiến Dịch
+      </mat-card-title>
+      <button
+        mat-flat-button
+        color="primary"
+        class="m-l-auto"
+        (click)="onCreateCampaign()"
+      >
+        Tạo Chiến Dịch Mới
+      </button>
+    </mat-card-header>
+  
+    <mat-card-content class="b-t-1" *ngIf="!isLoading">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tên Chiến Dịch</th>
+            <th>Mục Tiêu (VNĐ)</th>
+            <th>Trạng Thái</th>
+            <th>Hành Động</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of campaigns">
+            <td>{{ c.Id }}</td>
+            <td>{{ c.Title }}</td>
+            <td>{{ c.GoalAmount | number }}</td>
+            <td>{{ c.Status }}</td>
+            <td>
+              <button
+                mat-button
+                color="primary"
+                (click)="onEditCampaign(c.Id)"
+              >
+                Sửa
+              </button>
+              <button
+                mat-button
+                color="warn"
+                (click)="onDeleteCampaign(c.Id)"
+              >
+                Xoá
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+  
+  <ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="medium"
+    color="#fff"
+    type="ball-beat"
+    [fullScreen]="false"
+    *ngIf="isLoading"
+  >
+    Loading...
+  </ngx-spinner>
+  

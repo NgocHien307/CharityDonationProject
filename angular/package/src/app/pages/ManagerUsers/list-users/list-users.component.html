@@ -1,0 +1,99 @@
+
+<mat-form-field  appearance="outline" class="search-box">
+  <mat-label>Tìm kiếm...</mat-label>
+  <input matInput placeholder="Nhập email or số điện thoại" (keyup)="applyFilter($event)" />
+</mat-form-field>
+<mat-card class="cardWithShadow">
+  <mat-card-content>
+    <h2 style="margin-bottom:20px">Tài khoản nhân viên</h2>
+    <button mat-flat-button class="bg-success text-white" (click)="onClickAdd()">
+      <mat-icon>add</mat-icon>
+      <span>Thêm mới</span>
+    </button>
+    <!-- <div class="search-bar" style="margin: 20px 0;">
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Tìm kiếm theo email hoặc số điện thoại</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Tìm kiếm..." />
+      </mat-form-field>
+    </div> -->
+
+    <div class="table-responsive">
+      <table mat-table [dataSource]="dataSource1" class="w-100">
+        <!-- Position Column -->
+       <ng-container matColumnDef="assigned">
+          <th mat-header-cell *matHeaderCellDef class="f-w-600 f-s-14 p-l-0">
+            Email
+          </th>
+          <td mat-cell *matCellDef="let element" class="p-l-0">
+            <span>
+              {{ element.Email }}
+            </span>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="fullname">
+          <th mat-header-cell *matHeaderCellDef class="f-w-600 f-s-14 p-l-0"> Họ và tên </th>
+          <td mat-cell *matCellDef="let element" class="p-l-0">
+            <span>{{ element.FullName }}</span>
+          </td>
+        </ng-container>
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef class="f-w-600 f-s-14">
+            Số điện thoại
+          </th>
+          <td mat-cell *matCellDef="let element" class="p-l-0">
+            <span>
+              {{ element.PhoneNumber }}
+            </span>
+          </td>
+        </ng-container>
+
+
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="priority">
+          <th mat-header-cell *matHeaderCellDef class="f-w-600 f-s-14">
+            Trạng thái
+          </th>
+          <td mat-cell *matCellDef="let element">
+            @if(element.Status == 1) {
+            <span class="bg-light-warning text-success rounded f-w-600 p-6 p-y-4 f-s-12">
+              Hoạt động
+            </span>
+            } @if(element.Status == 0) {
+            <span class="bg-light-error text-error rounded f-w-600 p-6 p-y-4 f-s-12">
+            Ngưng hoạt động
+            </span>
+            }
+          </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="budget">
+          <th mat-header-cell *matHeaderCellDef class="f-w-600 f-s-14">Hành động</th>
+          <td mat-cell *matCellDef="let element">
+              <button mat-flat-button color="primary" (click)="onDetailPage(element.UserId)">
+                <mat-icon>edit</mat-icon>
+                <span>Sửa</span>
+              </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns1"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+    </div>
+  </mat-card-content>
+</mat-card>
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-beat"
+  [fullScreen]="true"
+  >Loading...</ngx-spinner
+>

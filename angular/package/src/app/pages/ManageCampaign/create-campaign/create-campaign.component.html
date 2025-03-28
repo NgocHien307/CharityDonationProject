@@ -1,0 +1,109 @@
+<mat-card class="cardWithShadow theme-card">
+    <mat-card-header>
+      <mat-card-title class="m-b-0">
+        Tạo Chiến Dịch
+      </mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content class="b-t-1">
+      <form [formGroup]="campaignForm" class="m-t-12">
+        <div class="row">
+          <!-- Cột 1 -->
+          <div class="col-lg-6 col-md-6">
+            <mat-label class="f-w-600 m-b-8 d-block">Tên chiến dịch</mat-label>
+            <mat-form-field appearance="outline" class="w-100" color="primary">
+              <input
+                matInput
+                formControlName="title"
+                placeholder="Nhập tên chiến dịch"
+              />
+            </mat-form-field>
+          </div>
+          <!-- Cột 2 -->
+          <div class="col-lg-6 col-md-6">
+            <mat-label class="f-w-600 m-b-8 d-block">Tên Quỹ</mat-label>
+            <mat-form-field appearance="outline" class="w-100" color="primary">
+              <input
+                matInput
+                formControlName="creatorName"
+                placeholder="VD: Quỹ từ thiện ABC"
+              />
+            </mat-form-field>
+          </div>
+  
+          <div class="col-lg-6 col-md-6">
+            <mat-label class="f-w-600 m-b-8 d-block">Mục tiêu (VNĐ)</mat-label>
+            <mat-form-field appearance="outline" class="w-100" color="primary">
+              <input
+                matInput
+                type="number"
+                formControlName="goalAmount"
+                placeholder="VD: 50000000"
+              />
+            </mat-form-field>
+          </div>
+  
+          <div class="col-lg-6 col-md-6">
+            <mat-label class="f-w-600 m-b-8 d-block">Email Liên Hệ</mat-label>
+            <mat-form-field appearance="outline" class="w-100" color="primary">
+              <input
+                matInput
+                type="email"
+                formControlName="contactEmail"
+                placeholder="Người chịu trách nhiệm"
+              />
+            </mat-form-field>
+          </div>
+  
+          <div class="col-lg-6 col-md-6">
+            <mat-label class="f-w-600 m-b-8 d-block">Đường dẫn ảnh</mat-label>
+            <mat-form-field appearance="outline" class="w-100" color="primary">
+              <input
+                matInput
+                formControlName="featuredImageUrl"
+                placeholder="Nhập URL ảnh"
+              />
+            </mat-form-field>
+          </div>
+  
+          <div class="col-lg-6 col-md-6">
+            <mat-label class="f-w-600 m-b-8 d-block">Mô tả chiến dịch</mat-label>
+            <mat-form-field appearance="outline" class="w-100" color="primary">
+              <textarea
+                matInput
+                rows="3"
+                formControlName="description"
+                placeholder="Mục tiêu, Lý do gây quỹ..."
+              ></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+  
+        <div class="m-t-12">
+          <button
+            mat-flat-button
+            color="primary"
+            class="m-r-8"
+            (click)="onSubmit()"
+          >
+            Tạo
+          </button>
+          <button mat-stroked-button color="warn" (click)="onCancel()">
+            Hủy
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
+  <ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="medium"
+    color="#fff"
+    type="ball-beat"
+    [fullScreen]="false"
+    *ngIf="isLoading"
+  >
+    Loading...
+  </ngx-spinner>
+  

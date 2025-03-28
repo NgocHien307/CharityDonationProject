@@ -1,0 +1,6 @@
+::ng-deep .mat-dialog-container {
+  max-width: 800vw !important; /* 80% chiều rộng của viewport */
+  max-height: 900vh !important; /* 90% chiều cao của viewport */
+  padding: 20px; /* Tăng padding để dialog không bị chật */
+  border-radius: 8px; /* Bo góc nhẹ cho đẹp */
+}
