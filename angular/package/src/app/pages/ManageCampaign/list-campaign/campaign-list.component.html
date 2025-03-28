@@ -1,65 +1,101 @@
-<mat-card class="cardWithShadow theme-card">
-    <mat-card-header>
-      <mat-card-title class="m-b-0">
-        Danh Sách Chiến Dịch
-      </mat-card-title>
-      <button
-        mat-flat-button
-        color="primary"
-        class="m-l-auto"
-        (click)="onCreateCampaign()"
-      >
-        Tạo Chiến Dịch Mới
-      </button>
-    </mat-card-header>
-  
-    <mat-card-content class="b-t-1" *ngIf="!isLoading">
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Tên Chiến Dịch</th>
-            <th>Mục Tiêu (VNĐ)</th>
-            <th>Trạng Thái</th>
-            <th>Hành Động</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let c of campaigns">
-            <td>{{ c.Id }}</td>
-            <td>{{ c.Title }}</td>
-            <td>{{ c.GoalAmount | number }}</td>
-            <td>{{ c.Status }}</td>
-            <td>
-              <button
-                mat-button
-                color="primary"
-                (click)="onEditCampaign(c.Id)"
-              >
-                Sửa
-              </button>
-              <button
-                mat-button
-                color="warn"
-                (click)="onDeleteCampaign(c.Id)"
-              >
-                Xoá
-              </button>
-            </td>
-          </tr>
-        </tbody>
+<!-- Thanh tìm kiếm -->
+<mat-form-field appearance="outline" class="search-box">
+  <mat-label>Tìm kiếm...</mat-label>
+  <input
+    matInput
+    placeholder="Nhập tên chiến dịch"
+    (keyup)="applyFilter($event)"
+  />
+</mat-form-field>
+
+<mat-card class="cardWithShadow">
+  <mat-card-content>
+    <h2 style="margin-bottom:20px">Danh sách chiến dịch</h2>
+    <button
+      mat-flat-button
+      class="bg-success text-white"
+      (click)="onClickAdd()"
+    >
+      <mat-icon>add</mat-icon>
+      <span>Thêm mới</span>
+    </button>
+
+    <div class="table-responsive" style="margin-top: 20px;">
+      <table mat-table [dataSource]="dataSource1" class="w-100">
+
+        <!-- Title Column -->
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef class="f-w-600 f-s-14 p-l-0">
+            Tên Chiến Dịch
+          </th>
+          <td mat-cell *matCellDef="let element" class="p-l-0">
+            {{ element.Title }}
+          </td>
+        </ng-container>
+
+        <!-- GoalAmount Column -->
+        <ng-container matColumnDef="goalAmount">
+          <th mat-header-cell *matHeaderCellDef class="f-w-600 f-s-14">Mục Tiêu</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.GoalAmount | number }} VNĐ
+          </td>
+        </ng-container>
+
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef class="f-w-600 f-s-14">
+            Trạng Thái
+          </th>
+          <td mat-cell *matCellDef="let element">
+            <span *ngIf="element.Status === 'Active'" class="bg-light-warning text-success rounded f-w-600 p-6 p-y-4 f-s-12">
+              Hoạt động
+            </span>
+            <span *ngIf="element.Status === 'Pending'" class="bg-light-error text-error rounded f-w-600 p-6 p-y-4 f-s-12">
+              Chờ duyệt
+            </span>
+            <span *ngIf="element.Status === 'Completed'" class="bg-light-info text-info rounded f-w-600 p-6 p-y-4 f-s-12">
+              Đã hoàn thành
+            </span>
+            <span *ngIf="element.Status === 'Canceled'" class="bg-light-error text-error rounded f-w-600 p-6 p-y-4 f-s-12">
+              Đã huỷ
+            </span>
+          </td>
+        </ng-container>
+
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef class="f-w-600 f-s-14">
+            Hành Động
+          </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-flat-button color="primary" (click)="onDetailPage(element.Id)">
+              <mat-icon>edit</mat-icon>
+              <span>Sửa</span>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns1"></tr>
       </table>
-    </mat-card-content>
-  </mat-card>
-  
-  <ngx-spinner
-    bdColor="rgba(51,51,51,0.8)"
-    size="medium"
-    color="#fff"
-    type="ball-beat"
-    [fullScreen]="false"
-    *ngIf="isLoading"
-  >
-    Loading...
-  </ngx-spinner>
-  
+
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Select page of periodic elements"
+      >
+      </mat-paginator>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<!-- Spinner -->
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-beat"
+  [fullScreen]="true"
+>
+  Loading...
+</ngx-spinner>

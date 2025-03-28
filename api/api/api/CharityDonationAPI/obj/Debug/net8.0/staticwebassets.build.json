@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Okb1zAdJj0Nsaw0sSvMEXtv44ymOjBwjLY8Y3K9ybAI=",
+  "Hash": "53Fz/oEAA6OhZSWW3/Dcg8/0WWP0D6+yh4WpuCKEni0=",
   "Source": "CharityDonationApi",
   "BasePath": "_content/CharityDonationApi",
   "Mode": "Default",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
+      "Identity": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
       "SourceId": "CharityDonationApi",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/CharityDonationApi",
       "RelativePath": "CharityDonationApi#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -69,7 +69,7 @@
       "Integrity": "yJzMRujk3CbSbBe5hogvoEpcGbz0ThnTl058XcI1svI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css"
+      "OriginalItemSpec": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css"
     }
   ],
   "Endpoints": [
@@ -149,7 +149,7 @@
     },
     {
       "Route": "CharityDonationApi.02jfxhbwsz.styles.css",
-      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -174,7 +174,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 07:45:36 GMT"
+          "Value": "Fri, 28 Mar 2025 02:52:18 GMT"
         },
         {
           "Name": "Link",
@@ -198,7 +198,7 @@
     },
     {
       "Route": "CharityDonationApi.styles.css",
-      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -223,7 +223,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 07:45:36 GMT"
+          "Value": "Fri, 28 Mar 2025 02:52:18 GMT"
         },
         {
           "Name": "Link",

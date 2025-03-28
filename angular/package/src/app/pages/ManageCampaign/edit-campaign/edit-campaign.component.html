@@ -1,0 +1,136 @@
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Thông tin Chiến Dịch</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="b-t-1">
+    <form>
+      <div class="row">
+        <!-- Title -->
+        <div class="col-lg-6">
+          <mat-label class="f-w-600 m-b-8 d-block">Tên Chiến Dịch</mat-label>
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input
+              [value]="campaign.Title"
+              matInput
+              placeholder="Tên Chiến Dịch"
+              (input)="onInputChange('Title', $event)"
+            />
+          </mat-form-field>
+        </div>
+
+        <!-- GoalAmount -->
+        <div class="col-lg-6">
+          <mat-label class="f-w-600 m-b-8 d-block">Mục Tiêu</mat-label>
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input
+              [value]="campaign.GoalAmount"
+              matInput
+              type="number"
+              placeholder="Số tiền cần"
+              (input)="onInputChange('GoalAmount', $event)"
+            />
+          </mat-form-field>
+        </div>
+
+        <!-- Description -->
+        <div class="col-lg-6">
+          <mat-label class="f-w-600 m-b-8 d-block">Mô Tả</mat-label>
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <textarea
+              matInput
+              rows="3"
+              placeholder="Mô tả chiến dịch"
+              (input)="onInputChange('Description', $event)"
+            >{{ campaign.Description }}</textarea>
+          </mat-form-field>
+        </div>
+
+        <!-- FeaturedImageUrl -->
+        <div class="col-lg-6">
+          <mat-label class="f-w-600 m-b-8 d-block">Ảnh Đại Diện</mat-label>
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input
+              [value]="campaign.FeaturedImageUrl"
+              matInput
+              placeholder="URL Ảnh"
+              (input)="onInputChange('FeaturedImageUrl', $event)"
+            />
+          </mat-form-field>
+        </div>
+
+        <!-- Status -->
+        <div class="col-lg-6">
+          <mat-label class="f-w-600 m-b-8 d-block">Trạng Thái</mat-label>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-select
+              [(value)]="campaign.Status"
+              (selectionChange)="onInputChange('Status', $event)"
+            >
+              <mat-option
+                *ngFor="let s of statusList"
+                [value]="s.value"
+              >
+                {{ s.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <!-- CategoryName -->
+        <div class="col-lg-6">
+          <mat-label class="f-w-600 m-b-8 d-block">Danh mục</mat-label>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-select
+              [(value)]="campaign.CategoryName"
+              (selectionChange)="onInputChange('CategoryName', $event)"
+            >
+              <mat-option
+                *ngFor="let c of categoryList"
+                [value]="c.value"
+              >
+                {{ c.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <!-- Creator (Mới thêm) -->
+        <div class="col-lg-6">
+          <mat-label class="f-w-600 m-b-8 d-block">Người/Tổ chức Tạo</mat-label>
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <mat-select
+              [(value)]="campaign.CreatorId"
+              (selectionChange)="onInputChange('CreatorId', $event)"
+            >
+              <mat-option *ngFor="let cr of creators" [value]="cr.id">
+                {{ cr.name }} - {{ cr.type }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="m-t-12">
+        <button mat-flat-button color="primary" class="m-r-8" (click)="onSubmit()">
+          Lưu
+        </button>
+        <button mat-stroked-button color="warn" (click)="onCancel()">
+          Hủy
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<!-- Spinner -->
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-beat"
+  [fullScreen]="false"
+>
+  Loading...
+</ngx-spinner>

@@ -46,5 +46,5 @@ namespace CharityDonationApi.Models
 		public string VerificationDocumentUrl { get; set; }
 
 		public DateTime? VerificationDate { get; set; }
-	}
+    }
 }

@@ -45,9 +45,8 @@ namespace CharityDonationApi.Repositories
 				EndDate = campaign.EndDate,
 				FeaturedImageUrl = campaign.FeaturedImageUrl,
 				CreatorId = campaign.CreatorId,
-				CreatorName = campaign.Creator.Name,
-				CategoryId = campaign.CategoryId,
-				CategoryName = campaign.Category.Name,
+                CreatorName = campaign.Creator != null ? campaign.Creator.Name : "N/A",
+                CategoryId = campaign.CategoryId,
 				Status = campaign.Status
 			};
 		}
@@ -66,7 +65,8 @@ namespace CharityDonationApi.Repositories
 				CreatorId = campaignVm.CreatorId,
 				CategoryId = campaignVm.CategoryId,
 				Status = campaignVm.Status
-			};
+
+            };
 
 			_context.Campaigns.Add(campaign);
 			await _context.SaveChangesAsync();

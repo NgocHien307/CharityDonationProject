@@ -11,12 +11,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { MaterialModule } from 'src/app/material.module';
-import { ReactiveFormsModule } from '@angular/forms';
-
+import {ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-create-campaign',
-  imports: [MatTableModule,
+   imports: [
+        MatTableModule,
         CommonModule,
         MatCardModule,
         MaterialModule,
@@ -24,13 +24,14 @@ import { ReactiveFormsModule } from '@angular/forms';
         MatMenuModule,
         NgxSpinnerModule,
         MatButtonModule,
-        ReactiveFormsModule,],
+        ReactiveFormsModule
+      ],
   templateUrl: './create-campaign.component.html',
-  styleUrls: ['./create-campaign.component.scss'],
+  styleUrls: ['./create-campaign.component.scss']
 })
 export class CreateCampaignComponent implements OnInit {
   campaignForm!: FormGroup;
-  isLoading = false;
+  isLoading = false; // Bạn có thể dùng để hiển thị spinner
 
   constructor(
     private fb: FormBuilder,
@@ -54,7 +55,6 @@ export class CreateCampaignComponent implements OnInit {
   onSubmit(): void {
     if (this.campaignForm.invalid) {
       // Nếu cần, hiển thị thông báo
-        alert('Vui lòng điền đầy đủ thông tin!');
       return;
     }
 
@@ -69,10 +69,8 @@ export class CreateCampaignComponent implements OnInit {
 
     this.campaignService.createCampaign(newCampaign).subscribe({
       next: (res) => {
-        this.isLoading = false;
         alert('Tạo chiến dịch thành công!');
-        // Chuyển hướng về danh sách
-        this.router.navigate(['/campaign/list']);
+        this.router.navigate(['/list-campaign']); 
       },
       error: (err) => {
         this.isLoading = false;

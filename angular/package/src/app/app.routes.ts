@@ -3,8 +3,8 @@ import { BlankComponent } from './layouts/blank/blank.component';
 import { FullComponent } from './layouts/full/full.component';
 import { AuthGuard } from './core/utils/auth.guard';
 import { CreateCampaignComponent } from './pages/ManageCampaign/create-campaign/create-campaign.component';
-import { CampaignListComponent } from './pages/ManageCampaign/list-campaign/campaign-list.component';
-import { UpdateCampaignComponent } from './pages/ManageCampaign/update-campaign/update-campaign.component';
+import { ListCampaignComponent } from './pages/ManageCampaign/list-campaign/campaign-list.component';
+import { EditCampaignComponent } from './pages/ManageCampaign/edit-campaign/edit-campaign.component';
 
 
 export const routes: Routes = [
@@ -56,11 +56,13 @@ export const routes: Routes = [
     path: '**',
     redirectTo: 'authentication/error',
   },
-  { path: 'campaign/list',
+  {
+    path: 'list-campaign',
     canActivate: [AuthGuard],
-     component: CampaignListComponent },
-  { path: 'campaign/create',
-    canActivate: [AuthGuard], component: CreateCampaignComponent },
-  { path: 'campaign/edit/:id',
-    canActivate: [AuthGuard], component: UpdateCampaignComponent },
+    children: [
+      { path: '', component: ListCampaignComponent },
+      { path: 'add-campaign', component: EditCampaignComponent },  
+      { path: 'edit-campaign/:id', component: EditCampaignComponent } 
+    ]
+  },
 ];
