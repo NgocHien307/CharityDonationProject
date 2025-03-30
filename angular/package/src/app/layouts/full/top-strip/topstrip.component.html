@@ -66,11 +66,8 @@
             </a>
         </mat-menu>
 
-        <button class="d-flex align-items-center gap-4 text-white" mat-flat-button [matMenuTriggerFor]="beforeMenutow">
-            <div class="d-flex align-items-center gap-6">
-                <i-tabler name="shopping-cart" class="icon-20 d-flex"></i-tabler>
-                Buy Now
-            </div>
+        <button class="d-flex align-items-center gap-4 text-white" mat-flat-button >
+            <a [routerLink]="['/authentication/login']" (click)="logout()">Logout</a>
         </button>
         <mat-menu #beforeMenutow="matMenu" xPosition="before">
             <a mat-menu-item href="https://www.wrappixel.com/templates/flexy-material-angular-admin/?ref=353" target="_blank">

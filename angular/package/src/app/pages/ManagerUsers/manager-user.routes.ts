@@ -4,7 +4,7 @@ import { EditUserComponent } from './list-users/edit-user/edit-user.component';
 
 
 export const ManagerUserRoutes: Routes = [
-    // { path: '', redirectTo: 'list-users', pathMatch: 'full' },
+     { path: '', redirectTo: 'list-users', pathMatch: 'full' },
   {
     path: '',
     component: ListUsersComponent,
