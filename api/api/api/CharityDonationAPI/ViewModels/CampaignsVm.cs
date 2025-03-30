@@ -29,5 +29,6 @@
 		public string CategoryName { get; set; } 
 
 		public string Status { get; set; }
-	}
+
+    }
 }

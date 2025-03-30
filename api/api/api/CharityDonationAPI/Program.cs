@@ -1,4 +1,5 @@
 ﻿using CharityDonationApi.Data;
+using CharityDonationApi.IRepositories;
 using CharityDonationApi.IRepositoties;
 using CharityDonationApi.Models;
 using CharityDonationApi.Repositories;
@@ -79,6 +80,7 @@ builder.Services.AddDbContext<CharityDbContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // addScoped
+builder.Services.AddScoped<ICreatorRepository, CreatorRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICampaignRepository, CampaignRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();

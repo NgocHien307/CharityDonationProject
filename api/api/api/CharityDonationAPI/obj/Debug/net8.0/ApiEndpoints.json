@@ -326,6 +326,105 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CharityDonationApi.Controllers.CreatorController",
+    "Method": "AddCreator",
+    "RelativePath": "api/Creator/add-creator",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vm",
+        "Type": "CharityDonationApi.ViewModels.CreatorsVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CharityDonationApi.Controllers.CreatorController",
+    "Method": "DeleteCreator",
+    "RelativePath": "api/Creator/delete-creator/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CharityDonationApi.Controllers.CreatorController",
+    "Method": "GetAllCreators",
+    "RelativePath": "api/Creator/get-all-creators",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CharityDonationApi.ViewModels.CreatorsVm, CharityDonationApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CharityDonationApi.Controllers.CreatorController",
+    "Method": "GetCreatorById",
+    "RelativePath": "api/Creator/get-creator-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CharityDonationApi.ViewModels.CreatorsVm",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CharityDonationApi.Controllers.CreatorController",
+    "Method": "UpdateCreator",
+    "RelativePath": "api/Creator/update-creator/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "vm",
+        "Type": "CharityDonationApi.ViewModels.CreatorsVm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CharityDonationApi.Controllers.UserController",
     "Method": "CreateUser",
     "RelativePath": "api/user/add-user",

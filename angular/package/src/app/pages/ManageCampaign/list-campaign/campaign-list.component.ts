@@ -1,82 +1,79 @@
-import { Component, OnInit } from '@angular/core';
-import { CampaignService } from '../../../core/service/campaign.service';
-import { Campaign } from 'src/app/core/models/database/campaign.model';
-import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatTableModule } from '@angular/material/table';
-import { NgxSpinnerModule } from 'ngx-spinner';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MaterialModule } from 'src/app/material.module';
+import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
+import { Router } from '@angular/router';
+import { CampaignService } from 'src/app/core/service/campaign.service';
+import { Campaign } from 'src/app/core/models/database/campaign.model';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
-  selector: 'app-campaign-list',
-  imports: [MatTableModule,
-          CommonModule,
-          MatCardModule,
-          MaterialModule,
-          MatIconModule,
-          MatMenuModule,
-          NgxSpinnerModule,
-          MatButtonModule,
-          ReactiveFormsModule,
-          ],
+  selector: 'app-list-campaign',
+  imports: [
+    MatTableModule,
+    CommonModule,
+    MatCardModule,
+    MaterialModule,
+    MatIconModule,
+    MatMenuModule,
+    NgxSpinnerModule,
+    MatButtonModule
+  ],
   templateUrl: './campaign-list.component.html',
-  styleUrls: ['./campaign-list.component.scss'],
+  styleUrls: ['./campaign-list.component.scss']
 })
-export class CampaignListComponent implements OnInit {
-  campaigns: Campaign[] = [];
-  isLoading = false;
+export class ListCampaignComponent implements OnInit {
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  
+  public listCampaign: Campaign[] = [];
+  dataSource1 = new MatTableDataSource<Campaign>(this.listCampaign);
+  
+  // Đặt các cột hiển thị
+  displayedColumns1: string[] = ['title', 'goalAmount', 'status', 'action'];
 
   constructor(
-    private campaignService: CampaignService,
-    private router: Router
+    private spinnerService: NgxSpinnerService,
+    private router: Router,
+    private campaignService: CampaignService
   ) {}
 
   ngOnInit(): void {
-    this.loadCampaigns();
+    this.spinnerService.show();
+    this.onGetData();
+
+    setTimeout(() => {
+      this.spinnerService.hide();
+    }, 1000);
   }
 
-  loadCampaigns(): void {
-    this.isLoading = true;
-    this.campaignService.getAllCampaigns().subscribe({
-      next: (res) => {
-        this.isLoading = false;
-        this.campaigns = res;
-      },
-      error: (err) => {
-        this.isLoading = false;
-        console.error('Lỗi khi load danh sách campaign:', err);
-      },
+  onClickAdd() {
+    this.router.navigate(['list-campaign', 'add-campaign']);
+  }
+
+  onGetData() {
+    this.campaignService.getAllCampaigns().subscribe((data) => {
+      console.log("List Campaign from API:", data);
+      this.listCampaign = data;
+      this.dataSource1 = new MatTableDataSource<Campaign>(this.listCampaign);
+      this.dataSource1.paginator = this.paginator;
     });
   }
 
-  onCreateCampaign(): void {
-    this.router.navigate(['/campaign/create']);
+  onDetailPage(elementId: number) {
+    this.router.navigate(['list-campaign', 'edit-campaign', elementId]);
   }
 
-  onEditCampaign(id: number): void {
-    this.router.navigate([`/campaign/edit/${id}`]);
-  }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
+    this.dataSource1.filter = filterValue;
 
-  onDeleteCampaign(id: number): void {
-    if (confirm('Bạn có chắc chắn muốn xoá chiến dịch này?')) {
-      this.isLoading = true;
-      this.campaignService.deleteCampaign(id).subscribe({
-        next: () => {
-          this.isLoading = false;
-          alert('Xoá thành công!');
-          this.loadCampaigns();
-        },
-        error: (err) => {
-          this.isLoading = false;
-          console.error('Lỗi xoá campaign:', err);
-          alert('Xoá thất bại!');
-        },
-      });
+    if (this.dataSource1.paginator) {
+      this.dataSource1.paginator.firstPage();
     }
   }
 }
