@@ -33,8 +33,8 @@ export const routes: Routes = [
       },
       {
         path: 'list-users',
-        canActivate: [AuthGuard],
-        data: { expectedRole: 'Admin' },
+        // canActivate: [AuthGuard],
+        // data: { expectedRole: 'Admin' },
         loadChildren: () =>
           import('./pages/ManagerUsers/manager-user.routes').then(
             (m) => m.ManagerUserRoutes
@@ -43,7 +43,7 @@ export const routes: Routes = [
       },
       {
         path: 'list-partner',
-        canActivate: [AuthGuard],
+        // canActivate: [AuthGuard],
         component: ListPartnerComponent
       },
       {
@@ -53,8 +53,8 @@ export const routes: Routes = [
       },
       {
         path: 'list-campaign',
-        canActivate: [AuthGuard],
-        data: { expectedRole: 'Admin' },
+        // canActivate: [AuthGuard],
+        // data: { expectedRole: 'Admin' },
         children: [
           { path: '', component: ListCampaignComponent },
           { path: 'add-campaign', component: EditCampaignComponent },  
