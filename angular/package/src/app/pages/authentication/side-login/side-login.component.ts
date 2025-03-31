@@ -69,7 +69,7 @@ export class AppSideLoginComponent {
           result.token,
           JSON.stringify(result.role)
         );
-            this.routingPage('/dashboard');
+            this.routingPage('/home');
 
     }
     else{
