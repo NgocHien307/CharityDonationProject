@@ -1,16 +1,33 @@
 <div class="app-topstrip bg-success text-white p-y-10 p-x-20 w-100 d-lg-flex align-items-center justify-content-between">
-    <h2 class="f-s-18 m-y-8 text-lg-left text-center">Booking Joco</h2>
+    <a mat-button [routerLink]="['/home']">
+        <h2 class="f-s-18 m-y-8 text-lg-left text-center">Charity Donation</h2>
+    </a>
+    
 
-    <div class="d-flex align-items-center justify-content-center flex-wrap">
-      <a mat-button class="text-white d-none d-lg-flex" [routerLink]="['/list-users']">
+    <div  class="d-flex align-items-center justify-content-center flex-wrap">
+      <a *ngIf="isAdminUser" mat-button class="text-white d-none d-lg-flex" [routerLink]="['/list-users']">
         <div class="d-flex align-items-center gap-4">
           <i-tabler name="lifebuoy" class="icon-20 d-flex"></i-tabler>
           Manager Users
         </div>
       </a>
 
+      <a *ngIf="isAdminUser" mat-button class="text-white d-none d-lg-flex" [routerLink]="['/list-campaign']">
+        <div class="d-flex align-items-center gap-4">
+          <i-tabler name="lifebuoy" class="icon-20 d-flex"></i-tabler>
+          Manager Campaigns
+        </div>
+      </a>
 
-        <a mat-button class="text-white d-none d-lg-flex" href="https://www.wrappixel.com/" target="_blank">
+      <a mat-button class="text-white d-none d-lg-flex" [routerLink]="['/list-partner']">
+        <div class="d-flex align-items-center gap-4">
+          <i-tabler name="lifebuoy" class="icon-20 d-flex"></i-tabler>
+          List partner
+        </div>
+      </a>
+
+
+        <a mat-button class="text-white d-none d-lg-flex" href="#" target="_blank">
             <div class="d-flex align-items-center gap-4">
                 <i-tabler name="gift" class="icon-20 d-flex"></i-tabler>
                 Templates

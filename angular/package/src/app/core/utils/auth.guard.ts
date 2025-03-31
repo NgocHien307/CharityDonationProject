@@ -16,8 +16,8 @@ export class AuthGuard implements CanActivate {
     ) {
     let userLogged: UserLogged = new UserLogged();
 
-    if (!this.rolePermission.hasRole(['Admin'])) {
-      this.router.navigate(['/dashboard']);
+    if (!this.rolePermission.hasRole(['Admin', 'User'])) {
+      this.router.navigate(['/home']);
       return false;
   }
   return true;
