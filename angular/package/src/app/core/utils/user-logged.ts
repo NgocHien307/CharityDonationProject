@@ -16,19 +16,17 @@ export class UserLogged {
     }
     getRoles() {
       const result: any = [];
-      let roles: any = [];
-      console.log("JSON.parse(this.getCookie(this.ROLEKEY)",JSON.parse(this.getCookie(this.ROLEKEY)));
-      try {
-        roles = JSON.parse(this.getCookie(this.ROLEKEY));
-      } catch (err) {
-        roles = this.getCookie(this.ROLEKEY);
+      let roles: any = this.getCookie(this.ROLEKEY);
+      if (roles) {
+        try {
+          roles = JSON.parse(roles);
+          roles.forEach((role: any) => {
+            result.push((role as string).trim().toLowerCase());
+          });
+        } catch (error) {
+          console.error('Lỗi khi phân tích JSON từ cookie ROLEKEY:', error);
+        }
       }
-      try {
-        roles.forEach((role: any) => {
-          result.push((role as string).trim().toLowerCase());
-        });
-      } catch (error) {}
-      console.log("rolket",result);
       return result;
     }
     getCurrentUser(): any {
