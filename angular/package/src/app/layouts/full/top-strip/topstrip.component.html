@@ -1,123 +1,77 @@
-<div class="app-topstrip bg-success text-white p-y-10 p-x-20 w-100 d-lg-flex align-items-center justify-content-between">
+<div
+    class="app-topstrip bg-success text-white p-y-10 p-x-20 w-100 d-lg-flex align-items-center justify-content-between">
     <a mat-button [routerLink]="['/home']">
-        <h2 class="f-s-18 m-y-8 text-lg-left text-center">Charity Donation</h2>
+        <h2 class="f-s-18 m-y-8 text-lg-left text-center">Quỹ Ước Mơ</h2>
     </a>
-    
 
-    <div  class="d-flex align-items-center justify-content-center flex-wrap">
-      <a *ngIf="isAdminUser" mat-button class="text-white d-none d-lg-flex" [routerLink]="['/list-users']">
-        <div class="d-flex align-items-center gap-4">
-          <i-tabler name="lifebuoy" class="icon-20 d-flex"></i-tabler>
-          Manager Users
-        </div>
-      </a>
+    <form class="d-flex me-3" (submit)="searchCampaigns($event)">
+        <input 
+          class="form-control me-2" 
+          type="search" 
+          placeholder="Tìm kiếm chiến dịch..." 
+          [(ngModel)]="searchQuery"
+          name="searchQuery"
+        >
+        <button class="btn btn-outline-primary" type="submit">Tìm</button>
+      </form>
+      
+      <!-- Danh sách kết quả tìm kiếm -->
+      <div class="search-results-container">
+        <ul *ngIf="filteredCampaigns.length > 0" class="dropdown-menu show search-results">
+          <li *ngFor="let campaign of filteredCampaigns">
+            <a class="dropdown-item" [routerLink]="'/campaign-detail/' + campaign.Id">
+              {{ campaign.Title }}
+            </a>
+          </li>
+        </ul>
+      </div>
 
-      <a *ngIf="isAdminUser" mat-button class="text-white d-none d-lg-flex" [routerLink]="['/list-campaign']">
-        <div class="d-flex align-items-center gap-4">
-          <i-tabler name="lifebuoy" class="icon-20 d-flex"></i-tabler>
-          Manager Campaigns
-        </div>
-      </a>
-
-      <a mat-button class="text-white d-none d-lg-flex" [routerLink]="['/list-partner']">
-        <div class="d-flex align-items-center gap-4">
-          <i-tabler name="lifebuoy" class="icon-20 d-flex"></i-tabler>
-          List partner
-        </div>
-      </a>
-
-
-        <a mat-button class="text-white d-none d-lg-flex" href="#" target="_blank">
+    <div class="d-flex align-items-center justify-content-center flex-wrap">
+        <a *ngIf="isAdminUser" mat-button class="text-white d-none d-lg-flex" [routerLink]="['/list-users']">
             <div class="d-flex align-items-center gap-4">
-                <i-tabler name="gift" class="icon-20 d-flex"></i-tabler>
-                Templates
+                <i-tabler name="lifebuoy" class="icon-20 d-flex"></i-tabler>
+                Manager Users
             </div>
         </a>
 
-        <a mat-button class="text-white d-none d-lg-flex" href="https://www.wrappixel.com/hire-us/" target="_blank">
+        <a *ngIf="isAdminUser" mat-button class="text-white d-none d-lg-flex" [routerLink]="['/list-campaign']">
             <div class="d-flex align-items-center gap-4">
-                <i-tabler name="briefcase" class="icon-20 d-flex"></i-tabler>
-                Hire Us
+                <i-tabler name="lifebuoy" class="icon-20 d-flex"></i-tabler>
+                Manager Campaigns
             </div>
         </a>
 
-        <button class="d-flex align-items-center gap-4 text-white b-1 border-primary m-x-10" mat-button
-            [matMenuTriggerFor]="beforeMenu">
-            <div class="d-flex align-items-center gap-6">
-                <i-tabler name="device-laptop" class="icon-20 d-flex"></i-tabler>
-                Live Preview
-                <i-tabler name="chevron-down" class="icon-20 d-flex"></i-tabler>
+        <a mat-button class="text-white d-none d-lg-flex" [routerLink]="['/list-partner']">
+            <div class="d-flex align-items-center gap-4">
+                <i-tabler name="lifebuoy" class="icon-20 d-flex"></i-tabler>
+                List partner
             </div>
-        </button>
-        <mat-menu #beforeMenu="matMenu" xPosition="before">
-            <a mat-menu-item href="https://www.wrappixel.com/templates/flexy-material-angular-admin/?ref=353"
-                target="_blank">
-                <div class="d-flex align-items-center gap-4">
-                    <i-tabler name="external-link" class="icon-18 d-flex"></i-tabler>
-                    Angular Preview
-                </div>
-            </a>
-            <a mat-menu-item href="https://www.wrappixel.com/templates/flexy-vuetify-dashboard/?ref=353" target="_blank">
-                <div class="d-flex align-items-center gap-4">
-                    <i-tabler name="external-link" class="icon-18 d-flex"></i-tabler>
-                    VueJs Preview
-                </div>
-            </a>
-            <a mat-menu-item href="https://www.wrappixel.com/templates/flexy-nextjs-dashboard-material-ui/?ref=353" target="_blank">
-                <div class="d-flex align-items-center gap-4">
-                    <i-tabler name="external-link" class="icon-18 d-flex"></i-tabler>
-                    NextJs Preview
-                </div>
-            </a>
-            <a mat-menu-item href="https://www.wrappixel.com/templates/flexy-react-material-dashboard-admin/?ref=353" target="_blank">
-                <div class="d-flex align-items-center gap-4">
-                    <i-tabler name="external-link" class="icon-18 d-flex"></i-tabler>
-                    React Preview
-                </div>
-            </a>
-            <a mat-menu-item href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/?ref=353" target="_blank">
-                <div class="d-flex align-items-center gap-4">
-                    <i-tabler name="external-link" class="icon-18 d-flex"></i-tabler>
-                    Bootstrap Preview
-                </div>
-            </a>
-        </mat-menu>
+        </a>
 
-        <button class="d-flex align-items-center gap-4 text-white" mat-flat-button >
-            <a [routerLink]="['/authentication/login']" (click)="logout()">Logout</a>
-        </button>
-        <mat-menu #beforeMenutow="matMenu" xPosition="before">
-            <a mat-menu-item href="https://www.wrappixel.com/templates/flexy-material-angular-admin/?ref=353" target="_blank">
-                <div class="d-flex align-items-center gap-4">
-                    <i-tabler name="external-link" class="icon-18 d-flex"></i-tabler>
-                    Angular Preview
-                </div>
-            </a>
-            <a mat-menu-item href="https://www.wrappixel.com/templates/flexy-vuetify-dashboard/?ref=353" target="_blank">
-                <div class="d-flex align-items-center gap-4">
-                    <i-tabler name="external-link" class="icon-18 d-flex"></i-tabler>
-                    VueJs Preview
-                </div>
-            </a>
-            <a mat-menu-item href="https://www.wrappixel.com/templates/flexy-nextjs-dashboard-material-ui/?ref=353" target="_blank">
-                <div class="d-flex align-items-center gap-4">
-                    <i-tabler name="external-link" class="icon-18 d-flex"></i-tabler>
-                    NextJs Preview
-                </div>
-            </a>
-            <a mat-menu-item href="https://www.wrappixel.com/templates/flexy-react-material-dashboard-admin/?ref=353" target="_blank">
-                <div class="d-flex align-items-center gap-4">
-                    <i-tabler name="external-link" class="icon-18 d-flex"></i-tabler>
-                    React Preview
-                </div>
-            </a>
-            <a mat-menu-item href="https://www.wrappixel.com/templates/flexy-bootstrap-admin-template/?ref=353" target="_blank">
-                <div class="d-flex align-items-center gap-4">
-                    <i-tabler name="external-link" class="icon-18 d-flex"></i-tabler>
-                    Bootstrap Preview
-                </div>
-            </a>
-        </mat-menu>
 
+
+
+        <span class="flex-1-auto"></span>
+        <button mat-mini-fab [matMenuTriggerFor]="profilemenu" aria-label="Notifications">
+          <img src="/assets/images/profile/user-1.jpg" class="rounded-circle object-cover d-block" width="35" />
+        </button>
+        <mat-menu #profilemenu="matMenu" class="cardWithShadow topbar-dd">
+          <button mat-menu-item>
+            <mat-icon class="d-flex align-items-center"><i-tabler name="user" class="icon-18 d-flex"></i-tabler></mat-icon>My
+            Profile
+          </button>
+          <button mat-menu-item>
+            <mat-icon class="d-flex align-items-center"><i-tabler name="mail" class="icon-18 d-flex"></i-tabler></mat-icon>My
+            Account
+          </button>
+          <button mat-menu-item>
+            <mat-icon class="d-flex align-items-center"><i-tabler name="list-check"
+                class="icon-18 d-flex"></i-tabler></mat-icon>My Task
+          </button>
+      
+          <div class="p-x-12 m-t-12">
+            <a [routerLink]="['/authentication/login']" mat-stroked-button class="w-100" (click)="logout()">Logout</a>
+          </div>
+        </mat-menu>
     </div>
 </div>

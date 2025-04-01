@@ -1,0 +1,19 @@
+.donation-list {
+    text-align: center; 
+    padding: 40px 20px;
+  }
+  
+  .donation-list h2 {
+    color: #e91e63; 
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .campaigns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+  }
+  
