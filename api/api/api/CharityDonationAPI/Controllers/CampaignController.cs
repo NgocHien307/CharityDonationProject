@@ -105,7 +105,21 @@ namespace CharityDonationApi.Controllers
 			}
 		}
 
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchCampaigns([FromQuery] string title)
+        {
+            if (string.IsNullOrEmpty(title))
+            {
+                return BadRequest("Title parameter is required.");
+            }
+
+            var campaigns = await _campaignRepository.SearchCampaignsByTitle(title);
+
+            return Ok(campaigns);
+        }
 
 
-	}
+
+
+    }
 }

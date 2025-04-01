@@ -7,6 +7,7 @@ import { ListCampaignComponent } from './pages/ManageCampaign/list-campaign/camp
 import { EditCampaignComponent } from './pages/ManageCampaign/edit-campaign/edit-campaign.component';
 import { ListPartnerComponent } from './pages/Partner/list-partner/list-partner.component';
 import { PartnerDetailComponent } from './pages/Partner/partner-detail/partner-detail.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 
 export const routes: Routes = [
@@ -23,6 +24,10 @@ export const routes: Routes = [
         path: 'home',
         loadChildren: () =>
           import('./pages/pages.routes').then((m) => m.PagesRoutes),
+      },
+      {
+        path: 'search-results',
+        component: SearchResultsComponent  
       },
       {
         path: 'ui-components',

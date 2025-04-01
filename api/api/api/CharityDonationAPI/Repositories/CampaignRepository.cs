@@ -109,6 +109,31 @@ namespace CharityDonationApi.Repositories
 			await _context.SaveChangesAsync();
 		}
 
-	}
+        public async Task<List<CampaignsVm>> SearchCampaignsByTitle(string title)
+        {
+            var campaigns = await _context.Campaigns
+                .Where(c => c.Title.Contains(title)) 
+                .Select(c => new CampaignsVm
+                {
+                    Id = c.Id,
+                    Title = c.Title,
+                    Description = c.Description,
+                    GoalAmount = c.GoalAmount,
+                    CollectedAmount = c.CollectedAmount,
+                    IsActive = c.IsActive,
+                    StartDate = c.StartDate,
+                    EndDate = c.EndDate,
+                    FeaturedImageUrl = c.FeaturedImageUrl,
+                    CreatorId = c.CreatorId,
+                    CreatorName = c.Creator.Name,
+                    CategoryId = c.CategoryId,
+                    Status = c.Status
+                })
+                .ToListAsync();
+            return campaigns;
+        }
+
+
+    }
 }
 	
