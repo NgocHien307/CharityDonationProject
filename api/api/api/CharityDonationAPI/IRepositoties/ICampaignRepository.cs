@@ -11,5 +11,7 @@ namespace CharityDonationApi.IRepositoties
 		Task addCampaign(CampaignsVm campaignVm);
 		Task updateCampaign(int id ,CampaignsVm campaignVm);
 		Task deleteCampaign(int id);
-	}
+
+        Task<List<CampaignsVm>> SearchCampaignsByTitle(string title);
+    }
 }

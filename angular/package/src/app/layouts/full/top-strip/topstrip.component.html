@@ -5,26 +5,26 @@
     </a>
 
     <form class="d-flex me-3" (submit)="searchCampaigns($event)">
-        <input 
-          class="form-control me-2" 
-          type="search" 
-          placeholder="Tìm kiếm chiến dịch..." 
-          [(ngModel)]="searchQuery"
-          name="searchQuery"
-        >
-        <button class="btn btn-outline-primary" type="submit">Tìm</button>
-      </form>
+      <input 
+        class="form-control me-2" 
+        type="search" 
+        placeholder="Tìm kiếm chiến dịch..." 
+        [(ngModel)]="searchQuery"
+        name="searchQuery"
+      >
+      <button class="btn btn-outline-primary" type="submit">Tìm</button>
+  </form>
+  
       
-      <!-- Danh sách kết quả tìm kiếm -->
-      <div class="search-results-container">
+    <div class="search-results-container">
         <ul *ngIf="filteredCampaigns.length > 0" class="dropdown-menu show search-results">
           <li *ngFor="let campaign of filteredCampaigns">
-            <a class="dropdown-item" [routerLink]="'/campaign-detail/' + campaign.Id">
+            <a class="dropdown-item" [routerLink]="'/view-campaign-detail/' + campaign.Id">
               {{ campaign.Title }}
             </a>
           </li>
         </ul>
-      </div>
+    </div>
 
     <div class="d-flex align-items-center justify-content-center flex-wrap">
         <a *ngIf="isAdminUser" mat-button class="text-white d-none d-lg-flex" [routerLink]="['/list-users']">
