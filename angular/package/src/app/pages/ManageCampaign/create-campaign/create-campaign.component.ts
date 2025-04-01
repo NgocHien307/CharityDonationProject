@@ -11,77 +11,293 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { MaterialModule } from 'src/app/material.module';
-import {ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { Creator, CreatorService } from 'src/app/core/service/creator.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { CategoryService, Category } from 'src/app/core/service/category.service';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-create-campaign',
-   imports: [
-        MatTableModule,
-        CommonModule,
-        MatCardModule,
-        MaterialModule,
-        MatIconModule,
-        MatMenuModule,
-        NgxSpinnerModule,
-        MatButtonModule,
-        ReactiveFormsModule
-      ],
+  imports: [
+    MatTableModule,
+    CommonModule,
+    MatCardModule,
+    MaterialModule,
+    MatIconModule,
+    MatMenuModule,
+    NgxSpinnerModule,
+    MatButtonModule,
+    ReactiveFormsModule
+  ],
   templateUrl: './create-campaign.component.html',
   styleUrls: ['./create-campaign.component.scss']
 })
 export class CreateCampaignComponent implements OnInit {
   campaignForm!: FormGroup;
-  isLoading = false; // Bạn có thể dùng để hiển thị spinner
+  creators: Creator[] = [];
+  categories: Category[] = [];
+  isLoading = false;
+  formSubmitted = false;
+  validationErrors: { [key: string]: string } = {};
+  selectedFile: File | null = null;
+  previewImageUrl: string | ArrayBuffer | null = null;
+  readonly Object = Object;
 
   constructor(
     private fb: FormBuilder,
+    private campaignService: CampaignService,
     private router: Router,
-    private campaignService: CampaignService
+    private creatorService: CreatorService,
+    private categoryService: CategoryService,
+    private snackBar: MatSnackBar,
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
-    // Khởi tạo form (Reactive Form)
+    this.buildForm();
+    this.loadCreators();
+    this.loadCategories();
+  }
+
+  private buildForm(): void {
     this.campaignForm = this.fb.group({
-      title: ['', Validators.required],
-      description: [''],
-      goalAmount: [0],
+      title: [
+        '',
+        [Validators.required, Validators.minLength(5), Validators.maxLength(200)]
+      ],
+      description: ['', [Validators.maxLength(5000)]],
+      goalAmount: [
+        null,
+        [Validators.required, Validators.min(1000)]
+      ],
       featuredImageUrl: [''],
-      creatorName: [''],
-      contactEmail: [''], // nếu bạn muốn
-      // Thêm các trường khác tuỳ nhu cầu...
+      creatorId: [null, Validators.required],
+      status: ['Active', Validators.required],
+      categoryId: [null, Validators.required]
+    });
+
+    this.campaignForm.valueChanges.subscribe(() => {
+      if (this.formSubmitted) {
+        this.validateForm();
+      }
     });
   }
 
-  onSubmit(): void {
-    if (this.campaignForm.invalid) {
-      // Nếu cần, hiển thị thông báo
+  private loadCreators(): void {
+    this.isLoading = true;
+    this.creatorService.getAllCreators().subscribe({
+      next: (res) => {
+        this.creators = res;
+        this.isLoading = false;
+      },
+      error: (err) => {
+        console.error('Lỗi khi load danh sách Creator:', err);
+        this.isLoading = false;
+        this.showErrorMessage('Không thể tải danh sách Creator. Vui lòng thử lại sau.');
+      },
+    });
+  }
+
+  private loadCategories(): void {
+    this.isLoading = true;
+    this.categoryService.getAllCategories().subscribe({
+      next: (res) => {
+        this.categories = res;
+        this.isLoading = false;
+      },
+      error: (err) => {
+        console.error('Lỗi khi load danh sách Category:', err);
+        this.isLoading = false;
+        this.showErrorMessage('Không thể tải danh sách Category. Vui lòng thử lại sau.');
+      },
+    });
+  }
+
+  // Xử lý khi người dùng chọn file
+  onFileSelected(event: any): void {
+    const file = event.target.files[0];
+    if (file) {
+      this.selectedFile = file;
+      
+      // Hiển thị preview ảnh
+      this.showImagePreview(file);
+      
+      // Không cần đặt giá trị cho form control vì sẽ upload riêng
+      this.campaignForm.get('featuredImageUrl')?.setValue('');
+    }
+  }
+  
+  // Hiển thị preview ảnh
+  showImagePreview(file: File): void {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      this.previewImageUrl = e.target?.result || null;
+    };
+    reader.readAsDataURL(file);
+  }
+  
+  // Xử lý upload ảnh
+  uploadImage(): Promise<string> {
+    return new Promise((resolve, reject) => {
+      if (!this.selectedFile) {
+        resolve(''); // Không có ảnh, trả về chuỗi rỗng
+        return;
+      }
+      
+      const formData = new FormData();
+      formData.append('file', this.selectedFile);
+      
+      this.http.post<any>(`${environment.apiUrl}/api/campaign/upload-image`, formData)
+        .subscribe({
+          next: (response) => {
+            resolve(response.imageUrl);
+          },
+          error: (error) => {
+            console.error('Lỗi khi upload ảnh:', error);
+            this.showErrorMessage('Không thể upload ảnh. Vui lòng thử lại sau.');
+            reject(error);
+          }
+        });
+    });
+  }
+
+  validateForm(): boolean {
+    this.validationErrors = {};
+    let isValid = true;
+    
+    Object.keys(this.f).forEach(key => {
+      const control = this.f[key];
+      if (control.invalid && control.touched) {
+        isValid = false;
+        
+        if (control.errors?.['required']) {
+          this.validationErrors[key] = `Trường "${this.getFieldLabel(key)}" là bắt buộc`;
+        } else if (control.errors?.['minlength']) {
+          this.validationErrors[key] = `"${this.getFieldLabel(key)}" phải có ít nhất ${control.errors?.['minlength'].requiredLength} ký tự`;
+        } else if (control.errors?.['maxlength']) {
+          this.validationErrors[key] = `"${this.getFieldLabel(key)}" không được vượt quá ${control.errors?.['maxlength'].requiredLength} ký tự`;
+        } else if (control.errors?.['min']) {
+          this.validationErrors[key] = `"${this.getFieldLabel(key)}" phải lớn hơn hoặc bằng ${control.errors?.['min'].min} VNĐ`;
+        } else if (control.errors?.['pattern']) {
+          this.validationErrors[key] = `"${this.getFieldLabel(key)}" không đúng định dạng`;
+        }
+      }
+    });
+    
+    return isValid;
+  }
+
+  getFieldLabel(fieldName: string): string {
+    const labels: { [key: string]: string } = {
+      'title': 'Tên Chiến Dịch',
+      'description': 'Mô tả',
+      'goalAmount': 'Mục Tiêu',
+      'featuredImageUrl': 'Ảnh',
+      'creatorId': 'Người/Tổ chức Tạo',
+      'status': 'Trạng thái', 
+      'categoryId': 'Danh mục'
+    };
+    
+    return labels[fieldName] || fieldName;
+  }
+
+  scrollToFirstError(): void {
+    const firstErrorField = Object.keys(this.validationErrors)[0];
+    if (firstErrorField) {
+      const errorElement = document.querySelector(`[formControlName="${firstErrorField}"]`);
+      if (errorElement) {
+        errorElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        (errorElement as HTMLElement).focus();
+      }
+    }
+  }
+
+  showErrorMessage(message: string): void {
+    this.snackBar.open(message, 'Đóng', {
+      duration: 5000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      panelClass: ['error-snackbar']
+    });
+  }
+
+  showSuccessMessage(message: string): void {
+    this.snackBar.open(message, 'Đóng', {
+      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      panelClass: ['success-snackbar']
+    });
+  }
+
+  async onSubmit(): Promise<void> {
+    this.formSubmitted = true;
+    this.campaignForm.markAllAsTouched();
+    
+    if (!this.validateForm()) {
+      const errorCount = Object.keys(this.validationErrors).length;
+      this.showErrorMessage(`Có ${errorCount} lỗi trong biểu mẫu. Vui lòng sửa trước khi gửi.`);
+      console.log('Lỗi validation form:', this.validationErrors);
+      this.scrollToFirstError();
       return;
     }
 
     this.isLoading = true;
-
-    // Lấy dữ liệu từ form
-    const newCampaign: Campaign = {
-      ...this.campaignForm.value,
-      // Ví dụ: StartDate = new Date();
-      // Bất kỳ trường nào backend yêu cầu
-    };
-
-    this.campaignService.createCampaign(newCampaign).subscribe({
-      next: (res) => {
-        alert('Tạo chiến dịch thành công!');
-        this.router.navigate(['/list-campaign']); 
-      },
-      error: (err) => {
-        this.isLoading = false;
-        alert('Đã có lỗi xảy ra khi tạo campaign!');
-        console.error(err);
-      },
-    });
+    
+    try {
+      // Upload ảnh trước khi gửi form
+      const imageUrl = await this.uploadImage();
+      
+      const formValues = this.campaignForm.value;
+      const selectedCreator = this.creators.find(c => c.id === formValues.creatorId);
+      const selectedCategory = this.categories.find(c => c.id === formValues.categoryId);
+      
+      const newCampaign: Campaign = {
+        ...formValues,
+        featuredImageUrl: imageUrl, // Sử dụng URL ảnh đã upload
+        creatorName: selectedCreator?.name || '',
+        categoryName: selectedCategory?.name || ''
+      };
+  
+      console.log('Sending campaign data:', newCampaign);
+      
+      this.campaignService.createCampaign(newCampaign).subscribe({
+        next: () => {
+          this.isLoading = false;
+          this.showSuccessMessage('Tạo chiến dịch thành công!');
+          this.router.navigate(['/list-campaign']);
+        },
+        error: (err) => {
+          this.isLoading = false;
+          
+          if (err.error && err.error.errors) {
+            const serverErrors = err.error.errors;
+            const errorMessage = Object.keys(serverErrors)
+              .map(key => `${key}: ${serverErrors[key].join(', ')}`)
+              .join('\n');
+            
+            this.showErrorMessage(`Lỗi từ server: ${errorMessage}`);
+          } else {
+            this.showErrorMessage('Đã có lỗi xảy ra khi tạo chiến dịch!');
+          }
+          
+          console.error('Chi tiết lỗi:', err);
+        }
+      });
+    } catch (error) {
+      this.isLoading = false;
+      this.showErrorMessage('Đã có lỗi xảy ra khi xử lý ảnh!');
+      console.error('Lỗi xử lý ảnh:', error);
+    }
   }
 
   onCancel(): void {
-    // Quay lại trang list, hoặc reset form
-    this.router.navigate(['/campaign/list']);
+    this.router.navigate(['/list-campaign']);
+  }
+  
+  get f() {
+    return this.campaignForm.controls;
   }
 }

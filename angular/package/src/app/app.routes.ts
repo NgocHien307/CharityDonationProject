@@ -62,7 +62,7 @@ export const routes: Routes = [
         // data: { expectedRole: 'Admin' },
         children: [
           { path: '', component: ListCampaignComponent },
-          { path: 'add-campaign', component: EditCampaignComponent },  
+          { path: 'add-campaign', component: CreateCampaignComponent },  
           { path: 'edit-campaign/:id', component: EditCampaignComponent } 
         ]
       },

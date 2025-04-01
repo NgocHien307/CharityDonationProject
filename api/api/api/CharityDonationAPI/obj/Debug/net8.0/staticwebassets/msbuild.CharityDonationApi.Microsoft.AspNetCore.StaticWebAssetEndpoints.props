@@ -1,0 +1,52 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10480"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 07:33:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.k52hz9rf3p.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"k52hz9rf3p"},{"Name":"integrity","Value":"sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="},{"Name":"label","Value":"_content/CharityDonationApi/uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10480"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 07:33:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-bsC80oGJ1s\u002Bw\u002BsWf3/K/a3hT9\u002Bao\u002BCPCjFJwjjB5qYg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1563996"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022bsC80oGJ1s\u002Bw\u002BsWf3/K/a3hT9\u002Bao\u002BCPCjFJwjjB5qYg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 07:34:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.mbbxczhyjz.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mbbxczhyjz"},{"Name":"integrity","Value":"sha256-bsC80oGJ1s\u002Bw\u002BsWf3/K/a3hT9\u002Bao\u002BCPCjFJwjjB5qYg="},{"Name":"label","Value":"_content/CharityDonationApi/uploads/campaigns/65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1563996"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022bsC80oGJ1s\u002Bw\u002BsWf3/K/a3hT9\u002Bao\u002BCPCjFJwjjB5qYg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 07:34:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/7847b14d-23d3-43b5-937d-244671c3e5ac_api.96out8pni6.zip">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"96out8pni6"},{"Name":"integrity","Value":"sha256-H33DTxe\u002BQ0X1WgZCMolMwvluFrZUEyA\u002B7zqThumbBuI="},{"Name":"label","Value":"_content/CharityDonationApi/uploads/campaigns/7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"24974435"},{"Name":"Content-Type","Value":"application/x-zip-compressed"},{"Name":"ETag","Value":"\u0022H33DTxe\u002BQ0X1WgZCMolMwvluFrZUEyA\u002B7zqThumbBuI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 07:39:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-H33DTxe\u002BQ0X1WgZCMolMwvluFrZUEyA\u002B7zqThumbBuI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"24974435"},{"Name":"Content-Type","Value":"application/x-zip-compressed"},{"Name":"ETag","Value":"\u0022H33DTxe\u002BQ0X1WgZCMolMwvluFrZUEyA\u002B7zqThumbBuI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 07:39:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-bsC80oGJ1s\u002Bw\u002BsWf3/K/a3hT9\u002Bao\u002BCPCjFJwjjB5qYg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1563996"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022bsC80oGJ1s\u002Bw\u002BsWf3/K/a3hT9\u002Bao\u002BCPCjFJwjjB5qYg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 07:36:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.mbbxczhyjz.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mbbxczhyjz"},{"Name":"integrity","Value":"sha256-bsC80oGJ1s\u002Bw\u002BsWf3/K/a3hT9\u002Bao\u002BCPCjFJwjjB5qYg="},{"Name":"label","Value":"_content/CharityDonationApi/uploads/campaigns/cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1563996"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022bsC80oGJ1s\u002Bw\u002BsWf3/K/a3hT9\u002Bao\u002BCPCjFJwjjB5qYg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 07:36:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>
