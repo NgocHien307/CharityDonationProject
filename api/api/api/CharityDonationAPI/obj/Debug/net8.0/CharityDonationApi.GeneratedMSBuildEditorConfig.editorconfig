@@ -17,19 +17,11 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CharityDonationApi
 build_property.RootNamespace = CharityDonationApi
-<<<<<<< HEAD
-build_property.ProjectDir = D:\ojt\test\api\api\api\CharityDonationAPI\
-=======
-build_property.ProjectDir = C:\Users\ADMIN\OneDrive\Desktop\CharityDonationProject\api\api\api\CharityDonationAPI\
->>>>>>> f1ad5814c6c305f433d1793ee2b8249940e86b7c
+build_property.ProjectDir = D:\Documents\FPTU\KY6\Mock Project\QuyUocMo\CharityDonationProject\api\api\api\CharityDonationAPI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-<<<<<<< HEAD
-build_property.MSBuildProjectDirectory = D:\ojt\test\api\api\api\CharityDonationAPI
-=======
-build_property.MSBuildProjectDirectory = C:\Users\ADMIN\OneDrive\Desktop\CharityDonationProject\api\api\api\CharityDonationAPI
->>>>>>> f1ad5814c6c305f433d1793ee2b8249940e86b7c
+build_property.MSBuildProjectDirectory = D:\Documents\FPTU\KY6\Mock Project\QuyUocMo\CharityDonationProject\api\api\api\CharityDonationAPI
 build_property._RazorSourceGeneratorDebug = 

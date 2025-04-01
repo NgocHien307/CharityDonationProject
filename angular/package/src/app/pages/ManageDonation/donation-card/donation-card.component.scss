@@ -1,0 +1,36 @@
+.donation-card {
+    border: 2px solid #e91e63; /* Viền hồng */
+    padding: 20px;
+    border-radius: 12px; /* Bo góc nhẹ */
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  }
+  
+  .donation-card h3 {
+    color: #e91e63; /* Màu hồng cho tiêu đề */
+    font-weight: bold;
+  }
+  
+  .donation-card p {
+    color: #333; /* Giữ màu chữ dễ đọc */
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .donation-card button {
+    background-color: #e91e63; /* Nền hồng */
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 24px; /* Bo góc nút */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .donation-card button:hover {
+    background-color: #d81b60; /* Màu hồng đậm hơn khi hover */
+  }
+  
