@@ -2,19 +2,9 @@
 
   <!-- Mobile Menu -->
 
-  <button mat-icon-button (click)="toggleMobileNav.emit()" class="d-flex d-lg-none justify-content-center">
-    <i-tabler name="menu-2" class="icon-20 d-flex"></i-tabler>
-  </button>
-
-  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Notifications">
-    <i-tabler class="d-flex" name="bell" matBadge="1" matBadgeColor="primary"></i-tabler>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
-
-
+  <a href="javascript:history.back()" class="btn btn-secondary">
+    <i class="bi bi-arrow-left"></i> 
+</a>
   <span class="flex-1-auto"></span>
   <button mat-mini-fab [matMenuTriggerFor]="profilemenu" aria-label="Notifications">
     <img src="/assets/images/profile/user-1.jpg" class="rounded-circle object-cover d-block" width="35" />
