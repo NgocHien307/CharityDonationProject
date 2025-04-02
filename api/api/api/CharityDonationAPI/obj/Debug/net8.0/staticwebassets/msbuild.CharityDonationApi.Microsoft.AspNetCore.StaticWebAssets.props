@@ -1,5 +1,23 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>CharityDonationApi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CharityDonationApi</BasePath>
+      <RelativePath>uploads/campaigns/0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>f1p9p81fhb</Fingerprint>
+      <Integrity>A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>CharityDonationApi</SourceId>
@@ -17,6 +35,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>CharityDonationApi</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/CharityDonationApi</BasePath>
+      <RelativePath>uploads/campaigns/33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>k52hz9rf3p</Fingerprint>
+      <Integrity>KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg'))">
       <SourceType>Package</SourceType>

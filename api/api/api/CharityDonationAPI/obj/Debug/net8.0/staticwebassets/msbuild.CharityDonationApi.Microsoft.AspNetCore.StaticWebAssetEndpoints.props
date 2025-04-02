@@ -1,5 +1,17 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.f1p9p81fhb.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"f1p9p81fhb"},{"Name":"integrity","Value":"sha256-A5D\u002BEq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA="},{"Name":"label","Value":"_content/CharityDonationApi/uploads/campaigns/0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"9859"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022A5D\u002BEq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 07:41:48 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-A5D\u002BEq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"9859"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022A5D\u002BEq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 07:41:48 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -11,6 +23,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"k52hz9rf3p"},{"Name":"integrity","Value":"sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="},{"Name":"label","Value":"_content/CharityDonationApi/uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10480"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 07:33:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"10480"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 06:10:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.k52hz9rf3p.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"k52hz9rf3p"},{"Name":"integrity","Value":"sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="},{"Name":"label","Value":"_content/CharityDonationApi/uploads/campaigns/33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"10480"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 06:10:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CharityDonationApi/uploads/campaigns/65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\campaigns\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg'))</AssetFile>

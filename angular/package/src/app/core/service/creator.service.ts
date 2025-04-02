@@ -22,6 +22,6 @@ export interface Creator {
 export class CreatorService {
   constructor(private http: HttpClient) {}
   getAllCreators(): Observable<Creator[]> {
-    return this.http.get<Creator[]>(environment.apiUrl + '/api/user/get-all-partner');
+    return this.http.get<Creator[]>(environment.apiUrl + '/api/Creator/get-all-creators');
 }
 }

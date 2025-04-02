@@ -1,56 +1,79 @@
+<!-- Trạng thái loading -->
 <div *ngIf="isLoading" class="text-center">
-    <span>Đang tải...</span> <!-- Hiển thị trạng thái tải dữ liệu -->
-</div>
-
-<div *ngIf="!isLoading && campaign" class="container my-5">
+    <span>Đang tải...</span>
+  </div>
+  
+  <!-- Hiển thị thông tin chiến dịch -->
+  <div *ngIf="!isLoading && campaign" class="container my-5">
     <div class="row align-items-center">
-        <div class="col-lg-7">
-            <h1 class="fw-bold text-dark mb-4">
-                <i class="fas fa-graduation-cap text-primary me-2"></i> {{ campaign.title }}
-            </h1>
-            <p class="text-muted lead">❤️ {{ campaign.description }}</p>
-
-            <div class="d-flex align-items-center mb-3">
-                <i class="fas fa-calendar-alt text-primary me-2"></i>
-                <strong>Ngày tổ chức:</strong> {{ campaign.startDate | date:'dd/MM/yyyy' }}
-            </div>
-
-            <div class="mt-4">
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-bold text-success">
-                        Đã quyên góp: {{ campaign.collectedAmount | number }} đ
-                    </span>
-                    <span class="text-muted">
-                        Mục tiêu: {{ campaign.goalAmount | number }} đ
-                    </span>
-                </div>
-                <div class="progress donation-progress">
-                    <div class="progress-bar donation-progress-bar" role="progressbar"
-                        [style.width.%]="(campaign.collectedAmount / campaign.goalAmount) * 100"
-                        attr.aria-valuenow="{{ (campaign.collectedAmount / campaign.goalAmount) * 100 }}"
-                        aria-valuemin="0" aria-valuemax="100">
-                        {{ (campaign.collectedAmount / campaign.goalAmount) * 100 | number:'1.0-2' }}%
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-4">
-                <button class="btn btn-primary btn-lg me-3">
-                    <i class="fas fa-hand-holding-usd me-2"></i>Quyên góp ngay
-                </button>
-                <button class="btn btn-outline-secondary btn-lg">
-                    <i class="fas fa-share-alt me-2"></i>Chia sẻ
-                </button>
-            </div>
+      <!-- Cột bên trái: Thông tin chiến dịch -->
+      <div class="col-lg-7">
+        <!-- Tiêu đề chiến dịch -->
+        <h1 class="fw-bold text-dark mb-4">
+          <i class="fas fa-graduation-cap text-primary me-2"></i> {{ campaign.Title }}
+        </h1>
+  
+        <!-- Mô tả chiến dịch -->
+        <p class="text-muted lead">❤️ {{ campaign.Description || 'Không có mô tả' }}</p>
+  
+        <!-- Ngày bắt đầu và ngày kết thúc -->
+        <div class="d-flex align-items-center mb-3">
+          <i class="fas fa-calendar-alt text-primary me-2"></i>
+          <strong>Ngày bắt đầu:</strong> {{ campaign.StartDate | date:'dd/MM/yyyy' }}
         </div>
-
-        <div class="col-lg-5">
-            <img [src]="campaign.featuredImageUrl" class="img-fluid rounded shadow-lg" alt="Hình ảnh quyên góp">
+        <div class="d-flex align-items-center mb-3">
+          <i class="fas fa-calendar-alt text-primary me-2"></i>
+          <strong>Ngày kết thúc:</strong> {{ campaign.EndDate ? (campaign.EndDate | date:'dd/MM/yyyy') : 'Chưa xác định' }}
         </div>
+  
+        <!-- Tiến độ quyên góp -->
+        <div class="mt-4">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="fw-bold text-success">
+              Đã quyên góp: {{ campaign.CollectedAmount | number }} đ
+            </span>
+            <span class="text-muted">
+              Mục tiêu: {{ campaign.GoalAmount | number }} đ
+            </span>
+          </div>
+          <div class="progress donation-progress">
+            <div
+              class="progress-bar donation-progress-bar"
+              role="progressbar"
+              [style.width.%]="(campaign.CollectedAmount / campaign.GoalAmount) * 100"
+              attr.aria-valuenow="{{ (campaign.CollectedAmount / campaign.GoalAmount) * 100 }}"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              {{ (campaign.CollectedAmount / campaign.GoalAmount) * 100 | number:'1.0-2' }}%
+            </div>
+          </div>
+        </div>
+  
+        <!-- Nút hành động -->
+        <div class="mt-4">
+          <button class="btn btn-primary btn-lg me-3">
+            <i class="fas fa-hand-holding-usd me-2"></i>Quyên góp ngay
+          </button>
+          <button class="btn btn-outline-secondary btn-lg">
+            <i class="fas fa-share-alt me-2"></i>Chia sẻ
+          </button>
+        </div>
+      </div>
+  
+      <!-- Cột bên phải: Ảnh đại diện -->
+      <div class="col-lg-5">
+        <img
+          [src]="campaign.FeaturedImageUrl || 'https://via.placeholder.com/500x300?text=Không+có+ảnh'"
+          class="img-fluid rounded shadow-lg"
+          alt="Hình ảnh quyên góp"
+        />
+      </div>
     </div>
-</div>
+  
 
-<!-- Hiển thị thông báo lỗi nếu có -->
-<div *ngIf="errorMessage" class="alert alert-danger mt-4">
+  
+  <!-- Hiển thị thông báo lỗi nếu có -->
+  <div *ngIf="errorMessage && !isLoading" class="alert alert-danger mt-4">
     {{ errorMessage }}
-</div>
+  </div>

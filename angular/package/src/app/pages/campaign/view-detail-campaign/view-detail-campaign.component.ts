@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule, NgIf, NgFor } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { CampaignService } from 'src/app/core/service/campaign.service';
+import { Campaign } from 'src/app/core/models/database/campaign.model';
 
 @Component({
   selector: 'app-view-detail-campaign',
@@ -11,9 +12,10 @@ import { CampaignService } from 'src/app/core/service/campaign.service';
   styleUrl: './view-detail-campaign.component.scss'
 })
 export class ViewDetailCampaignComponent implements OnInit {
-  campaign: any;
+  campaign: Campaign | null = null; 
   errorMessage: string = '';
   isLoading: boolean = true;
+  
   constructor(
     private route: ActivatedRoute,
     private campaignService: CampaignService
@@ -21,9 +23,12 @@ export class ViewDetailCampaignComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    console.log('ID từ URL:', id);  // Kiểm tra ID từ URL
+    console.log('ID từ URL:', id);
     if (id) {
       this.fetchCampaignDetails(id);
+    } else {
+      this.errorMessage = 'Không tìm thấy ID chiến dịch trong URL.';
+      this.isLoading = false;
     }
   }
 
@@ -31,13 +36,16 @@ export class ViewDetailCampaignComponent implements OnInit {
     const campaignId = Number(id);
     if (isNaN(campaignId)) {
       console.error('ID không hợp lệ');
+      this.errorMessage = 'ID chiến dịch không hợp lệ.';
+      this.isLoading = false;
       return;
     }
+
     this.campaignService.getCampaignById(campaignId).subscribe({
-      next: (data) => {
-        console.log('Dữ liệu chiến dịch nhận được:', data);  // Kiểm tra dữ liệu nhận được từ API
+      next: (data: Campaign) => {
+        console.log('Dữ liệu chiến dịch nhận được:', data);
         this.campaign = data;
-        this.isLoading = false;  // Set loading to false khi đã có dữ liệu
+        this.isLoading = false;
       },
       error: (error) => {
         console.error('Lỗi khi lấy dữ liệu:', error);
@@ -46,5 +54,4 @@ export class ViewDetailCampaignComponent implements OnInit {
       }
     });
   }
-
 }
