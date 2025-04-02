@@ -21,24 +21,39 @@ export class SearchResultsComponent implements OnInit {
     // Lấy query từ URL (nếu có)
     this.route.queryParams.subscribe(params => {
       this.searchQuery = params['query'] || '';
+      console.log('Tìm kiếm với từ khóa:', this.searchQuery);  // Kiểm tra giá trị của searchQuery
       if (this.searchQuery) {
         this.searchCampaigns();
       }
     });
   }
+  
+  
 
   searchCampaigns(): void {
-    // Cập nhật URL với query tìm kiếm
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: { query: this.searchQuery },
-      queryParamsHandling: 'merge', // Giữ lại các query params khác nếu có
+      queryParamsHandling: 'merge',
     });
-
-    // Gọi API tìm kiếm
+  
     this.campaignService.searchCampaignsByTitle(this.searchQuery).subscribe({
-      next: (data) => this.searchResults = data,
-      error: (err) => console.error('Error fetching search results:', err)
+      next: (data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          this.searchResults = data;
+        } else {
+          this.searchResults = [];  // Không có kết quả, hiển thị thông báo
+        }
+      },
+      error: (err) => {
+        console.error('Lỗi khi gọi API:', err);
+        this.searchResults = [];
+      }
     });
   }
+  
+  
+  
+  
+  
 }
