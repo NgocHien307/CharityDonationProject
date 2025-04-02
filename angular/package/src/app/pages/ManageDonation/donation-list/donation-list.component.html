@@ -1,17 +1,21 @@
 <section class="donation-list">
-    <h2>Các chiến dịch từ thiện</h2>
+  <h2>Các chiến dịch từ thiện</h2>
 
-    <!-- Hiển thị trạng thái loading -->
-    <p *ngIf="isLoading" class="loading">Đang tải danh sách chiến dịch...</p>
+  <!-- Hiển thị trạng thái loading -->
+  <p *ngIf="isLoading" class="loading">Đang tải danh sách chiến dịch...</p>
 
-    <!-- Hiển thị lỗi nếu có -->
-    <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+  <!-- Hiển thị lỗi nếu có -->
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
 
-    <!-- Hiển thị danh sách chiến dịch -->
-    <div *ngIf="!isLoading && !errorMessage" class="campaigns">
-        <app-donation-card 
-            *ngFor="let donation of donations" 
-            [data]="donation">
-        </app-donation-card>
-    </div>
+  <!-- Hiển thị danh sách chiến dịch -->
+  <div *ngIf="displayedDonations.length > 0" class="row">
+      <div class="col-md-6 col-lg-4 mb-4" *ngFor="let donation of displayedDonations">
+          <app-donation-card [data]="donation"></app-donation-card>
+      </div>
+  </div>
+
+  <!-- Nút Xem thêm -->
+  <div *ngIf="displayedDonations.length < donations.length" class="d-flex justify-content-center mt-4">
+      <button class="btn btn-primary" (click)="loadMore()">Xem thêm</button>
+  </div>
 </section>

@@ -1,0 +1,6 @@
+<div class="donation-card" [routerLink]="['/campaign-detail', data?.id]">
+  <img src="https://homepage.momocdn.net/blogscontents/momo-amazone-s3-api-250319162450-638779982904240937.jpg" alt="Minh họa quyên góp" class="donation-image">
+  <h3>{{ data?.title }}</h3>
+  <p>Đã quyên góp: {{ data?.collectedAmount | number }} / {{ data?.goalAmount | number }} VNĐ</p>
+  <button>Quyên góp</button>
+</div>

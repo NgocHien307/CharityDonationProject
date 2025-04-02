@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { PartnerService } from 'src/app/core/service/partner.service';
+import { PartnerService} from 'src/app/core/service/partner.service';
 import { CommonModule } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { RouterModule } from '@angular/router';
+import { CampaignService } from 'src/app/core/service/campaign.service';
+import { PartnerCampaignsComponent } from "../partner-campaigns/partner-campaigns.component";
+import { DonationListComponent } from '../../ManageDonation/donation-list/donation-list.component';
+import { DonationCardComponent } from '../../ManageDonation/donation-card/donation-card.component';
+
 @Component({
   selector: 'app-list-partner',
-  imports: [CommonModule, NgxPaginationModule, RouterModule],
+  imports: [CommonModule, NgxPaginationModule, RouterModule, DonationListComponent, PartnerCampaignsComponent],
   templateUrl: './list-partner.component.html',
   styleUrl: './list-partner.component.scss'
 })
@@ -27,6 +32,10 @@ export class ListPartnerComponent implements OnInit {
         this.isLoading = false;
       }
     });
+
+    
+
+    
   }
 }
 

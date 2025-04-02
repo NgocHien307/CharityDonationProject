@@ -34,3 +34,72 @@
     background-color: #d81b60; /* Màu hồng đậm hơn khi hover */
   }
   
+
+  .donation-image {
+    width: 300px; /* Điều chỉnh kích thước theo ý bạn */
+    height: auto; /* Để giữ tỉ lệ ảnh */
+    border-radius: 8px; /* Bo góc nhẹ nếu muốn */
+}
+
+.donation-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+  margin: 15px;
+}
+
+.donation-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.donation-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.donation-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 3px solid #eee;
+}
+
+.donation-info {
+  padding: 20px;
+}
+
+.donation-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.donation-amount {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.donate-button {
+  background-color: #1e90ff;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #187bcd;
+}
