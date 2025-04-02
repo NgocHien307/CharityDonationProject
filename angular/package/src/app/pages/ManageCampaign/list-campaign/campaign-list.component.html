@@ -62,7 +62,15 @@
           </td>
         </ng-container>
 
-        <!-- Action Column -->
+        <!-- EndDate Column -->
+        <ng-container matColumnDef="endDate">
+          <th mat-header-cell *matHeaderCellDef class="f-w-600 f-s-14">Ngày Kết Thúc</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.EndDate | date: 'dd/MM/yyyy' }}
+          </td>
+        </ng-container>
+
+        <!-- Action Column (Gộp tất cả hành động vào đây) -->
         <ng-container matColumnDef="action">
           <th mat-header-cell *matHeaderCellDef class="f-w-600 f-s-14">
             Hành Động
@@ -71,6 +79,14 @@
             <button mat-flat-button color="primary" (click)="onDetailPage(element.Id)">
               <mat-icon>edit</mat-icon>
               <span>Sửa</span>
+            </button>
+            <button mat-flat-button color="primary" (click)="openExtendDialog(element)">
+              <mat-icon>schedule</mat-icon>
+              <span>Gia hạn</span>
+            </button>
+            <button mat-flat-button color="warn" (click)="deleteCampaign(element.Id)">
+              <mat-icon>delete</mat-icon>
+              <span>Xóa</span>
             </button>
           </td>
         </ng-container>

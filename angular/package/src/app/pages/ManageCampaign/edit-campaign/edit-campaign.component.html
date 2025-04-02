@@ -4,32 +4,27 @@
   </mat-card-header>
 
   <mat-card-content class="b-t-1">
-    <form>
+    <form [formGroup]="campaignForm" (ngSubmit)="onSubmit()">
       <div class="row">
         <!-- Title -->
         <div class="col-lg-6">
-          <mat-label class="f-w-600 m-b-8 d-block">Tên Chiến Dịch</mat-label>
+          <mat-label class="f-w-600 m-b-8 d-block">Tên Chiến Dịch *</mat-label>
           <mat-form-field appearance="outline" class="w-100" color="primary">
-            <input
-              [value]="campaign.Title"
-              matInput
-              placeholder="Tên Chiến Dịch"
-              (input)="onInputChange('Title', $event)"
-            />
+            <input matInput placeholder="Tên Chiến Dịch" formControlName="title" />
+            <mat-error *ngIf="campaignForm.get('title')?.hasError('required')">
+              Tên chiến dịch là bắt buộc
+            </mat-error>
           </mat-form-field>
         </div>
 
         <!-- GoalAmount -->
         <div class="col-lg-6">
-          <mat-label class="f-w-600 m-b-8 d-block">Mục Tiêu</mat-label>
+          <mat-label class="f-w-600 m-b-8 d-block">Mục Tiêu *</mat-label>
           <mat-form-field appearance="outline" class="w-100" color="primary">
-            <input
-              [value]="campaign.GoalAmount"
-              matInput
-              type="number"
-              placeholder="Số tiền cần"
-              (input)="onInputChange('GoalAmount', $event)"
-            />
+            <input matInput type="number" placeholder="Số tiền cần" formControlName="goalAmount" />
+            <mat-error *ngIf="campaignForm.get('goalAmount')?.hasError('required')">
+              Mục tiêu là bắt buộc
+            </mat-error>
           </mat-form-field>
         </div>
 
@@ -37,12 +32,7 @@
         <div class="col-lg-6">
           <mat-label class="f-w-600 m-b-8 d-block">Mô Tả</mat-label>
           <mat-form-field appearance="outline" class="w-100" color="primary">
-            <textarea
-              matInput
-              rows="3"
-              placeholder="Mô tả chiến dịch"
-              (input)="onInputChange('Description', $event)"
-            >{{ campaign.Description }}</textarea>
+            <textarea matInput rows="3" placeholder="Mô tả chiến dịch" formControlName="description"></textarea>
           </mat-form-field>
         </div>
 
@@ -50,70 +40,68 @@
         <div class="col-lg-6">
           <mat-label class="f-w-600 m-b-8 d-block">Ảnh Đại Diện</mat-label>
           <mat-form-field appearance="outline" class="w-100" color="primary">
-            <input
-              [value]="campaign.FeaturedImageUrl"
-              matInput
-              placeholder="URL Ảnh"
-              (input)="onInputChange('FeaturedImageUrl', $event)"
-            />
+            <input matInput placeholder="URL Ảnh" formControlName="featuredImageUrl" />
           </mat-form-field>
         </div>
 
         <!-- Status -->
         <div class="col-lg-6">
-          <mat-label class="f-w-600 m-b-8 d-block">Trạng Thái</mat-label>
+          <mat-label class="f-w-600 m-b-8 d-block">Trạng Thái *</mat-label>
           <mat-form-field appearance="outline" class="w-100">
-            <mat-select
-              [(value)]="campaign.Status"
-              (selectionChange)="onInputChange('Status', $event)"
-            >
-              <mat-option
-                *ngFor="let s of statusList"
-                [value]="s.value"
-              >
+            <mat-select formControlName="status" placeholder="Chọn trạng thái">
+              <mat-option *ngFor="let s of statusList" [value]="s.value">
                 {{ s.viewValue }}
               </mat-option>
             </mat-select>
+            <mat-error *ngIf="campaignForm.get('status')?.hasError('required')">
+              Trạng thái là bắt buộc
+            </mat-error>
           </mat-form-field>
         </div>
 
         <!-- CategoryName -->
         <div class="col-lg-6">
-          <mat-label class="f-w-600 m-b-8 d-block">Danh mục</mat-label>
+          <mat-label class="f-w-600 m-b-8 d-block">Danh mục *</mat-label>
           <mat-form-field appearance="outline" class="w-100">
-            <mat-select
-              [(value)]="campaign.CategoryName"
-              (selectionChange)="onInputChange('CategoryName', $event)"
-            >
-              <mat-option
-                *ngFor="let c of categoryList"
-                [value]="c.value"
-              >
+            <mat-select formControlName="categoryName" placeholder="Chọn danh mục">
+              <mat-option *ngFor="let c of categoryList" [value]="c.value">
                 {{ c.viewValue }}
               </mat-option>
             </mat-select>
+            <mat-error *ngIf="campaignForm.get('categoryName')?.hasError('required')">
+              Danh mục là bắt buộc
+            </mat-error>
           </mat-form-field>
         </div>
 
-        <!-- Creator (Mới thêm) -->
+        <!-- CreatorId -->
         <div class="col-lg-6">
-          <mat-label class="f-w-600 m-b-8 d-block">Người/Tổ chức Tạo</mat-label>
+          <mat-label class="f-w-600 m-b-8 d-block">Người/Tổ chức Tạo *</mat-label>
           <mat-form-field appearance="outline" class="w-100" color="primary">
-            <mat-select
-              [(value)]="campaign.CreatorId"
-              (selectionChange)="onInputChange('CreatorId', $event)"
-            >
+            <mat-select formControlName="creatorId" placeholder="Chọn người/tổ chức">
               <mat-option *ngFor="let cr of creators" [value]="cr.id">
                 {{ cr.name }} - {{ cr.type }}
               </mat-option>
             </mat-select>
+            <mat-error *ngIf="campaignForm.get('creatorId')?.hasError('required')">
+              Người tạo là bắt buộc
+            </mat-error>
           </mat-form-field>
         </div>
 
+        <!-- EndDate -->
+        <div class="col-lg-6">
+          <mat-label class="f-w-600 m-b-8 d-block">Ngày Kết Thúc</mat-label>
+          <mat-form-field appearance="outline" class="w-100" color="primary">
+            <input matInput [matDatepicker]="picker" formControlName="endDate" placeholder="Chọn ngày" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
       </div>
 
       <div class="m-t-12">
-        <button mat-flat-button color="primary" class="m-r-8" (click)="onSubmit()">
+        <button mat-flat-button color="primary" class="m-r-8" type="submit" [disabled]="campaignForm.invalid">
           Lưu
         </button>
         <button mat-stroked-button color="warn" (click)="onCancel()">
@@ -124,13 +112,6 @@
   </mat-card-content>
 </mat-card>
 
-<!-- Spinner -->
-<ngx-spinner
-  bdColor="rgba(51,51,51,0.8)"
-  size="medium"
-  color="#fff"
-  type="ball-beat"
-  [fullScreen]="false"
->
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-beat" [fullScreen]="false">
   Loading...
 </ngx-spinner>

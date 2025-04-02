@@ -17,6 +17,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { CategoryService, Category } from 'src/app/core/service/category.service';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-create-campaign',
@@ -29,7 +31,9 @@ import { environment } from 'src/environments/environment';
     MatMenuModule,
     NgxSpinnerModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   templateUrl: './create-campaign.component.html',
   styleUrls: ['./create-campaign.component.scss']
@@ -75,7 +79,8 @@ export class CreateCampaignComponent implements OnInit {
       featuredImageUrl: [''],
       creatorId: [null, Validators.required],
       status: ['Active', Validators.required],
-      categoryId: [null, Validators.required]
+      categoryId: [null, Validators.required],
+      endDate: [null]
     });
 
     this.campaignForm.valueChanges.subscribe(() => {

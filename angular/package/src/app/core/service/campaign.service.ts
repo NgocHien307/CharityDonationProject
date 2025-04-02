@@ -62,5 +62,5 @@ export class CampaignService extends ApiService {
       catchError(err => throwError(() => new Error(err)))
     );
   }
-  
 }
+  

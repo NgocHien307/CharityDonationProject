@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|c:\\users\\admin\\onedrive\\desktop\\charitydonationproject\\api\\api\\api\\charitydonationapi\\models\\campaigns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:models\\campaigns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|c:\\users\\admin\\onedrive\\desktop\\charitydonationproject\\api\\api\\api\\charitydonationapi\\controllers\\campaigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{98A158D7-E17E-47FC-8415-AFB51618C53C}|CharityDonationApi.csproj|solutionrelative:controllers\\campaigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 212,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +54,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Campaigns.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\Models\\Campaigns.cs",
+              "RelativeDocumentMoniker": "Models\\Campaigns.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\Models\\Campaigns.cs",
+              "RelativeToolTip": "Models\\Campaigns.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAC8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T03:23:43.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -58,21 +75,19 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAAIwGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T07:29:07.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T07:29:07.035Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CampaignController.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\Controllers\\CampaignController.cs",
               "RelativeDocumentMoniker": "Controllers\\CampaignController.cs",
               "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\Controllers\\CampaignController.cs",
               "RelativeToolTip": "Controllers\\CampaignController.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAmwKIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T07:28:36.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T07:28:36.371Z"
             }
           ]
         },

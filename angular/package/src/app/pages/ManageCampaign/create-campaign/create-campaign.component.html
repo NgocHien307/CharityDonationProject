@@ -200,6 +200,24 @@
         </div>
       </div>
 
+      <!-- EndDate -->
+<div class="col-12 col-md-6">
+  <mat-label class="f-w-600 m-b-4 d-block">Ngày Kết Thúc</mat-label>
+  <small class="text-muted d-block mb-1">
+    - Chọn ngày kết thúc chiến dịch (nếu có)
+  </small>
+  <mat-form-field appearance="outline" class="w-100" color="primary" [ngClass]="{'field-error': f['endDate'].invalid && (f['endDate'].touched || formSubmitted)}">
+    <input
+      matInput
+      [matDatepicker]="picker"
+      formControlName="endDate"
+      placeholder="Chọn ngày kết thúc"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+
       <!-- Form Status -->
       <div *ngIf="formSubmitted" class="row mt-3">
         <div class="col-12">

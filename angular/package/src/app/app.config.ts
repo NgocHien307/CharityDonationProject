@@ -47,6 +47,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideAnimationsAsync(),
     provideClientHydration(),
+    provideNativeDateAdapter(),
     importProvidersFrom(
       FormsModule,
       ReactiveFormsModule,
