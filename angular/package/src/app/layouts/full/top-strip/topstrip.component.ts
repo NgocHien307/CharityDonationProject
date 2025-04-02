@@ -24,7 +24,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-topstrip',
-  imports: [TablerIconsModule, MatButtonModule, MatMenuModule, RouterModule, CommonModule, MaterialModule, NgScrollbarModule,FormsModule],
+  imports: [TablerIconsModule, MatButtonModule, MatMenuModule, RouterModule, CommonModule, MaterialModule, NgScrollbarModule, FormsModule],
   templateUrl: './topstrip.component.html',
 })
 export class AppTopstripComponent implements OnInit {
@@ -51,7 +51,7 @@ export class AppTopstripComponent implements OnInit {
   getCampaigns(): void {
     this.http.get<any[]>('https://localhost:7204/api/campaign/Get-all-campaigns')
       .subscribe({
-        next: (data) => this.campaigns = data, // Đảm bảo dùng campaigns
+        next: (data) => this.campaigns = data,
         error: (err) => console.error('Error fetching campaigns:', err)
       });
   }
@@ -59,18 +59,15 @@ export class AppTopstripComponent implements OnInit {
   getCategories(): void {
     this.http.get<any[]>('https://localhost:7204/api/campaign/Get-all-Category')
       .subscribe({
-        next: (data) => this.categories = data, // Đảm bảo dùng campaigns
+        next: (data) => this.categories = data,
         error: (err) => console.error('Error fetching campaigns:', err)
       });
   }
   searchCampaigns(event: Event): void {
-    event.preventDefault(); // Ngăn reload trang
-
-    if (!this.searchQuery.trim()) {
-      return;
+    event.preventDefault();
+    if (this.searchQuery.trim()) {
+      this.router.navigate(['/search-results'], { queryParams: { query: this.searchQuery } });
     }
-
-    this.router.navigate(['/search-results'], { queryParams: { query: this.searchQuery } });
   }
 
 }

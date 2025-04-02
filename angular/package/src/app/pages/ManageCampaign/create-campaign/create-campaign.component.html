@@ -1,163 +1,270 @@
 <mat-card class="cardWithShadow theme-card">
-    <mat-card-header>
-      <mat-card-title class="m-b-0">Tạo Chiến Dịch</mat-card-title>
-    </mat-card-header>
-  
-    <mat-card-content class="b-t-1">
-      <form [formGroup]="campaignForm" class="m-t-12">
-        <div class="row">
-          <!-- Title -->
-          <div class="col-lg-6 col-md-6">
-            <mat-label class="f-w-600 m-b-8 d-block">Tên Chiến Dịch</mat-label>
-            <mat-form-field appearance="outline" class="w-100" color="primary">
-              <input 
-                matInput 
-                formControlName="title"
-                placeholder="Nhập tên chiến dịch"
-              />
-            </mat-form-field>
-          </div>
-  
-          <!-- GoalAmount -->
-          <div class="col-lg-6 col-md-6">
-            <mat-label class="f-w-600 m-b-8 d-block">Mục Tiêu (VNĐ)</mat-label>
-            <mat-form-field appearance="outline" class="w-100" color="primary">
-              <input
-                matInput
-                type="number"
-                formControlName="goalAmount"
-                placeholder="VD: 50000000"
-              />
-            </mat-form-field>
-          </div>
-  
-          <!-- Description -->
-          <div class="col-lg-12 col-md-12">
-            <mat-label class="f-w-600 m-b-8 d-block">Mô tả</mat-label>
-            <mat-form-field appearance="outline" class="w-100" color="primary">
-              <textarea
-                matInput
-                rows="3"
-                formControlName="description"
-                placeholder="Nội dung, lý do gây quỹ..."
-              ></textarea>
-            </mat-form-field>
-          </div>
-  
-          <!-- FeaturedImageUrl -->
-          <div class="col-lg-6 col-md-6">
-            <mat-label class="f-w-600 m-b-8 d-block">URL Ảnh</mat-label>
-            <mat-form-field appearance="outline" class="w-100" color="primary">
-              <input
-                matInput
-                formControlName="featuredImageUrl"
-                placeholder="Nhập link ảnh đại diện"
-              />
-            </mat-form-field>
-          </div>
-  
-          <!-- StartDate - EndDate -->
-          <div class="col-lg-3 col-md-3">
-            <mat-label class="f-w-600 m-b-8 d-block">Bắt đầu</mat-label>
-            <mat-form-field appearance="outline" class="w-100" color="primary">
-              <input 
-                matInput 
-                [matDatepicker]="picker1" 
-                formControlName="startDate"
-                placeholder="Chọn ngày bắt đầu"
-              />
-              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-              <mat-datepicker #picker1></mat-datepicker>
-            </mat-form-field>
-          </div>
-          <div class="col-lg-3 col-md-3">
-            <mat-label class="f-w-600 m-b-8 d-block">Kết thúc</mat-label>
-            <mat-form-field appearance="outline" class="w-100" color="primary">
-              <input 
-                matInput
-                [matDatepicker]="picker2" 
-                formControlName="endDate"
-                placeholder="Chọn ngày kết thúc"
-              />
-              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-              <mat-datepicker #picker2></mat-datepicker>
-            </mat-form-field>
-          </div>
-  
-          <!-- Creator -->
-          <div class="col-lg-6 col-md-6">
-            <mat-label class="f-w-600 m-b-8 d-block">Người Tạo</mat-label>
-            <mat-form-field appearance="outline" class="w-100" color="primary">
-              <input
-                matInput
-                formControlName="creatorName"
-                placeholder="VD: Tổ chức A"
-              />
-            </mat-form-field>
-          </div>
-  
-          <!-- Category -->
-          <div class="col-lg-6 col-md-6">
-            <mat-label class="f-w-600 m-b-8 d-block">Loại Chiến Dịch</mat-label>
-            <mat-form-field appearance="outline" class="w-100" color="primary">
-              <mat-select formControlName="categoryName">
-                <mat-option [value]="'Giáo dục'">Giáo dục</mat-option>
-                <mat-option [value]="'Trẻ em'">Trẻ em</mat-option>
-                <mat-option [value]="'Y tế'">Y tế</mat-option>
-                <mat-option [value]="'Xã hội'">Xã hội</mat-option>
-                <!-- ... tuỳ bạn -->
-              </mat-select>
-            </mat-form-field>
-          </div>
-  
-          <!-- Status -->
-          <div class="col-lg-6 col-md-6">
-            <mat-label class="f-w-600 m-b-8 d-block">Trạng Thái</mat-label>
-            <mat-form-field appearance="outline" class="w-100" color="primary">
-              <mat-select formControlName="status">
-                <mat-option [value]="'Pending'">Chờ duyệt</mat-option>
-                <mat-option [value]="'Active'">Đang hoạt động</mat-option>
-                <mat-option [value]="'Completed'">Hoàn thành</mat-option>
-                <mat-option [value]="'Canceled'">Hủy</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-  
-          <!-- isActive -->
-          <div class="col-lg-6 col-md-6 m-t-8 d-flex align-items-center">
-            <mat-checkbox formControlName="isActive">
-              Hoạt động (IsActive)
-            </mat-checkbox>
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Tạo Chiến Dịch</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="b-t-1">
+    <!-- Error Summary -->
+    <div *ngIf="formSubmitted && Object.keys(validationErrors).length > 0" class="alert alert-danger mt-3 mb-3">
+      <h4 class="alert-heading"><mat-icon>error</mat-icon> Vui lòng sửa các lỗi sau:</h4>
+      <ul>
+        <li *ngFor="let error of validationErrors | keyvalue">
+          {{ error.value }}
+        </li>
+      </ul>
+    </div>
+
+    <form [formGroup]="campaignForm" (ngSubmit)="onSubmit()" class="m-t-12">
+      <div class="row g-3">
+        <!-- Title -->
+        <div class="col-12 col-md-6">
+          <mat-label class="f-w-600 m-b-4 d-block">Tên Chiến Dịch *</mat-label>
+          <small class="text-muted d-block mb-1">
+            - Bắt buộc nhập, độ dài từ 5 đến 200 ký tự 
+            <br />
+            - Ví dụ: "Chiến dịch Mùa Xuân 2025"
+          </small>
+          <mat-form-field appearance="outline" class="w-100" color="primary" [ngClass]="{'field-error': f['title'].invalid && (f['title'].touched || formSubmitted)}">
+            <input
+              matInput
+              placeholder="Tên chiến dịch"
+              formControlName="title"
+            />
+            <!-- Lỗi -->
+            <mat-error *ngIf="f['title'].errors?.['required'] && (f['title'].touched || formSubmitted)">
+              Bạn phải nhập tên chiến dịch
+            </mat-error>
+            <mat-error *ngIf="f['title'].errors?.['minlength'] && (f['title'].touched || formSubmitted)">
+              Tối thiểu 5 ký tự
+            </mat-error>
+            <mat-error *ngIf="f['title'].errors?.['maxlength'] && (f['title'].touched || formSubmitted)">
+              Tối đa 200 ký tự
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- GoalAmount -->
+        <div class="col-12 col-md-6">
+          <mat-label class="f-w-600 m-b-4 d-block">Mục Tiêu (VNĐ) *</mat-label>
+          <small class="text-muted d-block mb-1">
+            - Bắt buộc, số tiền ≥ 1000
+            <br />
+            - Ví dụ: 50000000 (50 triệu)
+          </small>
+          <mat-form-field appearance="outline" class="w-100" color="primary" [ngClass]="{'field-error': f['goalAmount'].invalid && (f['goalAmount'].touched || formSubmitted)}">
+            <input
+              matInput
+              type="number"
+              placeholder="Nhập số tiền mục tiêu"
+              formControlName="goalAmount"
+            />
+            <span matPrefix>VNĐ&nbsp;</span>
+            <mat-error *ngIf="f['goalAmount'].errors?.['required'] && (f['goalAmount'].touched || formSubmitted)">
+              Số tiền là bắt buộc
+            </mat-error>
+            <mat-error *ngIf="f['goalAmount'].errors?.['min'] && (f['goalAmount'].touched || formSubmitted)">
+              Phải lớn hơn hoặc bằng 1000 VNĐ
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Status - Thêm trường mới -->
+        <div class="col-12 col-md-6">
+          <mat-label class="f-w-600 m-b-4 d-block">Trạng Thái *</mat-label>
+          <small class="text-muted d-block mb-1">
+            - Chọn trạng thái cho chiến dịch
+          </small>
+          <mat-form-field appearance="outline" class="w-100" color="primary" [ngClass]="{'field-error': f['status'].invalid && (f['status'].touched || formSubmitted)}">
+            <mat-select formControlName="status" placeholder="Chọn trạng thái">
+              <mat-option value="Active">Đang hoạt động</mat-option>
+              <mat-option value="Pending">Chờ duyệt</mat-option>
+              <mat-option value="Completed">Đã hoàn thành</mat-option>
+              <mat-option value="Cancelled">Đã hủy</mat-option>
+            </mat-select>
+            <mat-error *ngIf="f['status'].errors?.['required'] && (f['status'].touched || formSubmitted)">
+              Vui lòng chọn trạng thái
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Category - Thêm trường mới -->
+        <div class="col-12 col-md-6">
+          <mat-label class="f-w-600 m-b-4 d-block">Danh Mục *</mat-label>
+          <small class="text-muted d-block mb-1">
+            - Chọn danh mục phù hợp với chiến dịch
+          </small>
+          <mat-form-field appearance="outline" class="w-100" color="primary" [ngClass]="{'field-error': f['categoryId'].invalid && (f['categoryId'].touched || formSubmitted)}">
+            <mat-select formControlName="categoryId" placeholder="Chọn danh mục">
+              <mat-option *ngFor="let cat of categories" [value]="cat.id">
+                {{ cat.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="f['categoryId'].errors?.['required'] && (f['categoryId'].touched || formSubmitted)">
+              Vui lòng chọn danh mục
+            </mat-error>
+          </mat-form-field>
+          <div *ngIf="categories.length === 0" class="alert alert-warning mt-2">
+            <mat-icon>warning</mat-icon> Chưa có danh mục nào. Vui lòng tạo danh mục trước.
           </div>
         </div>
-  
-        <!-- Button -->
-        <div class="m-t-12">
+
+        <!-- Description -->
+        <div class="col-12">
+          <mat-label class="f-w-600 m-b-4 d-block">Mô tả</mat-label>
+          <small class="text-muted d-block mb-1">
+            - Giải thích mục tiêu, lý do, cách thức tổ chức 
+            <br />
+            - Tối đa 5000 ký tự
+          </small>
+          <mat-form-field appearance="outline" class="w-100" color="primary" [ngClass]="{'field-error': f['description'].invalid && (f['description'].touched || formSubmitted)}">
+            <textarea
+              matInput
+              rows="3"
+              formControlName="description"
+              placeholder="Nội dung, lý do gây quỹ..."
+            ></textarea>
+            <mat-hint align="end">{{f['description'].value?.length || 0}}/5000</mat-hint>
+            <mat-error
+              *ngIf="
+                f['description'].errors?.['maxlength'] &&
+                (f['description'].touched || formSubmitted)
+              "
+            >
+              Không vượt quá 5000 ký tự
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Featured Image Upload -->
+        <div class="col-12 col-md-6">
+          <mat-label class="f-w-600 m-b-4 d-block">Ảnh đại diện</mat-label>
+          <small class="text-muted d-block mb-1">
+            - Tải lên ảnh có định dạng JPG, PNG, GIF
+            <br />
+            - Kích thước khuyến nghị: 800x600px
+          </small>
+          
+          <!-- Input ẩn cho URL -->
+          <input type="hidden" formControlName="featuredImageUrl">
+          
+          <!-- File Input -->
+          <div class="mt-2 mb-3">
+            <div class="custom-file-upload">
+              <button mat-stroked-button color="primary" type="button" (click)="fileInput.click()">
+                <mat-icon>cloud_upload</mat-icon> Chọn file
+              </button>
+              <input #fileInput
+                type="file"
+                accept="image/*"
+                style="display: none"
+                (change)="onFileSelected($event)"
+              />
+              
+              <span *ngIf="selectedFile" class="ms-2">
+                {{selectedFile.name}} ({{(selectedFile.size / 1024).toFixed(1)}} KB)
+              </span>
+            </div>
+          </div>
+          
+          <!-- Image Preview -->
+          <div *ngIf="previewImageUrl" class="mt-2 mb-3">
+            <div class="img-preview-container">
+              <img [src]="previewImageUrl" alt="Preview" class="img-fluid img-thumbnail" style="max-height: 200px;">
+            </div>
+          </div>
+        </div>
+
+        <!-- CreatorId -->
+        <div class="col-12 col-md-6">
+          <mat-label class="f-w-600 m-b-4 d-block">Người/Tổ chức Tạo *</mat-label>
+          <small class="text-muted d-block mb-1">
+            - Bắt buộc chọn 1 Creator có sẵn 
+            <br />
+            - Nếu chưa có, vui lòng tạo Creator trước
+          </small>
+          <mat-form-field appearance="outline" class="w-100" color="primary" [ngClass]="{'field-error': f['creatorId'].invalid && (f['creatorId'].touched || formSubmitted)}">
+            <mat-select formControlName="creatorId" placeholder="Chọn người/tổ chức">
+              <mat-option *ngFor="let c of creators" [value]="c.id">
+                {{ c.name }} - {{ c.type }}
+              </mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="f['creatorId'].errors?.['required'] && (f['creatorId'].touched || formSubmitted)"
+            >
+              Vui lòng chọn Creator
+            </mat-error>
+          </mat-form-field>
+          <div *ngIf="creators.length === 0" class="alert alert-warning mt-2">
+            <mat-icon>warning</mat-icon> Chưa có Creator nào. Vui lòng <a routerLink="/creator/create">tạo Creator</a> trước.
+          </div>
+        </div>
+      </div>
+
+      <!-- EndDate -->
+<div class="col-12 col-md-6">
+  <mat-label class="f-w-600 m-b-4 d-block">Ngày Kết Thúc</mat-label>
+  <small class="text-muted d-block mb-1">
+    - Chọn ngày kết thúc chiến dịch (nếu có)
+  </small>
+  <mat-form-field appearance="outline" class="w-100" color="primary" [ngClass]="{'field-error': f['endDate'].invalid && (f['endDate'].touched || formSubmitted)}">
+    <input
+      matInput
+      [matDatepicker]="picker"
+      formControlName="endDate"
+      placeholder="Chọn ngày kết thúc"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+      <!-- Form Status -->
+      <div *ngIf="formSubmitted" class="row mt-3">
+        <div class="col-12">
+          <div *ngIf="Object.keys(validationErrors).length > 0" class="text-danger mb-3">
+            <mat-icon>warning</mat-icon> Vui lòng sửa các lỗi trước khi tiếp tục.
+          </div>
+          <div *ngIf="Object.keys(validationErrors).length === 0" class="text-success mb-3">
+            <mat-icon>check_circle</mat-icon> Thông tin hợp lệ, bạn có thể gửi form.
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="row mt-3">
+        <div class="col-12 d-flex align-items-center">
           <button
             mat-flat-button
             color="primary"
-            class="m-r-8"
-            (click)="onSubmit()"
+            class="m-r-8 me-2"
+            type="submit"
+            [disabled]="isLoading"
           >
-            Tạo
+            <mat-icon>add_circle</mat-icon> Tạo
           </button>
-          <button mat-stroked-button color="warn" (click)="onCancel()">
-            Hủy
+          <button
+            mat-stroked-button
+            color="warn"
+            type="button"
+            [disabled]="isLoading"
+            (click)="onCancel()"
+          >
+            <mat-icon>cancel</mat-icon> Hủy
           </button>
         </div>
-      </form>
-    </mat-card-content>
-  </mat-card>
-  
-  <!-- Spinner -->
-  <ngx-spinner
-    bdColor="rgba(51,51,51,0.8)"
-    size="medium"
-    color="#fff"
-    type="ball-beat"
-    [fullScreen]="false"
-    *ngIf="isLoading"
-  >
-    Loading...
-  </ngx-spinner>
-  
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<!-- Spinner -->
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-beat"
+  [fullScreen]="false"
+  *ngIf="isLoading"
+>
+  <p class="loading-text">Đang xử lý...</p>
+</ngx-spinner>

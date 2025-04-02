@@ -1,0 +1,58 @@
+.field-error {
+    ::ng-deep .mat-form-field-outline {
+      border-color: #f44336;
+      border-width: 2px;
+    }
+  }
+  
+  .alert {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .alert-danger {
+    background-color: #ffebee;
+    color: #b71c1c;
+    border: 1px solid #ef9a9a;
+  }
+  
+  .alert-warning {
+    background-color: #fff8e1;
+    color: #ff8f00;
+    border: 1px solid #ffe082;
+  }
+  
+  .img-preview {
+    max-width: 200px;
+    max-height: 150px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 4px;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  .error-snackbar {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .success-snackbar {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .mat-icon {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  
+  .loading-text {
+    color: white;
+    margin-top: 50px;
+  }

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { ViewDetailCampaignComponent } from '../../campaign/view-detail-campaign/view-detail-campaign.component';
 
 interface Campaign {
   id: number;
@@ -14,7 +15,7 @@ interface Campaign {
 @Component({
   selector: 'app-donation-card',
   standalone: true,
-  imports: [CommonModule, RouterModule], 
+  imports: [CommonModule, RouterModule, ViewDetailCampaignComponent], 
   templateUrl: './donation-card.component.html',
   styleUrls: ['./donation-card.component.scss']
 })

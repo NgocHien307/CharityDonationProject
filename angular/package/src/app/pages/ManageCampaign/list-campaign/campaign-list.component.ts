@@ -7,10 +7,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MaterialModule } from 'src/app/material.module';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CampaignService } from 'src/app/core/service/campaign.service';
 import { Campaign } from 'src/app/core/models/database/campaign.model';
 import { MatPaginator } from '@angular/material/paginator';
+import { ExtendCampaignDialogComponent } from '../extend-campaign-dialog/extend-campaign-dialog.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-list-campaign',
@@ -22,21 +25,26 @@ import { MatPaginator } from '@angular/material/paginator';
     MatIconModule,
     MatMenuModule,
     NgxSpinnerModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule,
+    MatDialogModule,
+    MatSnackBarModule,
   ],
   templateUrl: './campaign-list.component.html',
-  styleUrls: ['./campaign-list.component.scss']
+  styleUrls: ['./campaign-list.component.scss'],
 })
 export class ListCampaignComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  
+
   public listCampaign: Campaign[] = [];
   dataSource1 = new MatTableDataSource<Campaign>(this.listCampaign);
-  
+
   // Đặt các cột hiển thị
-  displayedColumns1: string[] = ['title', 'goalAmount', 'status', 'action'];
+  displayedColumns1: string[] = ['title', 'goalAmount', 'status', 'endDate', 'action'];
 
   constructor(
+    private dialog: MatDialog,
+    private snackBar: MatSnackBar,
     private spinnerService: NgxSpinnerService,
     private router: Router,
     private campaignService: CampaignService
@@ -57,7 +65,7 @@ export class ListCampaignComponent implements OnInit {
 
   onGetData() {
     this.campaignService.getAllCampaigns().subscribe((data) => {
-      console.log("List Campaign from API:", data);
+      console.log('List Campaign from API:', data);
       this.listCampaign = data;
       this.dataSource1 = new MatTableDataSource<Campaign>(this.listCampaign);
       this.dataSource1.paginator = this.paginator;
@@ -66,6 +74,43 @@ export class ListCampaignComponent implements OnInit {
 
   onDetailPage(elementId: number) {
     this.router.navigate(['list-campaign', 'edit-campaign', elementId]);
+  }
+
+  openExtendDialog(campaign: Campaign): void {
+    const dialogRef = this.dialog.open(ExtendCampaignDialogComponent, {
+      width: '400px',
+      data: { currentEndDate: campaign.EndDate },
+    });
+
+    dialogRef.afterClosed().subscribe((newEndDate) => {
+      if (newEndDate) {
+        const updatedCampaign = { ...campaign, EndDate: newEndDate };
+        this.campaignService.updateCampaign(campaign.Id, updatedCampaign).subscribe({
+          next: () => {
+            this.snackBar.open('Gia hạn chiến dịch thành công!', 'Đóng', { duration: 3000 });
+            this.onGetData(); // Sử dụng onGetData thay vì loadCampaigns
+          },
+          error: () => {
+            this.snackBar.open('Gia hạn thất bại!', 'Đóng', { duration: 3000 });
+          },
+        });
+      }
+    });
+  }
+
+  deleteCampaign(id: number): void {
+    if (confirm('Bạn có chắc chắn muốn xóa chiến dịch này?')) {
+      this.campaignService.deleteCampaign(id).subscribe({
+        next: () => {
+          this.snackBar.open('Xóa chiến dịch thành công!', 'Đóng', { duration: 3000 });
+          this.onGetData(); // Làm mới danh sách
+        },
+        error: (err) => {
+          this.snackBar.open('Xóa chiến dịch thất bại!', 'Đóng', { duration: 3000 });
+          console.error('Lỗi khi xóa chiến dịch:', err);
+        },
+      });
+    }
   }
 
   applyFilter(event: Event) {

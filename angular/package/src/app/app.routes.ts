@@ -7,6 +7,8 @@ import { ListCampaignComponent } from './pages/ManageCampaign/list-campaign/camp
 import { EditCampaignComponent } from './pages/ManageCampaign/edit-campaign/edit-campaign.component';
 import { ListPartnerComponent } from './pages/Partner/list-partner/list-partner.component';
 import { PartnerDetailComponent } from './pages/Partner/partner-detail/partner-detail.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
+import {ViewDetailCampaignComponent} from './pages/campaign/view-detail-campaign/view-detail-campaign.component';
 
 
 export const routes: Routes = [
@@ -24,6 +26,15 @@ export const routes: Routes = [
         loadChildren: () =>
           import('./pages/pages.routes').then((m) => m.PagesRoutes),
       },
+      {
+        path: 'search-results',
+        component: SearchResultsComponent  
+      },
+      {
+        path: 'view-campaign-detail/:id',
+        component: ViewDetailCampaignComponent
+      },
+
       {
         path: 'ui-components',
         loadChildren: () =>
@@ -57,7 +68,7 @@ export const routes: Routes = [
         data: { expectedRole: 'Admin' },
         children: [
           { path: '', component: ListCampaignComponent },
-          { path: 'add-campaign', component: EditCampaignComponent },  
+          { path: 'add-campaign', component: CreateCampaignComponent },  
           { path: 'edit-campaign/:id', component: EditCampaignComponent } 
         ]
       },

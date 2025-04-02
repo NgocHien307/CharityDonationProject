@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "PackagePath": "staticwebassets\\uploads\\campaigns\\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg",
+      "PackagePath": "staticwebassets\\uploads\\campaigns\\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip",
+      "PackagePath": "staticwebassets\\uploads\\campaigns\\7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip"
+    },
+    {
+      "Id": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg",
+      "PackagePath": "staticwebassets\\uploads\\campaigns\\cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CharityDonationApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CharityDonationApi.props",
+      "PackagePath": "build\\CharityDonationApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CharityDonationApi.props",
+      "PackagePath": "buildMultiTargeting\\CharityDonationApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CharityDonationApi.props",
+      "PackagePath": "buildTransitive\\CharityDonationApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
