@@ -1,7 +1,7 @@
 <div
-    class="app-topstrip bg-success text-white p-y-10 p-x-20 w-100 d-lg-flex align-items-center justify-content-between">
+    class="app-topstrip custom-bg text-white p-y-10 p-x-20 w-100 d-lg-flex align-items-center justify-content-between">
     <a mat-button [routerLink]="['/home']">
-        <h2 class="f-s-18 m-y-8 text-lg-left text-center">Quỹ Ước Mơ</h2>
+        <h2  class="f-s-18 m-y-8 text-lg-left text-center" style="color: black;">Quỹ Ước Mơ</h2>
     </a>
 
     <form class="d-flex me-3" (submit)="searchCampaigns($event)">
@@ -12,7 +12,7 @@
         [(ngModel)]="searchQuery"
         name="searchQuery"
       >
-      <button class="btn btn-outline-primary" type="submit">Tìm</button>
+      <button class="btn btn-outline-primary" type="submit" style="color: black;">Tìm</button>
   </form>
   
       

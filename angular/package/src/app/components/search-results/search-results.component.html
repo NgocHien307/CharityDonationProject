@@ -1,15 +1,13 @@
-<div class="container mt-4">
-    <h2>Kết quả tìm kiếm cho: "{{ searchQuery }}"</h2>
-
-    <div *ngIf="searchResults.length > 0; else noResults">
-      <ul class="list-group">
-        <li *ngFor="let campaign of searchResults" class="list-group-item">
-          <a [routerLink]="'/view-campaign-detail/' + campaign.id">{{ campaign.title }}</a>
-        </li>
-      </ul>
-    </div>
-
-    <ng-template #noResults>
-      <p>Không tìm thấy chiến dịch nào.</p>
-    </ng-template>
+<div *ngIf="searchResults.length > 0; else noResults">
+  <ul class="list-group">
+    <li *ngFor="let campaign of searchResults" class="list-group-item">
+      <a [routerLink]="'/view-campaign-detail/' + campaign.id">{{ campaign.title }}</a>
+    </li>
+  </ul>
 </div>
+
+<ng-template #noResults>
+  <div class="no-results-container">
+    <p>Không tìm thấy chiến dịch nào.</p>
+  </div>
+</ng-template>
