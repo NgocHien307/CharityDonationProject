@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oWmXDYss0OLBOdQxdN1QgegvZDKt+4IrFk3rvddnVUE=",
+  "Hash": "/NRaIYcYVG8jZzhFVOmCKwoRiU2FiJpxaGozK4Jwrso=",
   "Source": "CharityDonationApi",
   "BasePath": "_content/CharityDonationApi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CharityDonationApi\\wwwroot",
       "Source": "CharityDonationApi",
-      "ContentRoot": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\",
       "BasePath": "_content/CharityDonationApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "Identity": "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "AssetKind": "All",
@@ -31,15 +31,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "25o87uqmvr",
+      "Integrity": "Nuu0BHvGBlwN6c5FSVjV9yxX0YPfwg3ufdOucRJCOz0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\QuickGrid.razor.js",
+      "Identity": "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\QuickGrid.razor.js",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "QuickGrid.razor.js",
       "AssetKind": "All",
@@ -50,17 +52,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "eu7w3d5g1a",
+      "Integrity": "tnamWuQ2F5I2J8hbtBt4/9i8Mb2y2o+9Tepj5tUrSdU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\QuickGrid.razor.js"
+      "OriginalItemSpec": "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
+      "Identity": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
       "SourceId": "CharityDonationApi",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/CharityDonationApi",
-      "RelativePath": "CharityDonationApi.styles.css",
+      "RelativePath": "CharityDonationApi#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -69,85 +73,589 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "02jfxhbwsz",
+      "Integrity": "yJzMRujk3CbSbBe5hogvoEpcGbz0ThnTl058XcI1svI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css"
+      "OriginalItemSpec": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css"
     },
     {
-      "Identity": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "Identity": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
       "SourceId": "CharityDonationApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\",
       "BasePath": "_content/CharityDonationApi",
-      "RelativePath": "uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "RelativePath": "uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "k52hz9rf3p",
+      "Integrity": "KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\campaigns\\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"
     },
     {
-      "Identity": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg",
+      "Identity": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg",
       "SourceId": "CharityDonationApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\",
       "BasePath": "_content/CharityDonationApi",
-      "RelativePath": "uploads/campaigns/65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg",
+      "RelativePath": "uploads/campaigns/65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "mbbxczhyjz",
+      "Integrity": "bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\campaigns\\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg"
     },
     {
-      "Identity": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip",
+      "Identity": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip",
       "SourceId": "CharityDonationApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\",
       "BasePath": "_content/CharityDonationApi",
-      "RelativePath": "uploads/campaigns/7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip",
+      "RelativePath": "uploads/campaigns/7847b14d-23d3-43b5-937d-244671c3e5ac_api#[.{fingerprint}]?.zip",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "96out8pni6",
+      "Integrity": "H33DTxe+Q0X1WgZCMolMwvluFrZUEyA+7zqThumbBuI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\campaigns\\7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip"
     },
     {
-      "Identity": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg",
+      "Identity": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg",
       "SourceId": "CharityDonationApi",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Documents\\FPTU\\KY6\\Mock Project\\QuyUocMo\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\",
       "BasePath": "_content/CharityDonationApi",
-      "RelativePath": "uploads/campaigns/cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg",
+      "RelativePath": "uploads/campaigns/cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "mbbxczhyjz",
+      "Integrity": "bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\campaigns\\cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "AssetFile": "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8251"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Nuu0BHvGBlwN6c5FSVjV9yxX0YPfwg3ufdOucRJCOz0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Oct 2024 23:57:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Nuu0BHvGBlwN6c5FSVjV9yxX0YPfwg3ufdOucRJCOz0="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Microsoft.AspNetCore.Components.QuickGrid/QuickGrid.razor.js",
+      "AssetFile": "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.11\\staticwebassets\\QuickGrid.razor.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tnamWuQ2F5I2J8hbtBt4/9i8Mb2y2o+9Tepj5tUrSdU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Oct 2024 23:38:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tnamWuQ2F5I2J8hbtBt4/9i8Mb2y2o+9Tepj5tUrSdU="
+        }
+      ]
+    },
+    {
+      "Route": "CharityDonationApi.02jfxhbwsz.styles.css",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yJzMRujk3CbSbBe5hogvoEpcGbz0ThnTl058XcI1svI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 07:19:05 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "02jfxhbwsz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-yJzMRujk3CbSbBe5hogvoEpcGbz0ThnTl058XcI1svI="
+        },
+        {
+          "Name": "label",
+          "Value": "CharityDonationApi.styles.css"
+        }
+      ]
+    },
+    {
+      "Route": "CharityDonationApi.styles.css",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\CharityDonationApi.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"yJzMRujk3CbSbBe5hogvoEpcGbz0ThnTl058XcI1svI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 07:19:05 GMT"
+        },
+        {
+          "Name": "Link",
+          "Value": "<_content/Microsoft.AspNetCore.Components.QuickGrid/Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css>; rel=\"preload\"; as=\"style\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-yJzMRujk3CbSbBe5hogvoEpcGbz0ThnTl058XcI1svI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10480"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 07:33:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.k52hz9rf3p.jpg",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10480"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 07:33:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k52hz9rf3p"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1563996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 07:34:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.mbbxczhyjz.jpg",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1563996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 07:34:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mbbxczhyjz"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/7847b14d-23d3-43b5-937d-244671c3e5ac_api.96out8pni6.zip",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24974435"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-zip-compressed"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H33DTxe+Q0X1WgZCMolMwvluFrZUEyA+7zqThumbBuI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 07:39:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "96out8pni6"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H33DTxe+Q0X1WgZCMolMwvluFrZUEyA+7zqThumbBuI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24974435"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/x-zip-compressed"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H33DTxe+Q0X1WgZCMolMwvluFrZUEyA+7zqThumbBuI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 07:39:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H33DTxe+Q0X1WgZCMolMwvluFrZUEyA+7zqThumbBuI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1563996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 07:36:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.mbbxczhyjz.jpg",
+      "AssetFile": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1563996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 07:36:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mbbxczhyjz"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg="
+        }
+      ]
     }
   ]
 }
