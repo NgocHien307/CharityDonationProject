@@ -50,6 +50,18 @@ export class CampaignService extends ApiService {
     return super.delete(`/api/campaign/delete-campaign/${id}`);
   }
 
+  getCampaignsByCreatorId(id: number): Observable<Campaign[]> {
+    const url = `/api/campaign/creator/${id}`;
+    return this.get(url).pipe(
+      map(res => {
+        if (Array.isArray(res)) {
+          return this.jsonConvert.deserializeArray(res, Campaign);
+        }
+        throw new Error('API trả về không phải mảng');
+      }),
+      catchError(err => throwError(() => new Error(err)))
+    );
+  }
   searchCampaignsByTitle(query: string): Observable<Campaign[]> {
     const url = `/api/campaign/search?title=${query}`;
     return this.get(url).pipe(
@@ -63,4 +75,5 @@ export class CampaignService extends ApiService {
     );
   }
 }
+
   

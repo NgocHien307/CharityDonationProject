@@ -6,6 +6,7 @@ import { CampaignService } from 'src/app/core/service/campaign.service';
 @Component({
   selector: 'app-view-detail-campaign',
   imports: [CommonModule, NgIf],
+  standalone: true,
   templateUrl: './view-detail-campaign.component.html',
   styleUrl: './view-detail-campaign.component.scss'
 })

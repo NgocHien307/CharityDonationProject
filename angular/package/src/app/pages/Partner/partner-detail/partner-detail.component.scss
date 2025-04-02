@@ -69,3 +69,38 @@ body {
   margin-bottom: 10px;
   line-height: 1.4;
 }
+
+.hero-section {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.stat-box {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.program-card {
+  transition: all 0.3s ease-in-out;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.program-footer {
+  background: #f8f9fa;
+}
+
+.btn {
+  border-radius: 8px;
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+}
