@@ -32,4 +32,6 @@ export class PartnerService {
     const url = `${environment.apiUrl + "/api/user/get-partner-by-id"}/${id}`;
     return this.http.get<Partner>(url);
   }
+
+  
 }

@@ -26,3 +26,30 @@
   transform: translateY(-5px);
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
+.card-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.card-img-top {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.card {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.list-group-item {
+  font-size: 14px;
+}

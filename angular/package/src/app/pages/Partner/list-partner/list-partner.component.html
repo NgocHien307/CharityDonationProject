@@ -1,9 +1,9 @@
 <div class="container my-5">
   <h3 class="text-primary fw-bold mb-4 text-center">
-    <i class="fas fa-handshake me-2"></i>Đối tác đồng hành
+    <i class="fas fa-handshake me-2"></i> Đối tác đồng hành
   </h3>
 
-  <!-- Hiển thị spinner khi đang tải dữ liệu -->
+  <!-- Spinner tải dữ liệu -->
   <div *ngIf="isLoading" class="text-center my-4">
     <div class="spinner-border text-primary" role="status">
       <span class="visually-hidden">Đang tải...</span>
@@ -18,22 +18,22 @@
   <!-- Danh sách đối tác -->
   <div *ngIf="partners.length > 0" class="row">
     <div class="col-md-6 col-lg-4 mb-4" *ngFor="let partner of partners | paginate: { itemsPerPage: 3, currentPage: currentPage }">
-      <a [routerLink]="['/partner-detail', partner.id]" class="text-decoration-none text-dark">
-      <div class="card h-100 shadow-sm">
-        
-          <img [src]="partner.logoUrl" [alt]="partner.name" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">{{ partner.name }}</h5>
-            <p class="card-text">{{ partner.description }}</p>
+      <a [routerLink]="['/partner-detail', partner.id]" class="text-decoration-none">
+        <div class="card h-100 shadow-sm border-0 hover-card">
+          <div class="card-img-container">
+            <img [src]="partner.logoUrl" [alt]="partner.name" class="card-img-top img-fluid">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">{{ partner.name }}</h5>
+            <p class="card-text text-muted">{{ partner.description }}</p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>Địa chỉ:</strong> {{ partner.address }}</li>
-            <li class="list-group-item"><strong>Email:</strong> {{ partner.email }}</li>
-            <li class="list-group-item"><strong>Điện thoại:</strong> {{ partner.phoneNumber }}</li>
+            <li class="list-group-item"><i class="fas fa-map-marker-alt me-2 text-danger"></i> {{ partner.address }}</li>
+            <li class="list-group-item"><i class="fas fa-envelope me-2 text-primary"></i> {{ partner.email }}</li>
+            <li class="list-group-item"><i class="fas fa-phone me-2 text-success"></i> {{ partner.phoneNumber }}</li>
           </ul>
-        
-      </div>
-    </a>
+        </div>
+      </a>
     </div>
   </div>
 
@@ -42,3 +42,9 @@
     <pagination-controls (pageChange)="currentPage = $event" previousLabel="Trước" nextLabel="Sau"></pagination-controls>
   </div>
 </div>
+
+<app-donation-list></app-donation-list>
+
+
+
+
