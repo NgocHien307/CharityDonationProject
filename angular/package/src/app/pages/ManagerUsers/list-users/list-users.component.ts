@@ -1,4 +1,3 @@
-
 import { CommonModule } from '@angular/common';
 import { Component, NgModule, OnInit, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,25 +15,37 @@ import { Users } from 'src/app/core/models/database/db.model';
 
 @Component({
   selector: 'app-list-users',
-  imports: [MatTableModule,
-      CommonModule,
-      MatCardModule,
-      MaterialModule,
-      MatIconModule,
-      MatMenuModule,
-      NgxSpinnerModule,
-      MatButtonModule,],
+  imports: [
+    MatTableModule,
+    CommonModule,
+    MatCardModule,
+    MaterialModule,
+    MatIconModule,
+    MatMenuModule,
+    NgxSpinnerModule,
+    MatButtonModule,
+  ],
   templateUrl: './list-users.component.html',
-  styleUrl: './list-users.component.scss'
+  styleUrl: './list-users.component.scss',
 })
 export class ListUsersComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   public listUser: Users[] = [];
   dataSource1 = new MatTableDataSource<Users>(this.listUser);
 
-  displayedColumns1: string[] = ['assigned', 'fullname', 'name', 'priority', 'budget'];
+  displayedColumns1: string[] = [
+    'assigned',
+    'fullname',
+    'name',
+    'priority',
+    'budget',
+  ];
 
-  constructor(private spinnerService: NgxSpinnerService, private router: Router, private service: UserService) {}
+  constructor(
+    private spinnerService: NgxSpinnerService,
+    private router: Router,
+    private service: UserService
+  ) {}
 
   ngOnInit(): void {
     this.spinnerService.show();
@@ -50,8 +61,8 @@ export class ListUsersComponent implements OnInit {
   }
 
   onGetData() {
-    this.service.getListUser().subscribe(data => {
-      console.log("data", data);
+    this.service.getListUser().subscribe((data) => {
+      console.log('data', data);
       this.listUser = data;
       this.dataSource1 = new MatTableDataSource<Users>(this.listUser);
       this.dataSource1.paginator = this.paginator;
@@ -64,11 +75,27 @@ export class ListUsersComponent implements OnInit {
   }
 
   applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
+    const filterValue = (event.target as HTMLInputElement).value
+      .trim()
+      .toLowerCase();
     this.dataSource1.filter = filterValue;
 
     if (this.dataSource1.paginator) {
       this.dataSource1.paginator.firstPage();
+    }
+  }
+  onDeleteUser(id: number) {
+    if (confirm('Bạn có chắc chắn muốn xóa người dùng này không?')) {
+      this.service.deleteUser(id).subscribe(
+        () => {
+          alert('Xóa người dùng thành công!');
+          this.onGetData(); // Cập nhật danh sách
+        },
+        (error) => {
+          console.error('Lỗi khi xóa:', error);
+          alert('Xóa người dùng thất bại!');
+        }
+      );
     }
   }
 }

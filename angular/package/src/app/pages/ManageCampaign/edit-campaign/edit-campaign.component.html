@@ -36,12 +36,48 @@
           </mat-form-field>
         </div>
 
-        <!-- FeaturedImageUrl -->
+        <!-- Featured Image Section -->
         <div class="col-lg-6">
           <mat-label class="f-w-600 m-b-8 d-block">Ảnh Đại Diện</mat-label>
+          <small class="text-muted d-block mb-1">
+            - Bạn có thể nhập URL ảnh hoặc tải lên file mới.
+          </small>
+
+          <!-- Nhập URL ảnh -->
           <mat-form-field appearance="outline" class="w-100" color="primary">
-            <input matInput placeholder="URL Ảnh" formControlName="featuredImageUrl" />
+            <mat-label>URL ảnh</mat-label>
+            <input
+              matInput
+              formControlName="featuredImageUrl"
+              placeholder="Dán URL ảnh ở đây"
+              (input)="onUrlInput($event)"
+            />
           </mat-form-field>
+
+          <!-- Hoặc tải lên file -->
+          <div class="mt-2 mb-3">
+            <div class="custom-file-upload">
+              <button mat-stroked-button color="primary" type="button" (click)="fileInput.click()">
+                <mat-icon>cloud_upload</mat-icon> Chọn file
+              </button>
+              <input #fileInput
+                type="file"
+                accept="image/*"
+                style="display: none"
+                (change)="onFileSelected($event)"
+              />
+              <span *ngIf="selectedFile" class="ms-2">
+                {{selectedFile.name}} ({{(selectedFile.size / 1024).toFixed(1)}} KB)
+              </span>
+            </div>
+          </div>
+
+          <!-- Image Preview -->
+          <div *ngIf="previewImageUrl" class="mt-2 mb-3">
+            <div class="img-preview-container">
+              <img [src]="previewImageUrl" alt="Preview" class="img-fluid img-thumbnail" style="max-height: 200px;">
+            </div>
+          </div>
         </div>
 
         <!-- Status -->
@@ -101,10 +137,10 @@
       </div>
 
       <div class="m-t-12">
-        <button mat-flat-button color="primary" class="m-r-8" type="submit" [disabled]="campaignForm.invalid">
+        <button mat-flat-button color="primary" class="m-r-8" type="submit" [disabled]="campaignForm.invalid || isLoading">
           Lưu
         </button>
-        <button mat-stroked-button color="warn" (click)="onCancel()">
+        <button mat-stroked-button color="warn" (click)="onCancel()" [disabled]="isLoading">
           Hủy
         </button>
       </div>

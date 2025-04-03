@@ -4,3 +4,14 @@
   padding: 20px; /* Tăng padding để dialog không bị chật */
   border-radius: 8px; /* Bo góc nhẹ cho đẹp */
 }
+.green-button {
+  background-color: green !important;
+  color: white !important;
+}
+.error-message {
+  color: #d32f2f; /* Red color for error text */
+  font-size: 0.875rem; /* Slightly smaller font size */
+  margin-top: 0px;
+  margin-bottom: 10px; /* Space between the input field and error message */
+  font-weight: 500; /* Make the text a bit bolder */
+}

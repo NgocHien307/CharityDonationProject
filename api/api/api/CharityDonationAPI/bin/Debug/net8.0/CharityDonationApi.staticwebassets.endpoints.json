@@ -167,6 +167,88 @@
       ]
     },
     {
+      "Route": "uploads/campaigns/0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.f1p9p81fhb.jpg",
+      "AssetFile": "uploads/campaigns/0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9859"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 07:41:48 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f1p9p81fhb"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.jpg",
+      "AssetFile": "uploads/campaigns/0c59e82f-1a60-4469-9d8f-39fe4eb34bb5_download.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9859"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 07:41:48 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA="
+        }
+      ]
+    },
+    {
       "Route": "uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
       "AssetFile": "uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
       "Selectors": [],
@@ -245,6 +327,88 @@
         {
           "Name": "label",
           "Value": "uploads/campaigns/1e1deaec-10c5-417f-af07-58872d93a3d2_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "AssetFile": "uploads/campaigns/33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10480"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 06:10:33 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.k52hz9rf3p.jpg",
+      "AssetFile": "uploads/campaigns/33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10480"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 06:10:33 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k52hz9rf3p"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"
         }
       ]
     },

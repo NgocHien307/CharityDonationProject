@@ -1,109 +1,117 @@
 <mat-card class="cardWithShadow theme-card">
-
-      <ng-template mat-tab-label><h3>Tài khoản</h3></ng-template>
-      <mat-card-header>
-        <mat-card-title class="m-b-0">Thông tin người dùng</mat-card-title>
-
-      </mat-card-header>
-      <mat-card-content class="b-t-1">
-        <form>
+  <ng-template mat-tab-label><h3>Tài khoản</h3></ng-template>
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Thông tin người dùng</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+    <form>
       <div class="row">
         <div class="col-lg-6">
           <!-- input -->
           <mat-label class="f-w-600 m-b-8 d-block">Họ và tên</mat-label>
-          @if(staff){
           <mat-form-field appearance="outline" class="w-100" color="primary">
-
-            <input [value]="staff.FullName" matInput placeholder="Họ và tên"
-            (input)="onInputChange('FullName', $event)" />
-
+            <input
+              [value]="staff.FullName"
+              matInput
+              placeholder="Họ và tên"
+              (input)="onInputChange('FullName', $event)"
+            />
           </mat-form-field>
-        }
+          <div *ngIf="!staff.FullName" class="error-message">
+            Họ và tên không được để trống
+          </div>
         </div>
+
         <div class="col-lg-6">
           <mat-label class="f-w-600 m-b-8 d-block">Số điện thoại</mat-label>
-          @if(staff){
           <mat-form-field appearance="outline" class="w-100" color="primary">
-
-            <input matInput (input)="onInputChange('PhoneNumber', $event)" [value]="staff.PhoneNumber" placeholder="Số điện thoại " />
-
+            <input
+              matInput
+              (input)="onInputChange('PhoneNumber', $event)"
+              [value]="staff.PhoneNumber"
+              placeholder="Số điện thoại"
+            />
           </mat-form-field>
-        }
+          <div *ngIf="!staff.PhoneNumber" class="error-message">
+            Số điện thoại không được để trống
+          </div>
         </div>
+
         <div class="col-lg-6">
-          <!-- input -->
           <mat-label class="f-w-600 m-b-8 d-block">Email</mat-label>
-          @if(staff){
           <mat-form-field appearance="outline" class="w-100" color="primary">
-            @if(staffid){
-              <input matInput type="email" (input)="onInputChange('Email', $event)"  [value]="staff.Email" placeholder="email" [disabled]="true"/>
-            }
-            @else {
-              <input matInput type="email" (input)="onInputChange('Email', $event)"  [value]="staff.Email" placeholder="email" />
-            }
-
+            <input
+              matInput
+              type="email"
+              (input)="onInputChange('Email', $event)"
+              [value]="staff.Email"
+              placeholder="email"
+              [disabled]="staffid ? true : false"
+            />
           </mat-form-field>
-        }
+          <div *ngIf="!staff.Email" class="error-message">
+            Email không được để trống
+          </div>
+          <div
+            *ngIf="!staff.Email || !staff.Email.endsWith('@gmail.com')"
+            class="error-message"
+          >
+            Email phải kết thúc bằng &#64;gmail.com
+          </div>
         </div>
-        @if(!staffid){
-        <div class="col-lg-6">
+
+        <div *ngIf="!staffid" class="col-lg-6">
           <mat-label class="f-w-600 m-b-8 d-block">Mật khẩu</mat-label>
-
           <mat-form-field appearance="outline" class="w-100" color="primary">
-            <input matInput (input)="onInputChange('PassWord', $event)" placeholder="Mật khẩu" />
-
+            <input
+              matInput
+              (input)="onInputChange('PassWord', $event)"
+              placeholder="Mật khẩu"
+            />
           </mat-form-field>
-
+          <div *ngIf="!staff.PassWord" class="error-message">
+            Mật khẩu không được để trống
+          </div>
         </div>
-      }
+
         <div class="col-lg-6">
           <mat-label class="f-w-600 m-b-8 d-block">Trạng thái</mat-label>
-          @if(staff){
           <mat-form-field appearance="outline" class="w-100">
-
-            <mat-select [(value)]="userStatus"  (selectionChange)="onInputChange('Status', $event.value)">
-              @for(option of stt; track option.value) {
-              <mat-option [value]="option.value">{{
+            <mat-select
+              [(value)]="userStatus"
+              (selectionChange)="onInputChange('Status', $event.value)"
+            >
+              <mat-option *ngFor="let option of stt" [value]="option.value">{{
                 option.viewValue
-                }}</mat-option>
-              }
+              }}</mat-option>
             </mat-select>
-
           </mat-form-field>
-        }
+          <div *ngIf="userStatus == null" class="error-message">
+            Vui lòng chọn trạng thái
+          </div>
         </div>
+
         <div class="col-lg-6">
           <mat-label class="f-w-600 m-b-8 d-block">Quyền</mat-label>
-          @if(staff){
           <mat-form-field appearance="outline" class="w-100">
-
-            <mat-select [(value)]="staff.RoleId"  (selectionChange)="onInputChange('RoleId', $event.value)">
-              @for(option of role; track option.value) {
-              <mat-option [value]="option.value">{{
+            <mat-select
+              [(value)]="staff.RoleId"
+              (selectionChange)="onInputChange('RoleId', $event.value)"
+            >
+              <mat-option *ngFor="let option of role" [value]="option.value">{{
                 option.viewValue
-                }}</mat-option>
-              }
+              }}</mat-option>
             </mat-select>
-
           </mat-form-field>
-        }
+          <div *ngIf="staff.RoleId == null" class="error-message">
+            Vui lòng chọn quyền
+          </div>
         </div>
       </div>
 
-      <div class="m-t-12">
-        <button mat-flat-button color="primary" class="m-r-8" (click)="onSubmit()">Lưu</button>
-        <button mat-stroked-button color="warn">Hủy</button>
-      </div>
+      <button mat-button class="green-button" (click)="onSubmit()">
+        {{ staffid ? "Cập nhật" : "Thêm người dùng" }}
+      </button>
     </form>
-
-      </mat-card-content>
-
+  </mat-card-content>
 </mat-card>
-<ngx-spinner
-  bdColor="rgba(51,51,51,0.8)"
-  size="medium"
-  color="#fff"
-  type="ball-beat"
-  [fullScreen]="false"
-  >Loading...</ngx-spinner
->
