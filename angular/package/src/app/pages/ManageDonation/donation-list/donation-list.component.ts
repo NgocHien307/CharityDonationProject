@@ -22,7 +22,7 @@ interface Campaign {
 export class DonationListComponent implements OnInit {
   donations: Campaign[] = []; // Danh sách đầy đủ từ API
   displayedDonations: Campaign[] = []; // Danh sách đang hiển thị
-  isLoading = true;
+  isLoading = false ;
   errorMessage: string | null = null;
   itemsPerPage = 6; // Số lượng hiển thị mỗi lần nhấn "Xem thêm"
 
@@ -55,9 +55,17 @@ export class DonationListComponent implements OnInit {
     });
   }
 
-  loadMore() {
-    const currentLength = this.displayedDonations.length;
-    const nextItems = this.donations.slice(currentLength, currentLength + this.itemsPerPage);
-    this.displayedDonations = [...this.displayedDonations, ...nextItems];
-  }
+  showLoadMore = true;
+loadMore() {
+  this.isLoading = true;
+  setTimeout(() => {
+    // Thêm dữ liệu vào danh sách hiển thị
+    const remainingItems = this.donations.slice(this.displayedDonations.length, this.displayedDonations.length + 5);
+    this.displayedDonations.push(...remainingItems);
+    this.isLoading = false;
+
+    this.showLoadMore = this.displayedDonations.length < this.donations.length;
+  }, 1000); // Giả lập thời gian tải
+}
+
 }

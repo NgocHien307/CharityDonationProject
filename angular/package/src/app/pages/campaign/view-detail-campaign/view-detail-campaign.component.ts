@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule, NgIf, NgFor } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { CampaignService } from 'src/app/core/service/campaign.service';
+import { Campaign } from 'src/app/core/models/database/campaign.model';
 
 @Component({
   selector: 'app-view-detail-campaign',

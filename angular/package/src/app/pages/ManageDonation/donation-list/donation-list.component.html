@@ -15,9 +15,15 @@
   </div>
 
   <!-- Nút Xem thêm -->
-  <div *ngIf="displayedDonations.length < donations.length" class="d-flex justify-content-center mt-4">
-      <button class="btn btn-primary" (click)="loadMore()">Xem thêm</button>
+  <div *ngIf="showLoadMore" class="d-flex justify-content-center mt-4">
+    <button class="btn btn-primary custom-btn" (click)="loadMore()" [disabled]="isLoading">
+      <span *ngIf="!isLoading"><i class="fas fa-angle-down me-2"></i> Xem thêm</span>
+      <span *ngIf="isLoading"><i class="fas fa-spinner fa-spin me-2"></i> Đang tải...</span>
+    </button>
   </div>
+  
+  
+  
     <p *ngIf="isLoading" class="loading">Đang tải danh sách chiến dịch...</p>
 
     <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
