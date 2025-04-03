@@ -1,79 +1,146 @@
 <!-- Trạng thái loading -->
 <div *ngIf="isLoading" class="text-center">
-    <span>Đang tải...</span>
+  <span>Đang tải...</span>
+</div>
+
+<!-- Hiển thị thông tin chiến dịch -->
+<div *ngIf="!isLoading && campaign" class="container my-5">
+  <!-- Tiêu đề và mô tả -->
+  <div class="row">
+    <div class="col-12">
+      <h1 class="campaign-title mb-3">{{ campaign.Title }}</h1>
+      <p class="campaign-description">
+        <i class="fas fa-heart text-danger me-2"></i>
+        {{ campaign.Description || 'Không có mô tả' }}
+      </p>
+      <p class="text-muted small">{{ campaign.StartDate | date:'dd/MM/yyyy' }}</p>
+    </div>
   </div>
-  
-  <!-- Hiển thị thông tin chiến dịch -->
-  <div *ngIf="!isLoading && campaign" class="container my-5">
-    <div class="row align-items-center">
-      <!-- Cột bên trái: Thông tin chiến dịch -->
-      <div class="col-lg-7">
-        <!-- Tiêu đề chiến dịch -->
-        <h1 class="fw-bold text-dark mb-4">
-          <i class="fas fa-graduation-cap text-primary me-2"></i> {{ campaign.Title }}
-        </h1>
-  
-        <!-- Mô tả chiến dịch -->
-        <p class="text-muted lead">❤️ {{ campaign.Description || 'Không có mô tả' }}</p>
-  
-        <!-- Ngày bắt đầu và ngày kết thúc -->
+
+  <div class="row">
+    <!-- Cột bên trái: Ảnh đại diện -->
+    <div class="col-md-8">
+      <div class="campaign-image mb-3">
+        <img
+          [src]="campaign.FeaturedImageUrl || 'https://via.placeholder.com/800x400?text=Không+có+ảnh'"
+          class="img-fluid rounded"
+          alt="Hình ảnh chiến dịch"
+        />
+      </div>
+    </div>
+
+    <!-- Cột bên phải: Thông tin quyên góp -->
+    <div class="col-md-4">
+      <div class="donation-info p-3 rounded shadow-sm">
+        <h5 class="text-uppercase text-muted mb-3">Thông tin quyên góp</h5>
         <div class="d-flex align-items-center mb-3">
-          <i class="fas fa-calendar-alt text-primary me-2"></i>
-          <strong>Ngày bắt đầu:</strong> {{ campaign.StartDate | date:'dd/MM/yyyy' }}
+          <img
+            src="https://via.placeholder.com/36x36?text=MO"
+            class="me-2"
+            alt="Logo MO"
+            style="width: 36px; height: 36px;"
+          />
+          <span><strong>Đơn vị thực hiện dự án</strong> MO - Ứng dụng Tài chính</span>
         </div>
         <div class="d-flex align-items-center mb-3">
-          <i class="fas fa-calendar-alt text-primary me-2"></i>
-          <strong>Ngày kết thúc:</strong> {{ campaign.EndDate ? (campaign.EndDate | date:'dd/MM/yyyy') : 'Chưa xác định' }}
+          <img
+            src="https://via.placeholder.com/36x36?text=HOPE"
+            class="me-2"
+            alt="Logo HOPE"
+            style="width: 36px; height: 36px;"
+          />
+          <span><strong>Đơn vị kiểm chứng</strong> {{ campaign.CreatorName || 'Chưa xác định' }}</span>
         </div>
-  
-        <!-- Tiến độ quyên góp -->
-        <div class="mt-4">
-          <div class="d-flex justify-content-between mb-2">
-            <span class="fw-bold text-success">
-              Đã quyên góp: {{ campaign.CollectedAmount | number }} đ
-            </span>
-            <span class="text-muted">
-              Mục tiêu: {{ campaign.GoalAmount | number }} đ
-            </span>
-          </div>
-          <div class="progress donation-progress">
+        <div class="donation-progress mb-3">
+          <div class="progress">
             <div
-              class="progress-bar donation-progress-bar"
+              class="progress-bar bg-pink"
               role="progressbar"
               [style.width.%]="(campaign.CollectedAmount / campaign.GoalAmount) * 100"
               attr.aria-valuenow="{{ (campaign.CollectedAmount / campaign.GoalAmount) * 100 }}"
               aria-valuemin="0"
               aria-valuemax="100"
-            >
-              {{ (campaign.CollectedAmount / campaign.GoalAmount) * 100 | number:'1.0-2' }}%
-            </div>
+            ></div>
+          </div>
+          <div class="d-flex justify-content-between mt-2">
+            <span class="text-pink">
+              {{ campaign.CollectedAmount | number }}đ quyên góp / {{ campaign.GoalAmount | number }}đ
+            </span>
           </div>
         </div>
-  
-        <!-- Nút hành động -->
-        <div class="mt-4">
-          <button class="btn btn-primary btn-lg me-3">
-            <i class="fas fa-hand-holding-usd me-2"></i>Quyên góp ngay
-          </button>
-          <button class="btn btn-outline-secondary btn-lg">
-            <i class="fas fa-share-alt me-2"></i>Chia sẻ
-          </button>
+        <div class="d-flex justify-content-between mb-3">
+          <div>
+            <strong>{{ donations.length }}</strong> Lượt quyên góp
+          </div>
+          <div>
+            <strong>{{ (campaign.CollectedAmount / campaign.GoalAmount) * 100 | number:'1.0-2' }}%</strong> Đạt được
+          </div>
+          <div>
+            <strong>{{ calculateRemainingDays() }}</strong> Ngày còn
+          </div>
         </div>
-      </div>
-  
-      <!-- Cột bên phải: Ảnh đại diện -->
-      <div class="col-lg-5">
-        <img
-          [src]="campaign.FeaturedImageUrl || 'https://via.placeholder.com/500x300?text=Không+có+ảnh'"
-          class="img-fluid rounded shadow-lg"
-          alt="Hình ảnh quyên góp"
-        />
+        <button class="btn btn-pink btn-lg w-100 mb-2">Quyên góp</button>
+        <button class="btn btn-outline-secondary btn-lg w-100">
+          <i class="fas fa-share-alt me-2"></i>Chia sẻ
+        </button>
       </div>
     </div>
-  
-
-  
-  <!-- Hiển thị thông báo lỗi nếu có -->
-  <div *ngIf="errorMessage && !isLoading" class="alert alert-danger mt-4">
-    {{ errorMessage }}
   </div>
+
+  <!-- Phần mô tả chi tiết -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h2>Câu chuyện</h2>
+      <p>{{ campaign.Description || 'Không có câu chuyện' }}</p>
+    </div>
+
+    <!-- Nhà hảo tâm -->
+    <div class="col-12">
+        <h3>Nhà hảo tâm hàng đầu</h3>
+      <div *ngIf="topDonors.length === 0" class="text-muted">
+        Chưa có nhà hảo tâm nào tham gia.
+      </div>
+      <ul class="donor-list">
+        <li *ngFor="let donor of topDonors; let i = index" class="donor-item d-flex justify-content-between align-items-center">
+          <span>
+            <span class="donor-rank">{{ i + 1 }}</span>
+            <i class="fas fa-heart text-danger me-2"></i>
+            {{ donor.User || 'Ẩn danh' }}
+          </span>
+          <span class="donor-amount">{{ donor.Amount | number }}đ</span>
+        </li>
+      </ul>
+      <h3>Nhà hảo tâm mới nhất</h3>
+      <div *ngIf="latestDonors.length === 0" class="text-muted">
+        Chưa có nhà hảo tâm nào tham gia.
+      </div>
+      <ul class="donor-list">
+        <li *ngFor="let donor of latestDonors; let i = index" class="donor-item d-flex justify-content-between align-items-center">
+          <span>
+            <span class="donor-rank">{{ i + 1 }}</span>
+            <i class="fas fa-heart text-danger me-2"></i>
+            {{ donor.User|| 'Ẩn danh' }}
+          </span>
+          <span class="donor-amount">{{ donor.Amount | number }}đ</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Về Creator -->
+    <div class="col-12 mt-4">
+      <h2>Về  {{campaign.CreatorName}}</h2>
+      <div *ngIf="creators.length === 0" class="text-muted">
+        Chưa có thông tin về đơn vị kiểm chứng.
+      </div>
+      <div *ngFor="let creator of creators">
+        <h2>Về {{ creator.name }} - Đơn vị kiểm chứng</h2>
+        <p>{{ creator.description || 'Không có mô tả' }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hiển thị thông báo lỗi nếu có -->
+<div *ngIf="errorMessage && !isLoading" class="alert alert-danger mt-4">
+  {{ errorMessage }}
+</div>

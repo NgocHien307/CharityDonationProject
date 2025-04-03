@@ -24,4 +24,8 @@ export class CreatorService {
   getAllCreators(): Observable<Creator[]> {
     return this.http.get<Creator[]>(environment.apiUrl + '/api/Creator/get-all-creators');
 }
+
+getCreatorById(id: number): Observable<Creator> {
+  return this.http.get<Creator>(`${environment.apiUrl}/api/Creator/get-creator-by-id/${id}`);
+}
 }

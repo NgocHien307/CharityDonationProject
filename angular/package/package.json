@@ -22,6 +22,7 @@
     "@angular/router": "^19.0.0",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "@swimlane/ngx-charts": "^22.0.0-alpha.1",
     "angular-tabler-icons": "^2.7.0",
     "apexcharts": "^3.49.0",
     "json2typescript": "^1.5.1",

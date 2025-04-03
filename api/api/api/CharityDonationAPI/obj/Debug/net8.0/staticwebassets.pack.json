@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\uploads\\campaigns\\33ef09c8-523d-49fc-b93c-7501620c6644_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"
     },
     {
+      "Id": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\3d60792b-9bb4-4dcc-8c54-42ac35d0cd1a_pexels-donaldtong94-55787.jpg",
+      "PackagePath": "staticwebassets\\uploads\\campaigns\\3d60792b-9bb4-4dcc-8c54-42ac35d0cd1a_pexels-donaldtong94-55787.jpg"
+    },
+    {
       "Id": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg",
       "PackagePath": "staticwebassets\\uploads\\campaigns\\65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg"
     },
@@ -21,8 +25,28 @@
       "PackagePath": "staticwebassets\\uploads\\campaigns\\7847b14d-23d3-43b5-937d-244671c3e5ac_api.zip"
     },
     {
+      "Id": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\7a6613dc-c5c7-4f0f-bed2-58b1bb351900_download.jpg",
+      "PackagePath": "staticwebassets\\uploads\\campaigns\\7a6613dc-c5c7-4f0f-bed2-58b1bb351900_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\a7b523c9-7e2d-46b8-b18e-9399eab85a7e_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "PackagePath": "staticwebassets\\uploads\\campaigns\\a7b523c9-7e2d-46b8-b18e-9399eab85a7e_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"
+    },
+    {
       "Id": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg",
       "PackagePath": "staticwebassets\\uploads\\campaigns\\cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\ddf844f6-aa13-4c61-af2f-c2555664e4dd_download.jpg",
+      "PackagePath": "staticwebassets\\uploads\\campaigns\\ddf844f6-aa13-4c61-af2f-c2555664e4dd_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\e81d1c6d-7128-4341-9878-b6c7d29eaf20_download.jpg",
+      "PackagePath": "staticwebassets\\uploads\\campaigns\\e81d1c6d-7128-4341-9878-b6c7d29eaf20_download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\CharityDonationProject\\api\\api\\api\\CharityDonationAPI\\wwwroot\\uploads\\campaigns\\fe6908b6-3072-41da-8c18-d7c62759dc40_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "PackagePath": "staticwebassets\\uploads\\campaigns\\fe6908b6-3072-41da-8c18-d7c62759dc40_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CharityDonationApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

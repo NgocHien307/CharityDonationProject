@@ -2,30 +2,39 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule, NgIf, NgFor } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { CampaignService } from 'src/app/core/service/campaign.service';
+import { DonationService } from 'src/app/core/service/donation.service';
 import { Campaign } from 'src/app/core/models/database/campaign.model';
+import { Donation } from 'src/app/core/models/database/donation.model';
+import { Creator, CreatorService } from 'src/app/core/service/creator.service';
 
 @Component({
   selector: 'app-view-detail-campaign',
-  imports: [CommonModule, NgIf],
+  imports: [CommonModule, NgIf, NgFor],
   standalone: true,
   templateUrl: './view-detail-campaign.component.html',
-  styleUrl: './view-detail-campaign.component.scss'
+  styleUrls: ['./view-detail-campaign.component.scss']
 })
 export class ViewDetailCampaignComponent implements OnInit {
-  campaign: Campaign | null = null; 
+  campaign: Campaign | null = null;
+  donations: Donation[] = [];
+  creators: Creator[] = []; // Danh sách Creators thay vì chỉ một Creator
   errorMessage: string = '';
   isLoading: boolean = true;
-  
+  topDonors: Donation[] = [];
+  latestDonors: Donation[] = [];
+
   constructor(
     private route: ActivatedRoute,
-    private campaignService: CampaignService
-  ) { }
+    private campaignService: CampaignService,
+    private donationService: DonationService,
+    private creatorService: CreatorService
+  ) {}
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    console.log('ID từ URL:', id);
     if (id) {
       this.fetchCampaignDetails(id);
+      this.fetchDonations(id);
     } else {
       this.errorMessage = 'Không tìm thấy ID chiến dịch trong URL.';
       this.isLoading = false;
@@ -35,7 +44,6 @@ export class ViewDetailCampaignComponent implements OnInit {
   fetchCampaignDetails(id: string) {
     const campaignId = Number(id);
     if (isNaN(campaignId)) {
-      console.error('ID không hợp lệ');
       this.errorMessage = 'ID chiến dịch không hợp lệ.';
       this.isLoading = false;
       return;
@@ -43,15 +51,68 @@ export class ViewDetailCampaignComponent implements OnInit {
 
     this.campaignService.getCampaignById(campaignId).subscribe({
       next: (data: Campaign) => {
-        console.log('Dữ liệu chiến dịch nhận được:', data);
         this.campaign = data;
         this.isLoading = false;
       },
       error: (error) => {
-        console.error('Lỗi khi lấy dữ liệu:', error);
         this.errorMessage = 'Lỗi khi tải chiến dịch, vui lòng thử lại!';
         this.isLoading = false;
       }
     });
+  }
+
+  fetchCreatorsDetails(creatorIds: number[]) {
+    // Lấy thông tin từng Creator trong danh sách CreatorIds
+    creatorIds.forEach((id) => {
+      this.creatorService.getCreatorById(id).subscribe({
+        next: (creator: Creator) => {
+          this.creators.push(creator); // Thêm Creator vào danh sách
+        },
+        error: (error) => {
+          console.error(`Lỗi khi lấy thông tin Creator ID ${id}:`, error);
+        }
+      });
+    });
+  }
+
+  fetchDonations(id: string) {
+    const campaignId = Number(id);
+    if (isNaN(campaignId)) {
+      return;
+    }
+
+    this.donationService.getDonationsByCampaignId(campaignId).subscribe({
+      next: (donations: Donation[]) => {
+        this.donations = donations;
+        this.topDonors = this.getTopDonors(donations);
+        this.latestDonors = this.getLatestDonors(donations);
+      },
+      error: (error) => {
+        this.errorMessage = 'Lỗi khi tải danh sách quyên góp.';
+      }
+    });
+  }
+
+  calculateRemainingDays(): number {
+    if (!this.campaign || !this.campaign.EndDate) {
+      return 0;
+    }
+    const endDate = new Date(this.campaign.EndDate);
+    const today = new Date();
+    const timeDiff = endDate.getTime() - today.getTime();
+    const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    return daysDiff > 0 ? daysDiff : 0;
+  }
+
+  getTopDonors(donations: Donation[]): Donation[] {
+    return donations
+      .sort((a, b) => b.Amount - a.Amount)
+      .slice(0, 10); // Lấy top 10
+  }
+
+  getLatestDonors(donations: Donation[]): Donation[] {
+    return donations
+      .sort((a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime())
+      .slice(0, 10); // Lấy 10 mới nhất
   }
 }
