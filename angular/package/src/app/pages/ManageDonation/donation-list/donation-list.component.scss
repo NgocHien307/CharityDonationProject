@@ -18,24 +18,23 @@
   }
   
   .custom-btn {
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 30px;
-    transition: all 0.3s ease-in-out;
-    background: linear-gradient(135deg, #007bff, #6610f2);
-    border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .custom-btn:hover {
-    background: linear-gradient(135deg, #6610f2, #007bff);
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .custom-btn:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn:hover {
+  background: linear-gradient(135deg, #6610f2, #007bff);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.custom-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}

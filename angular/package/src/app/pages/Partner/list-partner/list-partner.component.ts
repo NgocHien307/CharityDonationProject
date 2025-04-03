@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PartnerService} from 'src/app/core/service/partner.service';
 import { CommonModule } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
@@ -10,11 +10,13 @@ import { DonationCardComponent } from '../../ManageDonation/donation-card/donati
 
 @Component({
   selector: 'app-list-partner',
-  imports: [CommonModule, NgxPaginationModule, RouterModule, DonationListComponent, PartnerCampaignsComponent],
+  imports: [CommonModule, NgxPaginationModule, RouterModule, DonationListComponent],
   templateUrl: './list-partner.component.html',
   styleUrl: './list-partner.component.scss'
 })
 export class ListPartnerComponent implements OnInit {
+  @Input() isInHome: boolean = false;
+  @Input() showDonationList: boolean = true;
   partners: any[] = [];
   isLoading = true;
   currentPage = 1; 

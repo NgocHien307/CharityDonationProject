@@ -1,0 +1,12 @@
+.card-body {
+  padding: 1.25rem; /* Cung cấp khoảng cách giữa các phần tử bên trong */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Tăng kích thước chữ cho tiêu đề */
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px; /* Đảm bảo hình ảnh không bị méo và vừa vặn với card */
+}

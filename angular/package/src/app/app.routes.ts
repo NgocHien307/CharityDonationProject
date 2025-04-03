@@ -9,6 +9,8 @@ import { ListPartnerComponent } from './pages/Partner/list-partner/list-partner.
 import { PartnerDetailComponent } from './pages/Partner/partner-detail/partner-detail.component';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
 import {ViewDetailCampaignComponent} from './pages/campaign/view-detail-campaign/view-detail-campaign.component';
+import { AppTopstripComponent } from './layouts/full/top-strip/topstrip.component';
+import { CategoryCampaignListComponent } from './pages/category/category-campaign-list/category-campaign-list.component';
 
 
 export const routes: Routes = [
@@ -56,6 +58,11 @@ export const routes: Routes = [
         path: 'list-partner',
         canActivate: [AuthGuard],
         component: ListPartnerComponent
+      },
+      {
+        path: 'categories/:id',
+        canActivate: [AuthGuard],
+        component: CategoryCampaignListComponent 
       },
       {
         path: 'partner-detail/:id', 

@@ -43,7 +43,9 @@
   </div>
 </div>
 
-<app-donation-list></app-donation-list>
+<div *ngIf="!isInHome"> <!-- Chỉ hiển thị nếu không phải trong Home -->
+  <app-donation-list></app-donation-list>
+</div>
 
 
 
