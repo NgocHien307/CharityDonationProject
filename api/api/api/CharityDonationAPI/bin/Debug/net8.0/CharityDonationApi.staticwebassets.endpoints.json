@@ -413,6 +413,88 @@
       ]
     },
     {
+      "Route": "uploads/campaigns/3d60792b-9bb4-4dcc-8c54-42ac35d0cd1a_pexels-donaldtong94-55787.jpg",
+      "AssetFile": "uploads/campaigns/3d60792b-9bb4-4dcc-8c54-42ac35d0cd1a_pexels-donaldtong94-55787.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1563996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:28:00 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/3d60792b-9bb4-4dcc-8c54-42ac35d0cd1a_pexels-donaldtong94-55787.mbbxczhyjz.jpg",
+      "AssetFile": "uploads/campaigns/3d60792b-9bb4-4dcc-8c54-42ac35d0cd1a_pexels-donaldtong94-55787.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1563996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:28:00 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mbbxczhyjz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bsC80oGJ1s+w+sWf3/K/a3hT9+ao+CPCjFJwjjB5qYg="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/3d60792b-9bb4-4dcc-8c54-42ac35d0cd1a_pexels-donaldtong94-55787.jpg"
+        }
+      ]
+    },
+    {
       "Route": "uploads/campaigns/65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg",
       "AssetFile": "uploads/campaigns/65d47930-3d4f-42b9-a46f-24fc56b193be_pexels-donaldtong94-55787.jpg",
       "Selectors": [],
@@ -577,6 +659,170 @@
       ]
     },
     {
+      "Route": "uploads/campaigns/7a6613dc-c5c7-4f0f-bed2-58b1bb351900_download.f1p9p81fhb.jpg",
+      "AssetFile": "uploads/campaigns/7a6613dc-c5c7-4f0f-bed2-58b1bb351900_download.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9859"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:21:38 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f1p9p81fhb"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/7a6613dc-c5c7-4f0f-bed2-58b1bb351900_download.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/7a6613dc-c5c7-4f0f-bed2-58b1bb351900_download.jpg",
+      "AssetFile": "uploads/campaigns/7a6613dc-c5c7-4f0f-bed2-58b1bb351900_download.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9859"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:21:38 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/a7b523c9-7e2d-46b8-b18e-9399eab85a7e_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "AssetFile": "uploads/campaigns/a7b523c9-7e2d-46b8-b18e-9399eab85a7e_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10480"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:19:19 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/a7b523c9-7e2d-46b8-b18e-9399eab85a7e_pngtree-cute-cartoon-light-bulb-image_1134759.k52hz9rf3p.jpg",
+      "AssetFile": "uploads/campaigns/a7b523c9-7e2d-46b8-b18e-9399eab85a7e_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10480"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:19:19 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k52hz9rf3p"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/a7b523c9-7e2d-46b8-b18e-9399eab85a7e_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"
+        }
+      ]
+    },
+    {
       "Route": "uploads/campaigns/cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg",
       "AssetFile": "uploads/campaigns/cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg",
       "Selectors": [],
@@ -655,6 +901,252 @@
         {
           "Name": "label",
           "Value": "uploads/campaigns/cb75dd77-adc6-4ea4-824e-a2a692ed42cb_pexels-donaldtong94-55787.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/ddf844f6-aa13-4c61-af2f-c2555664e4dd_download.f1p9p81fhb.jpg",
+      "AssetFile": "uploads/campaigns/ddf844f6-aa13-4c61-af2f-c2555664e4dd_download.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9859"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:18:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f1p9p81fhb"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/ddf844f6-aa13-4c61-af2f-c2555664e4dd_download.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/ddf844f6-aa13-4c61-af2f-c2555664e4dd_download.jpg",
+      "AssetFile": "uploads/campaigns/ddf844f6-aa13-4c61-af2f-c2555664e4dd_download.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9859"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:18:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/e81d1c6d-7128-4341-9878-b6c7d29eaf20_download.f1p9p81fhb.jpg",
+      "AssetFile": "uploads/campaigns/e81d1c6d-7128-4341-9878-b6c7d29eaf20_download.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9859"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:11:01 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f1p9p81fhb"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/e81d1c6d-7128-4341-9878-b6c7d29eaf20_download.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/e81d1c6d-7128-4341-9878-b6c7d29eaf20_download.jpg",
+      "AssetFile": "uploads/campaigns/e81d1c6d-7128-4341-9878-b6c7d29eaf20_download.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9859"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:11:01 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-A5D+Eq30nqMobfrdcHgRApAdZJp8/xOhKvL2GG8YtzA="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/fe6908b6-3072-41da-8c18-d7c62759dc40_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "AssetFile": "uploads/campaigns/fe6908b6-3072-41da-8c18-d7c62759dc40_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10480"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:19:49 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/campaigns/fe6908b6-3072-41da-8c18-d7c62759dc40_pngtree-cute-cartoon-light-bulb-image_1134759.k52hz9rf3p.jpg",
+      "AssetFile": "uploads/campaigns/fe6908b6-3072-41da-8c18-d7c62759dc40_pngtree-cute-cartoon-light-bulb-image_1134759.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10480"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 08:19:49 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k52hz9rf3p"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KFzQvWivJpo6yuyifg0SRaKX07S8sV9jx1ZcSe5sxyE="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/campaigns/fe6908b6-3072-41da-8c18-d7c62759dc40_pngtree-cute-cartoon-light-bulb-image_1134759.jpg"
         }
       ]
     }
