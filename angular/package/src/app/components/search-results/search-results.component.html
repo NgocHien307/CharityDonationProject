@@ -1,7 +1,10 @@
 <div *ngIf="searchResults.length > 0; else noResults">
   <ul class="list-group">
     <li *ngFor="let campaign of searchResults" class="list-group-item">
-      <a [routerLink]="'/view-campaign-detail/' + campaign.id">{{ campaign.title }}</a>
+      <a [routerLink]="['/view-campaign-detail', campaign.Id]" class="campaign-link">
+        <img [src]="campaign.FeaturedImageUrl" alt="{{ campaign.Title }}" class="campaign-image">
+        <span class="campaign-title">{{ campaign.Title }}</span>
+      </a>
     </li>
   </ul>
 </div>
