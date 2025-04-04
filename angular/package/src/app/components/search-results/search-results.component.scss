@@ -1,0 +1,20 @@
+.campaign-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .campaign-image {
+    width: 60px; 
+    height: 60px;
+    border-radius: 8px; 
+    margin-right: 10px;
+    object-fit: cover;
+  }
+  
+  .campaign-title {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
