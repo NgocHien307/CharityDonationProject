@@ -19,6 +19,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Campaign } from 'src/app/core/models/database/campaign.model';
 import { FormsModule } from '@angular/forms';
+import { Category, CategoryService } from 'src/app/core/service/category.service';
 
 
 
@@ -32,17 +33,24 @@ export class AppTopstripComponent implements OnInit {
   isAdminUser: boolean = true;
   isUser: boolean = true;
   campaigns: any[] = [];
-  categories: any[] = [];
+  categories: Category[] = [];
   searchQuery: string = '';
   filteredCampaigns: Campaign[] = [];
 
-  constructor(private rolePermissionService: RolePermissionService, private router: Router, private http: HttpClient) {
+  constructor(private rolePermissionService: RolePermissionService, private router: Router, private http: HttpClient, private categoryService: CategoryService) {
     this.isAdminUser = this.rolePermissionService.hasRole(['Admin']);
   }
   ngOnInit(): void {
     this.getCampaigns();
     this.getCategories();
+    this.loadCategories();
   }
+
+  goToCategory(categoryId: number): void {
+    console.log('Navigating to category:', categoryId);
+    this.router.navigate(['/categories', categoryId]);
+  }
+  
 
   logout() {
     this.userLogged.logout();
@@ -70,4 +78,19 @@ export class AppTopstripComponent implements OnInit {
     }
   }
 
+  loadCategories(): void {
+    this.categoryService.getAllCategories()
+      .subscribe({
+        next: (data) => {
+          console.log('Categories:', data);
+          this.categories = data;
+        },
+        error: (err) => console.error('Error fetching categories:', err)
+      });
+
+      
+
+  
+
+}
 }

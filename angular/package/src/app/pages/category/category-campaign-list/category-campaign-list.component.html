@@ -1,0 +1,62 @@
+<div class="container">
+  <!-- Thanh category hàng ngang -->
+  <div class="nav nav-tabs">
+    <a *ngFor="let category of categories" class="nav-link"
+       [routerLink]="['/categories', category.id]"
+       [class.active]="category.id === selectedCategoryId">
+      {{ category.name }}
+    </a>
+  </div>
+  
+
+  <!-- Danh sách campaign -->
+  <div class="mt-3">
+    <h3>Danh sách Campaign</h3>
+
+
+    <div class="row g-4" *ngIf="campaigns.length > 0; else noCampaigns">
+            <div class="col-md-4" *ngFor="let campaign of campaigns">
+                <div class="card mb-4 border-0 shadow-sm">
+                    <img [src]="campaign.featuredImageUrl" class="card-img-top" alt="Campaign Image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ campaign.title | slice:0:25 }}<span *ngIf="campaign.title.length > 25">...</span></h5>
+                        <p class="card-text text-muted small">
+                            {{ campaign.description | slice:0:30 }}<span *ngIf="campaign.description.length > 30">...</span>
+                        </p>
+                        
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-success">{{ campaign.collectedAmount | number }}đ</span>
+                            <span class="text-muted">{{ campaign.goalAmount | number }}đ</span>
+                        </div>
+
+                        <div class="progress" style="height: 5px;">
+                            <div class="progress-bar bg-success" role="progressbar" 
+                                [style.width.%]="getProgressPercentage(campaign.collectedAmount, campaign.goalAmount)"
+                                aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mt-2 small">
+                            <span>1.141 lượt quyên góp</span>
+                            <span>{{ getProgressPercentage(campaign.collectedAmount, campaign.goalAmount) | number:'1.0-0' }}% đạt được</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mt-3">
+                            <span class="badge bg-primary" *ngIf="getDaysLeft(campaign.endDate) > 0">
+                                Còn {{ getDaysLeft(campaign.endDate) }} ngày
+                            </span>
+                            <span class="badge bg-danger" *ngIf="getDaysLeft(campaign.endDate) <= 0">
+                                Đã kết thúc
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <ng-template #noCampaigns>
+      <p>Không có campaign nào cho danh mục này.</p>
+    </ng-template>
+  </div>
+</div>
