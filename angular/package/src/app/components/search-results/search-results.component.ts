@@ -10,6 +10,7 @@ import { CampaignService } from 'src/app/core/service/campaign.service';
   standalone: true,
   imports: [CommonModule,RouterModule],
   templateUrl: './search-results.component.html',
+  styleUrl: './search-results.component.scss',
 })
 export class SearchResultsComponent implements OnInit {
   searchQuery: string = '';

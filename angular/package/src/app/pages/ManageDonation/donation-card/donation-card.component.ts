@@ -2,7 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { ViewDetailCampaignComponent } from '../../campaign/view-detail-campaign/view-detail-campaign.component';
 
 interface Campaign {
   id: number;
