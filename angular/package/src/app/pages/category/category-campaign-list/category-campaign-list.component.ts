@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-category-campaign-list',
   standalone: true,
-  imports:[CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink],
   templateUrl: './category-campaign-list.component.html',
 })
 export class CategoryCampaignListComponent implements OnInit {

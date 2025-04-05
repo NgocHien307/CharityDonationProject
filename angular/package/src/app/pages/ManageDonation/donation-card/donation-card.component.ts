@@ -15,7 +15,7 @@ interface Campaign {
 @Component({
   selector: 'app-donation-card',
   standalone: true,
-  imports: [CommonModule, RouterModule, ViewDetailCampaignComponent], 
+  imports: [CommonModule, RouterModule], 
   templateUrl: './donation-card.component.html',
   styleUrls: ['./donation-card.component.scss']
 })

@@ -1,15 +1,13 @@
-
 <div class="donation-card" [routerLink]="['/view-campaign-detail', data?.id]">
-  <div class="donation-image-container">
+    <div class="donation-image-container">
       <img src="{{data?.featuredImageUrl}}" alt="Minh họa quyên góp" class="donation-image">
-  </div>
-  <div class="donation-info">
+    </div>
+    <div class="donation-info">
       <h3 class="donation-title">{{ data?.title }}</h3>
       <p class="donation-amount">
-          Đã quyên góp: <strong>{{ data?.collectedAmount | number }} / {{ data?.goalAmount | number }} VNĐ</strong>
+        Đã quyên góp: <strong>{{ formattedGoal }}</strong>
       </p>
       <button class="donate-button">Quyên góp</button>
+    </div>
   </div>
-</div>
-
-
+  

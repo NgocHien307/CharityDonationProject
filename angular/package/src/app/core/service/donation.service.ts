@@ -17,7 +17,7 @@ export class DonationService extends ApiService {
 
   // Lấy tất cả các khoản quyên góp
   getAllDonations(): Observable<Donation[]> {
-    const url = `/api/campaign/Get-all-Donation`;
+    const url = `/api/Donation/Get-all-Donation`;
     return super.get(url).pipe(
       map((res) => {
         console.log('API Response:', res);
@@ -33,7 +33,7 @@ export class DonationService extends ApiService {
 
   // Lấy một khoản quyên góp theo ID
   getDonationById(id: number): Observable<Donation> {
-    const url = `/api/campaign/Get-DonationById/${id}`;
+    const url = `/api/Donation/Get-DonationById/${id}`;
     return super.get(url).pipe(
       map((res) => {
         console.log('API Response:', res);
@@ -49,7 +49,7 @@ export class DonationService extends ApiService {
 
   // Lấy danh sách khoản quyên góp theo CampaignId
   getDonationsByCampaignId(campaignId: number): Observable<Donation[]> {
-    const url = `/api/campaign/Get-Donation/campaign/${campaignId}`;
+    const url = `/api/Donation/Get-Donation/campaign/${campaignId}`;
     return super.get(url).pipe(
       map((res) => {
         console.log('API Response:', res);
@@ -65,7 +65,7 @@ export class DonationService extends ApiService {
 
   // Tạo mới một khoản quyên góp
   createDonation(formData: any): Observable<DataResponse> {
-    const url = `/api/campaign/Create-Donation`;
+    const url = `/api/Donation/Create-Donation`;
     return super.postEntity(url, formData).pipe(
       catchError((err) => throwError(() => new Error(err))),
       map((res) => {
@@ -73,4 +73,40 @@ export class DonationService extends ApiService {
       })
     );
   }
+
+  // Lấy tổng số tiền đã donate cho một Campaign
+getTotalDonationByCampaign(campaignId: number): Observable<number> {
+  const url = `/api/Donation/campaign/${campaignId}/total-donations`;
+  return super.get(url).pipe(
+    map((res: any) => {
+      console.log('Total Donation for Campaign:', res);
+      return res.total;
+    })
+  );
+}
+
+// Lấy tổng số tiền mà một user đã donate
+getTotalDonationByUser(userId: number): Observable<number> {
+  const url = `/api/Donation/user/${userId}/total`;
+  return super.get(url).pipe(
+    map((res: any) => {
+      console.log('Total Donation by User:', res);
+      return res.total;
+    })
+  );
+}
+
+// Lấy tổng số tiền mà user đã donate cho một campaign cụ thể
+getTotalDonationByUserForCampaign(userId: number, campaignId: number): Observable<number> {
+  const url = `/api/Donation/user/${userId}/campaign/${campaignId}/total`;
+  return super.get(url).pipe(
+    map((res: any) => {
+      console.log('User Donation for Campaign:', res);
+      return res.totalDonated;
+    })
+  );
+}
+
+
+
 }
