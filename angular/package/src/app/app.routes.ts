@@ -58,7 +58,6 @@ export const routes: Routes = [
       },
       {
         path: 'list-partner',
-        canActivate: [AuthGuard],
         component: ListPartnerComponent
       },
       {
@@ -67,12 +66,10 @@ export const routes: Routes = [
       },
       {
         path: 'Donation-info/:campaignId',
-        canActivate: [AuthGuard],
         component: DonationComponent
       },
       {
         path: 'categories/:id',
-        canActivate: [AuthGuard],
         component: CategoryCampaignListComponent 
       },
       {

@@ -38,7 +38,8 @@ namespace CharityDonationApi.Repositories
 				Id = campaign.Id,
 				Title = campaign.Title,
 				Description = campaign.Description,
-				GoalAmount = campaign.GoalAmount,
+                SubDescription = campaign.SubDescription,
+                GoalAmount = campaign.GoalAmount,
 				CollectedAmount = campaign.CollectedAmount,
 				IsActive = campaign.IsActive,
 				StartDate = DateTime.UtcNow,
@@ -56,7 +57,8 @@ namespace CharityDonationApi.Repositories
 			{
 				Title = campaignVm.Title,
 				Description = campaignVm.Description,
-				GoalAmount = campaignVm.GoalAmount,
+                SubDescription = campaignVm.SubDescription,
+                GoalAmount = campaignVm.GoalAmount,
 				CollectedAmount = campaignVm.CollectedAmount,
 				IsActive = campaignVm.IsActive,
 				StartDate = DateTime.UtcNow,
@@ -83,7 +85,8 @@ namespace CharityDonationApi.Repositories
 
 			campaign.Title = campaignVm.Title;
 			campaign.Description = campaignVm.Description;
-			campaign.GoalAmount = campaignVm.GoalAmount;
+            campaign.SubDescription = campaignVm.SubDescription;
+            campaign.GoalAmount = campaignVm.GoalAmount;
 			campaign.CollectedAmount = campaignVm.CollectedAmount;
 			campaign.IsActive = campaignVm.IsActive;
 			campaign.EndDate = campaignVm.EndDate;
@@ -118,6 +121,7 @@ namespace CharityDonationApi.Repositories
                     Id = c.Id,
                     Title = c.Title,
                     Description = c.Description,
+                    SubDescription = c.SubDescription,
                     GoalAmount = c.GoalAmount,
                     CollectedAmount = c.CollectedAmount,
                     IsActive = c.IsActive,

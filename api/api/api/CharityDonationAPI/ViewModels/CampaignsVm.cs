@@ -8,7 +8,9 @@
 
 		public string Description { get; set; }
 
-		public decimal GoalAmount { get; set; }
+		public string SubDescription { get; set; }
+
+        public decimal GoalAmount { get; set; }
 
 		public decimal CollectedAmount { get; set; }
 

@@ -1,29 +1,29 @@
 <!-- Trạng thái loading -->
-<div *ngIf="isLoading" class="text-center">
-  <span>Đang tải...</span>
+<div *ngIf="isLoading" class="text-center py-5">
+  <span class="loading-text">Đang tải...</span>
 </div>
 
 <!-- Hiển thị thông tin chiến dịch -->
 <div *ngIf="!isLoading && campaign" class="container my-5">
   <!-- Tiêu đề và mô tả -->
-  <div class="row">
+  <div class="row mb-4">
     <div class="col-12">
-      <h1 class="campaign-title mb-3">{{ campaign.Title }}</h1>
+      <h1 class="campaign-title">{{ campaign.Title }}</h1>
       <p class="campaign-description">
         <i class="fas fa-heart text-danger me-2"></i>
         {{ campaign.Description || 'Không có mô tả' }}
       </p>
-      <p class="text-muted small">{{ campaign.StartDate | date:'dd/MM/yyyy' }}</p>
+      <p class="campaign-date">{{ campaign.StartDate | date:'dd/MM/yyyy' }}</p>
     </div>
   </div>
 
   <div class="row">
     <!-- Cột bên trái: Ảnh đại diện -->
     <div class="col-md-8">
-      <div class="campaign-image mb-3">
+      <div class="campaign-image mb-4">
         <img
           [src]="campaign.FeaturedImageUrl || 'https://via.placeholder.com/800x400?text=Không+có+ảnh'"
-          class="img-fluid rounded"
+          class="img-fluid rounded shadow-sm"
           alt="Hình ảnh chiến dịch"
         />
       </div>
@@ -31,28 +31,28 @@
 
     <!-- Cột bên phải: Thông tin quyên góp -->
     <div class="col-md-4">
-      <div class="donation-info p-3 rounded shadow-sm">
-        <h5 class="text-uppercase text-muted mb-3">Thông tin quyên góp</h5>
+      <div class="donation-info p-4 rounded shadow bg-white">
+        <h5 class="donation-heading">Thông tin quyên góp</h5>
         <div class="d-flex align-items-center mb-3">
           <img
             src="https://cdn-icons-png.flaticon.com/128/2508/2508296.png"
-            class="me-2"
+            class="me-2 rounded-circle"
             alt="Logo MO"
             style="width: 36px; height: 36px;"
           />
-          <span><strong>Đơn vị thực hiện dự án</strong> MO - Ứng dụng Tài chính</span>
+          <span class="organization-text"><strong>Đơn vị thực hiện dự án</strong> MO - Ứng dụng Tài chính</span>
         </div>
         <div class="d-flex align-items-center mb-3">
           <img
             src="https://via.placeholder.com/36x36?text=HOPE"
-            class="me-2"
+            class="me-2 rounded-circle"
             alt="Logo HOPE"
             style="width: 36px; height: 36px;"
           />
-          <span><strong>Đơn vị kiểm chứng</strong> {{ campaign.CreatorName || 'Chưa xác định' }}</span>
+          <span class="organization-text"><strong>Đơn vị kiểm chứng</strong> {{ campaign.CreatorName || 'Chưa xác định' }}</span>
         </div>
-        <div class="donation-progress mb-3">
-          <div class="progress">
+        <div class="donation-progress mb-4">
+          <div class="progress" style="height: 12px;">
             <div
               class="progress-bar bg-pink"
               role="progressbar"
@@ -63,12 +63,12 @@
             ></div>
           </div>
           <div class="d-flex justify-content-between mt-2">
-            <span class="text-pink">
-              {{ campaign.CollectedAmount | number }}đ quyên góp / {{ campaign.GoalAmount | number }}đ
+            <span class="progress-text">
+              {{ campaign.CollectedAmount | number }}đ / {{ campaign.GoalAmount | number }}đ
             </span>
           </div>
         </div>
-        <div class="d-flex justify-content-between mb-3">
+        <div class="d-flex justify-content-between mb-4 donation-stats">
           <div>
             <strong>{{ donations.length }}</strong> Lượt quyên góp
           </div>
@@ -76,7 +76,7 @@
             <strong>{{ (campaign.CollectedAmount / campaign.GoalAmount) * 100 | number:'1.0-2' }}%</strong> Đạt được
           </div>
           <div>
-            <strong>{{ calculateRemainingDays() }}</strong> Ngày còn
+            Còn <strong>{{ calculateRemainingDays() }}</strong> Ngày
           </div>
         </div>
         <button class="btn btn-pink btn-lg w-100 mb-2" [routerLink]="['/Donation-info', campaign.Id]">Quyên góp</button>
@@ -90,36 +90,37 @@
   <!-- Phần mô tả chi tiết -->
   <div class="row mt-5">
     <div class="col-12">
-      <h2>Câu chuyện</h2>
-      <p>{{ campaign.Description || 'Không có câu chuyện' }}</p>
+      <h2 class="story-heading">Câu chuyện</h2>
+      <div [innerHTML]="getSafeSubDescription()" class="story-content"></div>
     </div>
 
     <!-- Nhà hảo tâm -->
-    <div class="col-12">
-        <h3>Nhà hảo tâm hàng đầu</h3>
-      <div *ngIf="topDonors.length === 0" class="text-muted">
+    <div class="col-12 mt-5">
+      <h3 class="donor-heading">Nhà hảo tâm hàng đầu</h3>
+      <div *ngIf="topDonors.length === 0" class="no-donor-text">
         Chưa có nhà hảo tâm nào tham gia.
       </div>
-      <ul class="donor-list">
-        <li *ngFor="let donor of topDonors; let i = index" class="donor-item d-flex justify-content-between align-items-center">
+      <ul class="list-group mb-4">
+        <li *ngFor="let donor of topDonors; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
           <span>
-            <span class="donor-rank">{{ i + 1 }}</span>
+            <span class="badge bg-secondary rounded-circle me-2" style="width: 24px; height: 24px; line-height: 24px;">{{ i + 1 }}</span>
             <i class="fas fa-heart text-danger me-2"></i>
             {{ donor.User || 'Ẩn danh' }}
           </span>
           <span class="donor-amount">{{ donor.Amount | number }}đ</span>
         </li>
       </ul>
-      <h3>Nhà hảo tâm mới nhất</h3>
-      <div *ngIf="latestDonors.length === 0" class="text-muted">
+
+      <h3 class="donor-heading">Nhà hảo tâm mới nhất</h3>
+      <div *ngIf="latestDonors.length === 0" class="no-donor-text">
         Chưa có nhà hảo tâm nào tham gia.
       </div>
-      <ul class="donor-list">
-        <li *ngFor="let donor of latestDonors; let i = index" class="donor-item d-flex justify-content-between align-items-center">
+      <ul class="list-group">
+        <li *ngFor="let donor of latestDonors; let i = index" class="list-group-item d-flex justify-content-between align-items-center">
           <span>
-            <span class="donor-rank">{{ i + 1 }}</span>
+            <span class="badge bg-secondary rounded-circle me-2" style="width: 24px; height: 24px; line-height: 24px;">{{ i + 1 }}</span>
             <i class="fas fa-heart text-danger me-2"></i>
-            {{ donor.User|| 'Ẩn danh' }}
+            {{ donor.User || 'Ẩn danh' }}
           </span>
           <span class="donor-amount">{{ donor.Amount | number }}đ</span>
         </li>
@@ -127,20 +128,20 @@
     </div>
 
     <!-- Về Creator -->
-    <div class="col-12 mt-4">
-      <h2>Về  {{campaign.CreatorName}}</h2>
-      <div *ngIf="creators.length === 0" class="text-muted">
+    <div class="col-12 mt-5">
+      <h2 class="creator-heading">Về {{ campaign.CreatorName }}</h2>
+      <div *ngIf="creators.length === 0" class="no-creator-text">
         Chưa có thông tin về đơn vị kiểm chứng.
       </div>
       <div *ngFor="let creator of creators">
-        <h2>Về {{ creator.name }} - Đơn vị kiểm chứng</h2>
-        <p>{{ creator.description || 'Không có mô tả' }}</p>
+        <h3 class="creator-subheading">Về {{ creator.name }} - Đơn vị kiểm chứng</h3>
+        <p class="creator-description">{{ creator.description || 'Không có mô tả' }}</p>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Hiển thị thông báo lỗi nếu có -->
-<div *ngIf="errorMessage && !isLoading" class="alert alert-danger mt-4">
+<div *ngIf="errorMessage && !isLoading" class="alert alert-danger mt-4 text-center">
   {{ errorMessage }}
 </div>

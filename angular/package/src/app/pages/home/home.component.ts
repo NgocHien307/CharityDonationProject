@@ -9,6 +9,7 @@ import { BannerComponent } from "./banner/banner.component";
 @Component({
   selector: 'app-home',
   imports: [SlideComponent, DonationListComponent, BannerComponent,ListPartnerComponent],
+
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
