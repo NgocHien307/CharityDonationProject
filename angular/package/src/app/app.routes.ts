@@ -13,6 +13,8 @@ import { AppTopstripComponent } from './layouts/full/top-strip/topstrip.componen
 import { CategoryCampaignListComponent } from './pages/category/category-campaign-list/category-campaign-list.component';
 import { DonationComponent } from './pages/donation/donation.component';
 import { ThankYouComponent } from './pages/thank-you/thank-you.component';
+import { ForgotPasswordComponent } from './pages/authentication/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './pages/authentication/reset-password/reset-password.component';
 
 
 export const routes: Routes = [
@@ -55,6 +57,14 @@ export const routes: Routes = [
             (m) => m.ManagerUserRoutes
           ),
           
+      },
+      {
+        path: 'forgot-password',
+        component: ForgotPasswordComponent
+      },
+      {
+        path: 'reset-password',
+        component: ResetPasswordComponent
       },
       {
         path: 'list-partner',
