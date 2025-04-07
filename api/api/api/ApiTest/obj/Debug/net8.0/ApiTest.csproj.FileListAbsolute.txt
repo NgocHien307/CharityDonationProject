@@ -1,0 +1,7 @@
+C:\Users\ADMIN\OneDrive\Desktop\CharityDonationProject\api\api\api\ApiTest\bin\Debug\net8.0\CoverletSourceRootsMapping_ApiTest
+C:\Users\ADMIN\OneDrive\Desktop\CharityDonationProject\api\api\api\ApiTest\obj\Debug\net8.0\ApiTest.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Desktop\CharityDonationProject\api\api\api\ApiTest\obj\Debug\net8.0\ApiTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\OneDrive\Desktop\CharityDonationProject\api\api\api\ApiTest\obj\Debug\net8.0\ApiTest.AssemblyInfoInputs.cache
+C:\Users\ADMIN\OneDrive\Desktop\CharityDonationProject\api\api\api\ApiTest\obj\Debug\net8.0\ApiTest.AssemblyInfo.cs
+C:\Users\ADMIN\OneDrive\Desktop\CharityDonationProject\api\api\api\ApiTest\obj\Debug\net8.0\ApiTest.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Desktop\CharityDonationProject\api\api\api\ApiTest\obj\Debug\net8.0\ApiTest.sourcelink.json

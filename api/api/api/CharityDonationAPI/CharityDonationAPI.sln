@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharityDonationApi", "CharityDonationApi.csproj", "{98A158D7-E17E-47FC-8415-AFB51618C53C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharityDonationApi.Tests", "..\TestAPI\CharityDonationApi.Tests.csproj", "{00308A18-B0E3-4973-AB88-61BE7F2AE45C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{98A158D7-E17E-47FC-8415-AFB51618C53C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98A158D7-E17E-47FC-8415-AFB51618C53C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98A158D7-E17E-47FC-8415-AFB51618C53C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00308A18-B0E3-4973-AB88-61BE7F2AE45C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00308A18-B0E3-4973-AB88-61BE7F2AE45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00308A18-B0E3-4973-AB88-61BE7F2AE45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00308A18-B0E3-4973-AB88-61BE7F2AE45C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
