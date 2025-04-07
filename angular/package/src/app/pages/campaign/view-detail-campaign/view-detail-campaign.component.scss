@@ -1,128 +1,153 @@
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+/* Font chung */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-  .text-center {
-    text-align: center;
-    font-size: 18px;
-    color: #666;
-  }
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
-  .alert-danger {
-    text-align: center;
-    color: red;
-    font-size: 16px;
-  }
+/* Trạng thái loading */
+.loading-text {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 400;
+}
 
-  .campaign-title {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    line-height: 1.2;
-  }
+/* Tiêu đề chiến dịch */
+.campaign-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.2;
+}
 
-  .campaign-description {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 10px;
+.campaign-description {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.6;
+}
 
-    .fas.fa-heart {
-      color: #ff4d4f;
-    }
-  }
+.campaign-date {
+  font-size: 14px;
+  color: #999999;
+  font-weight: 400;
+}
 
-  .campaign-image {
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-  }
+/* Thông tin quyên góp */
+.donation-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: #666666;
+  text-transform: uppercase;
+}
 
-  .donation-info {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.organization-text {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 400;
+}
 
-    h5 {
-      font-size: 14px;
-      font-weight: bold;
-      color: #999;
-      text-transform: uppercase;
-    }
+.organization-text strong {
+  font-weight: 700;
+}
 
-    .progress {
-      height: 10px;
-      border-radius: 5px;
-      background-color: #f0f0f0;
+.progress-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ff4d4f;
+}
 
-      .progress-bar.bg-pink {
-        background-color: #ff4d4f;
-      }
-    }
+.donation-stats {
+  font-size: 14px;
+  color: #666666;
+  font-weight: 400;
+}
 
-    .text-pink {
-      color: #ff4d4f;
-      font-weight: bold;
-    }
+.donation-stats strong {
+  font-weight: 700;
+  color: #000000;
+}
 
-    .btn-pink {
-      background-color: #ff4d4f;
-      color: #fff;
-      font-weight: bold;
-      border: none;
-      transition: background-color 0.3s ease;
+/* Nút */
+.btn-pink {
+  background-color: #ff4d4f;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
 
-      &:hover {
-        background-color: #e63946;
-      }
-    }
+.btn-outline-secondary {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  border-color: #ddd;
+}
 
-    .btn-outline-secondary {
-      border-color: #ddd;
-      color: #333;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
+/* Câu chuyện */
+.story-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+}
 
-      &:hover {
-        background-color: #f0f0f0;
-      }
-    }
+.story-content {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.6;
+}
 
-    img {
-      width: 36px;
-      height: 36px;
-      object-fit: cover;
-    }
-  }
+/* Nhà hảo tâm */
+.donor-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
 
-  .donor-list {
-    list-style: none;
-    padding: 0;
+.no-donor-text {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 400;
+}
 
-    .donor-item {
-      padding: 10px;
-      border-bottom: 1px solid #eee;
-      font-size: 16px;
+.list-group-item {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 400;
+}
 
-      .donor-rank {
-        display: inline-block;
-        width: 20px;
-        text-align: center;
-        margin-right: 10px;
-      }
+.donor-amount {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+}
 
-      .fas.fa-heart {
-        color: #ff4d4f;
-      }
+/* Về Creator */
+.creator-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+}
 
-      .donor-amount {
-        font-weight: bold;
-        color: #333;
-      }
-    }
-  }
+.creator-subheading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.creator-description {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 400;
+}
+
+.no-creator-text {
+  font-size: 16px;
+  color: #666666;
+  font-weight: 400;
+}
+
+/* Progress bar */
+.bg-pink {
+  background-color: #ff4d4f !important;
 }

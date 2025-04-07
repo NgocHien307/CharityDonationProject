@@ -16,6 +16,9 @@ export class Campaign {
 
   @JsonProperty('description', StringConverter, true)
   Description: string = undefined as any;
+  
+  @JsonProperty('subDescription', StringConverter, true) 
+  SubDescription: string = '';
 
   @JsonProperty('goalAmount', NumberConverter, true)
   GoalAmount: number = 0;

@@ -10,14 +10,18 @@ namespace CharityDonationApi.Models
 		public int Id { get; set; }
 
 		[Required]
-		[MaxLength(100)]
+		[MaxLength(200)]
 		public string Title { get; set; }
 
 		[Required]
 		[MaxLength(10000)]
 		public string Description { get; set; }
 
-		[Required]
+        [Required]
+        [MaxLength(10000)]
+        public string SubDescription { get; set; }
+
+        [Required]
 		[Column(TypeName = "decimal(18,2)")]
 		public decimal GoalAmount { get; set; }
 

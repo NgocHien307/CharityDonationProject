@@ -6,6 +6,7 @@ import { DonationService } from 'src/app/core/service/donation.service';
 import { Campaign } from 'src/app/core/models/database/campaign.model';
 import { Donation } from 'src/app/core/models/database/donation.model';
 import { Creator, CreatorService } from 'src/app/core/service/creator.service';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-view-detail-campaign',
@@ -27,7 +28,8 @@ export class ViewDetailCampaignComponent implements OnInit {
     private route: ActivatedRoute,
     private campaignService: CampaignService,
     private donationService: DonationService,
-    private creatorService: CreatorService
+    private creatorService: CreatorService,
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit() {
@@ -78,9 +80,11 @@ export class ViewDetailCampaignComponent implements OnInit {
   fetchDonations(id: string) {
     const campaignId = Number(id);
     if (isNaN(campaignId)) {
+      this.errorMessage = 'ID chiến dịch không hợp lệ.';
+      this.isLoading = false;
       return;
     }
-
+  
     this.donationService.getDonationsByCampaignId(campaignId).subscribe({
       next: (donations: Donation[]) => {
         this.donations = donations;
@@ -89,6 +93,7 @@ export class ViewDetailCampaignComponent implements OnInit {
       },
       error: (error) => {
         this.errorMessage = 'Lỗi khi tải danh sách quyên góp.';
+        this.isLoading = false; 
       }
     });
   }
@@ -114,5 +119,17 @@ export class ViewDetailCampaignComponent implements OnInit {
     return donations
       .sort((a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime())
       .slice(0, 10); // Lấy 10 mới nhất
+  }
+
+  getSafeSubDescription(): SafeHtml {
+    if (!this.campaign || !this.campaign.SubDescription) {
+      return '';
+    }
+    // Regex để tìm URL ảnh (hỗ trợ định dạng jpg, png, gif)
+    const imageRegex = /(https?:\/\/.*\.(?:png|jpg|gif))/gi;
+    // Thay thế URL bằng thẻ <img>
+    const htmlContent = this.campaign.SubDescription.replace(imageRegex, '<img src="$1" alt="Ảnh minh họa" style="max-width: 100%; height: auto;" />');
+    // Đảm bảo an toàn khi chèn HTML
+    return this.sanitizer.bypassSecurityTrustHtml(htmlContent);
   }
 }

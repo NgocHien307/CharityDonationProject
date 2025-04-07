@@ -71,7 +71,8 @@ export class CreateCampaignComponent implements OnInit {
         '',
         [Validators.required, Validators.minLength(5), Validators.maxLength(200)]
       ],
-      description: ['', [Validators.maxLength(5000)]],
+      subDescription: ['', [Validators.maxLength(10000)]],
+      description: ['', [Validators.maxLength(10000)]],
       goalAmount: [
         null,
         [Validators.required, Validators.min(1000)]
@@ -203,6 +204,7 @@ export class CreateCampaignComponent implements OnInit {
   getFieldLabel(fieldName: string): string {
     const labels: { [key: string]: string } = {
       'title': 'Tên Chiến Dịch',
+      'subDescription': 'Câu chuyện ngắn gọn',
       'description': 'Mô tả',
       'goalAmount': 'Mục Tiêu',
       'featuredImageUrl': 'Ảnh',
