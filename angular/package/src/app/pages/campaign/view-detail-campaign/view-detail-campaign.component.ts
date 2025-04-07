@@ -6,10 +6,11 @@ import { DonationService } from 'src/app/core/service/donation.service';
 import { Campaign } from 'src/app/core/models/database/campaign.model';
 import { Donation } from 'src/app/core/models/database/donation.model';
 import { Creator, CreatorService } from 'src/app/core/service/creator.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-view-detail-campaign',
-  imports: [CommonModule, NgIf, NgFor],
+  imports: [CommonModule, NgIf, NgFor, RouterLink],
   standalone: true,
   templateUrl: './view-detail-campaign.component.html',
   styleUrls: ['./view-detail-campaign.component.scss']

@@ -5,12 +5,17 @@ import { JsonConvert } from 'json2typescript';
 import { catchError, map, Observable, throwError } from 'rxjs';
 import { DataResponse } from '../models/data-response.model';
 import { Donation } from '../models/database/donation.model';
+import { DonationResponse } from '../models/database/donation-response.model';
+import { Router } from '@angular/router';  // Thêm import Router
 
 @Injectable({
   providedIn: 'root',
 })
 export class DonationService extends ApiService {
-  constructor(protected override http: HttpClient) {
+  constructor(
+    protected override http: HttpClient,
+    private router: Router // Inject Router vào constructor
+  ) {
     super(http);
     const jsonConvert = new JsonConvert();
   }
@@ -64,8 +69,8 @@ export class DonationService extends ApiService {
   }
 
   // Tạo mới một khoản quyên góp
-  createDonation(formData: any): Observable<DataResponse> {
-    const url = `/api/Donation/Create-Donation`;
+  createDonation(formData: any): Observable<DonationResponse> {
+    const url = `/api/Payment/create-payment`;
     return super.postEntity(url, formData).pipe(
       catchError((err) => throwError(() => new Error(err))),
       map((res) => {
@@ -75,38 +80,65 @@ export class DonationService extends ApiService {
   }
 
   // Lấy tổng số tiền đã donate cho một Campaign
-getTotalDonationByCampaign(campaignId: number): Observable<number> {
-  const url = `/api/Donation/campaign/${campaignId}/total-donations`;
-  return super.get(url).pipe(
-    map((res: any) => {
-      console.log('Total Donation for Campaign:', res);
-      return res.total;
-    })
-  );
-}
+  getTotalDonationByCampaign(campaignId: number): Observable<number> {
+    const url = `/api/Donation/campaign/${campaignId}/total-donations`;
+    return super.get(url).pipe(
+      map((res: any) => {
+        console.log('Total Donation for Campaign:', res);
+        return res.total;
+      })
+    );
+  }
 
-// Lấy tổng số tiền mà một user đã donate
-getTotalDonationByUser(userId: number): Observable<number> {
-  const url = `/api/Donation/user/${userId}/total`;
-  return super.get(url).pipe(
-    map((res: any) => {
-      console.log('Total Donation by User:', res);
-      return res.total;
-    })
-  );
-}
+  // Lấy tổng số tiền mà một user đã donate
+  getTotalDonationByUser(userId: number): Observable<number> {
+    const url = `/api/Donation/user/${userId}/total`;
+    return super.get(url).pipe(
+      map((res: any) => {
+        console.log('Total Donation by User:', res);
+        return res.total;
+      })
+    );
+  }
 
-// Lấy tổng số tiền mà user đã donate cho một campaign cụ thể
-getTotalDonationByUserForCampaign(userId: number, campaignId: number): Observable<number> {
-  const url = `/api/Donation/user/${userId}/campaign/${campaignId}/total`;
-  return super.get(url).pipe(
-    map((res: any) => {
-      console.log('User Donation for Campaign:', res);
-      return res.totalDonated;
-    })
-  );
-}
+  // Lấy tổng số tiền mà user đã donate cho một campaign cụ thể
+  getTotalDonationByUserForCampaign(userId: number, campaignId: number): Observable<number> {
+    const url = `/api/Donation/user/${userId}/campaign/${campaignId}/total`;
+    return super.get(url).pipe(
+      map((res: any) => {
+        console.log('User Donation for Campaign:', res);
+        return res.totalDonated;
+      })
+    );
+  }
 
+  // Lấy link thanh toán
+  getPaymentLink(donationId: number): Observable<string> {
+    const url = `/api/Donation/Get-Payment-Link/${donationId}`;
+    return super.get(url).pipe(
+      map((res: any) => {
+        console.log('Payment Link for Donation:', res);
 
+        // Giả sử API trả về đối tượng có chứa URL thanh toán
+        if (res && res.paymentLink) {
+          return res.paymentLink; // Trả về link thanh toán
+        }
 
+        throw new Error('Dữ liệu từ API không hợp lệ!');
+      }),
+      catchError((err) => throwError(() => new Error(err)))
+    );
+  }
+
+  // Xử lý callback thanh toán
+  handlePaymentCallback(response: any): void {
+    if (response.success) {
+      // Thanh toán thành công, điều hướng đến trang cảm ơn
+      this.router.navigate([response.redirectUrl]);  // Điều hướng đến trang home hoặc trang cảm ơn
+      alert(response.message);  // Hiển thị thông báo thành công
+    } else {
+      // Thanh toán không thành công, có thể chuyển hướng sang trang lỗi hoặc hiển thị thông báo
+      alert('Thanh toán không thành công!');
+    }
+  }
 }

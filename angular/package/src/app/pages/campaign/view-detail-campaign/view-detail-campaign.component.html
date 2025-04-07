@@ -79,7 +79,7 @@
             <strong>{{ calculateRemainingDays() }}</strong> Ngày còn
           </div>
         </div>
-        <button class="btn btn-pink btn-lg w-100 mb-2">Quyên góp</button>
+        <button class="btn btn-pink btn-lg w-100 mb-2" [routerLink]="['/Donation-info', campaign.Id]">Quyên góp</button>
         <button class="btn btn-outline-secondary btn-lg w-100">
           <i class="fas fa-share-alt me-2"></i>Chia sẻ
         </button>

@@ -1,0 +1,36 @@
+<!-- donation.component.html -->
+<div class="donation-container">
+  <h2>Quyên góp cho chiến dịch</h2>
+
+  <div *ngIf="campaignId" class="donation-form">
+    <form (ngSubmit)="onDonate()">
+      <div class="form-group">
+        <label for="amount">Số tiền quyên góp:</label>
+        <input type="number" id="amount" [(ngModel)]="amount" name="amount" class="form-control" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Thông điệp (tuỳ chọn):</label>
+        <textarea id="message" [(ngModel)]="message" name="message" class="form-control" rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="paymentMethod">Phương thức thanh toán:</label>
+        <input type="text" id="paymentMethod" [(ngModel)]="paymentMethod" name="paymentMethod" class="form-control" required />
+      </div>
+
+      <div class="form-group">
+        <label for="isAnonymous">
+          <input type="checkbox" id="isAnonymous" [(ngModel)]="isAnonymous" name="isAnonymous" /> Quyên góp ẩn danh
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Quyên góp</button>
+    </form>
+  </div>
+
+  <div *ngIf="!campaignId" class="error-message">
+    <p>Không có chiến dịch quyên góp nào được tìm thấy hoặc ID chiến dịch không hợp lệ.</p>
+    <a routerLink="/" class="btn btn-secondary">Quay lại trang chủ</a>
+  </div>
+</div>

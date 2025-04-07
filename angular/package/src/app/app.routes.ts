@@ -11,6 +11,8 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 import {ViewDetailCampaignComponent} from './pages/campaign/view-detail-campaign/view-detail-campaign.component';
 import { AppTopstripComponent } from './layouts/full/top-strip/topstrip.component';
 import { CategoryCampaignListComponent } from './pages/category/category-campaign-list/category-campaign-list.component';
+import { DonationComponent } from './pages/donation/donation.component';
+import { ThankYouComponent } from './pages/thank-you/thank-you.component';
 
 
 export const routes: Routes = [
@@ -58,6 +60,15 @@ export const routes: Routes = [
         path: 'list-partner',
         canActivate: [AuthGuard],
         component: ListPartnerComponent
+      },
+      {
+        path: 'thank-you',
+        component: ThankYouComponent
+      },
+      {
+        path: 'Donation-info/:campaignId',
+        canActivate: [AuthGuard],
+        component: DonationComponent
       },
       {
         path: 'categories/:id',

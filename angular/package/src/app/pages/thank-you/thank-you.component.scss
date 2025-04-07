@@ -1,0 +1,26 @@
+.payment-result {
+  text-align: center;
+  padding: 20px;
+}
+
+.payment-result h1 {
+  font-size: 24px;
+  color: #4caf50;
+}
+
+.payment-result p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
