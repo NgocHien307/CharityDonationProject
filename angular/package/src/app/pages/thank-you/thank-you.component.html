@@ -1,0 +1,11 @@
+<div class="thank-you-container">
+  <h1>Thanh toán thành công!</h1>
+  <p><strong>Mã giao dịch:</strong> {{ transactionReference }}</p>
+  <p><strong>Số tiền:</strong> {{ amount }} VND</p>
+  <p><strong>Phương thức thanh toán:</strong> {{ paymentMethod }}</p>
+  <p><strong>Trạng thái thanh toán:</strong> {{ paymentStatus }}</p>
+  <p><strong>Ngày giao dịch:</strong> {{ transactionDate }}</p>
+  <p><strong>Ghi chú:</strong> {{ paymentNote }}</p>
+
+  <button (click)="goHome()">Quay lại trang chủ</button>
+</div>
