@@ -5,6 +5,7 @@ import { CampaignService } from 'src/app/core/service/campaign.service';
 import { CurrencyPipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { Campaign } from 'src/app/core/models/database/campaign.model';
+import { RouterLink } from '@angular/router';
 
 interface Partner {
   id: number;
@@ -16,7 +17,7 @@ interface Partner {
 
 @Component({
   selector: 'app-partner-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './partner-detail.component.html',
   styleUrl: './partner-detail.component.scss',
   providers: [CurrencyPipe],

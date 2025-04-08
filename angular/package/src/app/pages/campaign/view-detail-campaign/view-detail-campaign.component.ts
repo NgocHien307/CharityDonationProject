@@ -8,10 +8,13 @@ import { Donation } from 'src/app/core/models/database/donation.model';
 import { Creator, CreatorService } from 'src/app/core/service/creator.service';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { CampaignSubscriptionService } from 'src/app/core/service/campaign-subscription.service';
+import { AuthenticationService } from 'src/app/core/service/authentication.service'; // <-- THÊM
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-view-detail-campaign',
-  imports: [CommonModule, NgIf, NgFor, RouterLink],
+  imports: [CommonModule, NgIf, NgFor, RouterLink, HttpClientModule],
   standalone: true,
   templateUrl: './view-detail-campaign.component.html',
   styleUrls: ['./view-detail-campaign.component.scss']
@@ -19,45 +22,51 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class ViewDetailCampaignComponent implements OnInit {
   campaign: Campaign | null = null;
   donations: Donation[] = [];
-  creators: Creator[] = []; // Danh sách Creators thay vì chỉ một Creator
+  creators: Creator[] = [];
   errorMessage: string = '';
   isLoading: boolean = true;
   topDonors: Donation[] = [];
   latestDonors: Donation[] = [];
+  userId!: number;
+  campaignId!: number;
+  isFollowing: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
     private campaignService: CampaignService,
     private donationService: DonationService,
     private creatorService: CreatorService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private subscriptionService: CampaignSubscriptionService,
+    private authService: AuthenticationService // <-- THÊM
   ) {}
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.fetchCampaignDetails(id);
-      this.fetchDonations(id);
-    } else {
-      this.errorMessage = 'Không tìm thấy ID chiến dịch trong URL.';
-      this.isLoading = false;
-    }
-  }
+    const idParam = this.route.snapshot.paramMap.get('id');
+    const userId = this.authService.getUserId();
 
-  fetchCampaignDetails(id: string) {
-    const campaignId = Number(id);
-    if (isNaN(campaignId)) {
-      this.errorMessage = 'ID chiến dịch không hợp lệ.';
+    if (!idParam || userId === null) {
+      this.errorMessage = 'Không tìm thấy thông tin người dùng hoặc chiến dịch.';
       this.isLoading = false;
       return;
     }
 
-    this.campaignService.getCampaignById(campaignId).subscribe({
+    this.campaignId = Number(idParam);
+    this.userId = userId;
+
+    this.fetchCampaignDetails(this.campaignId);
+    this.fetchDonations(this.campaignId);
+
+    this.checkFollowStatus();
+  }
+
+  fetchCampaignDetails(id: number) {
+    this.campaignService.getCampaignById(id).subscribe({
       next: (data: Campaign) => {
         this.campaign = data;
         this.isLoading = false;
       },
-      error: (error) => {
+      error: () => {
         this.errorMessage = 'Lỗi khi tải chiến dịch, vui lòng thử lại!';
         this.isLoading = false;
       }
@@ -65,72 +74,90 @@ export class ViewDetailCampaignComponent implements OnInit {
   }
 
   fetchCreatorsDetails(creatorIds: number[]) {
-    // Lấy thông tin từng Creator trong danh sách CreatorIds
     creatorIds.forEach((id) => {
       this.creatorService.getCreatorById(id).subscribe({
-        next: (creator: Creator) => {
-          this.creators.push(creator); // Thêm Creator vào danh sách
-        },
-        error: (error) => {
-          console.error(`Lỗi khi lấy thông tin Creator ID ${id}:`, error);
-        }
+        next: (creator: Creator) => this.creators.push(creator),
+        error: (error) => console.error(`Lỗi khi lấy thông tin Creator ID ${id}:`, error)
       });
     });
   }
 
-  fetchDonations(id: string) {
-    const campaignId = Number(id);
-    if (isNaN(campaignId)) {
-      this.errorMessage = 'ID chiến dịch không hợp lệ.';
-      this.isLoading = false;
-      return;
-    }
-  
-    this.donationService.getDonationsByCampaignId(campaignId).subscribe({
+  fetchDonations(id: number) {
+    this.donationService.getDonationsByCampaignId(id).subscribe({
       next: (donations: Donation[]) => {
         this.donations = donations;
         this.topDonors = this.getTopDonors(donations);
         this.latestDonors = this.getLatestDonors(donations);
       },
-      error: (error) => {
+      error: () => {
         this.errorMessage = 'Lỗi khi tải danh sách quyên góp.';
-        this.isLoading = false; 
+        this.isLoading = false;
       }
     });
   }
 
   calculateRemainingDays(): number {
-    if (!this.campaign || !this.campaign.EndDate) {
-      return 0;
-    }
+    if (!this.campaign?.EndDate) return 0;
     const endDate = new Date(this.campaign.EndDate);
     const today = new Date();
-    const timeDiff = endDate.getTime() - today.getTime();
-    const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    const daysDiff = Math.ceil((endDate.getTime() - today.getTime()) / (1000 * 3600 * 24));
     return daysDiff > 0 ? daysDiff : 0;
   }
 
   getTopDonors(donations: Donation[]): Donation[] {
-    return donations
-      .sort((a, b) => b.Amount - a.Amount)
-      .slice(0, 10); // Lấy top 10
+    return donations.sort((a, b) => b.Amount - a.Amount).slice(0, 10);
   }
 
   getLatestDonors(donations: Donation[]): Donation[] {
     return donations
       .sort((a, b) => new Date(b.Date).getTime() - new Date(a.Date).getTime())
-      .slice(0, 10); // Lấy 10 mới nhất
+      .slice(0, 10);
   }
 
   getSafeSubDescription(): SafeHtml {
-    if (!this.campaign || !this.campaign.SubDescription) {
-      return '';
-    }
-    // Regex để tìm URL ảnh (hỗ trợ định dạng jpg, png, gif)
+    if (!this.campaign?.SubDescription) return '';
     const imageRegex = /(https?:\/\/.*\.(?:png|jpg|gif))/gi;
-    // Thay thế URL bằng thẻ <img>
-    const htmlContent = this.campaign.SubDescription.replace(imageRegex, '<img src="$1" alt="Ảnh minh họa" style="max-width: 100%; height: auto;" />');
-    // Đảm bảo an toàn khi chèn HTML
+    const htmlContent = this.campaign.SubDescription.replace(
+      imageRegex,
+      '<img src="$1" alt="Ảnh minh họa" style="max-width: 100%; height: auto;" />'
+    );
     return this.sanitizer.bypassSecurityTrustHtml(htmlContent);
   }
+
+  checkFollowStatus() {
+    this.subscriptionService.isUserFollowingCampaign(this.userId, this.campaignId).subscribe({
+      next: res => this.isFollowing = res.isFollowing,
+      error: err => this.isFollowing = false
+    });
+  }
+
+  toggleFollow() {
+    if (this.isFollowing) {
+      this.subscriptionService.unfollowCampaign(this.userId, this.campaignId).subscribe({
+        next: () => {
+          this.isFollowing = false;
+          alert("Đã hủy theo dõi chiến dịch.");
+        },
+        error: () => alert("Hủy theo dõi thất bại!")
+      });
+    } else {
+      this.subscriptionService.followCampaign(this.userId, this.campaignId).subscribe({
+        next: () => {
+          this.isFollowing = true;
+          alert("Đã theo dõi chiến dịch.");
+        },
+        error: err => {
+          console.error('Lỗi khi theo dõi:', err);
+          if (err.error && err.error.message === "Bạn đã theo dõi chiến dịch này rồi.") {
+            this.isFollowing = true;
+            alert("Bạn đã theo dõi chiến dịch này rồi.");
+          } else {
+            alert("Theo dõi thất bại!");
+          }
+        }
+      });
+    }
+  }
+  
+  
 }

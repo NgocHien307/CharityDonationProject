@@ -61,7 +61,7 @@
 
         <div class="row g-4" *ngIf="campaigns.length > 0; else noCampaigns">
             <div class="col-md-4" *ngFor="let campaign of campaigns">
-                <div class="card mb-4 border-0 shadow-sm">
+                <div class="card mb-4 border-0 shadow-sm" [routerLink]="['/view-campaign-detail', campaign.Id]">
                     <img [src]="campaign.FeaturedImageUrl" class="card-img-top" alt="Campaign Image">
                     <div class="card-body">
                         <h5 class="card-title">{{ campaign.Title | slice:0:25 }}<span *ngIf="campaign.Title.length > 25">...</span></h5>

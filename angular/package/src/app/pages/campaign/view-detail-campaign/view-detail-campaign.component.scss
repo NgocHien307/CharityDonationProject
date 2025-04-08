@@ -151,3 +151,23 @@ body {
 .bg-pink {
   background-color: #ff4d4f !important;
 }
+
+.btn-follow {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 12px;
+}
+
+.btn-follow.not-following {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-follow.following {
+  background-color: #dc3545;
+  color: white;
+}

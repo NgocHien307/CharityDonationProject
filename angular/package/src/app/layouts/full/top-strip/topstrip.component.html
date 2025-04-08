@@ -40,6 +40,13 @@
       </div>
     </a>
 
+    <a *ngIf="isLoggedIn" mat-button class="text-white d-none d-lg-flex" [routerLink]="['/follow-list']">
+      <div class="d-flex align-items-center gap-4">
+        <i-tabler name="lifebuoy" class="icon-20 d-flex"></i-tabler>
+        Chiến dịch đang theo dõi
+      </div>
+    </a>
+
     <div class="dropdown">
       <button class="btn btn-outline-secondary border-0 bg-transparent dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
         Hoàn Cảnh Quyên Góp

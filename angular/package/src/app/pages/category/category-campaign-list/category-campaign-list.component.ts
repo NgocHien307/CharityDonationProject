@@ -22,7 +22,7 @@ export class CategoryCampaignListComponent implements OnInit {
   ngOnInit(): void {
     this.loadCategories();
     this.route.params.subscribe(params => {
-      this.selectedCategoryId = +params['id'];
+      this.selectedCategoryId = +params['id']; // Lấy ID từ URL
       this.loadCampaigns();
     });
   }
@@ -39,23 +39,21 @@ export class CategoryCampaignListComponent implements OnInit {
     this.http.get<any[]>(`https://localhost:7204/api/campaign/Category/${this.selectedCategoryId}`)
       .subscribe({
         next: (data) => {
-          // Kiểm tra nếu không có chiến dịch, hiển thị thông báo lỗi
           if (data && data.length > 0) {
             this.campaigns = data;
-            this.errorMessage = ''; // Xóa thông báo lỗi nếu có chiến dịch
+            this.errorMessage = ''; // Reset lỗi nếu có campaign
           } else {
             this.campaigns = [];
-            this.errorMessage = 'Không có chiến dịch nào cho danh mục này.'; // Hiển thị thông báo nếu không có chiến dịch
+            this.errorMessage = 'Không có chiến dịch nào cho danh mục này.'; // Lỗi nếu không có campaign
           }
         },
         error: (err) => {
           console.error('Error fetching campaigns:', err);
-          this.campaigns = []; // Xóa danh sách chiến dịch khi có lỗi
-          this.errorMessage = 'Đã có lỗi xảy ra khi tải chiến dịch.'; // Hiển thị thông báo lỗi khi có lỗi API
+          this.campaigns = [];
+          this.errorMessage = 'Đã có lỗi xảy ra khi tải chiến dịch.'; // Lỗi tải chiến dịch
         }
       });
   }
-  
 
   getProgressPercentage(collected: number, goal: number): number {
     return goal > 0 ? Math.min((collected / goal) * 100, 100) : 0;
@@ -71,6 +69,6 @@ export class CategoryCampaignListComponent implements OnInit {
 
   selectCategory(categoryId: number): void {
     this.selectedCategoryId = categoryId;
-    this.loadCampaigns();
+    this.loadCampaigns(); // Tải lại campaign khi thay đổi danh mục
   }
 }

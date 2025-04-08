@@ -62,4 +62,9 @@ export class AuthenticationService extends ApiService {
   getToken(): string | null {
     return localStorage.getItem('auth_token');
   }
+
+  logout(): void {
+    localStorage.removeItem('auth_token');
+    localStorage.removeItem('user_id');
+  }
 }

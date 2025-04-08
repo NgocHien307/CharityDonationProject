@@ -15,6 +15,7 @@ import { DonationComponent } from './pages/donation/donation.component';
 import { ThankYouComponent } from './pages/thank-you/thank-you.component';
 import { ForgotPasswordComponent } from './pages/authentication/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './pages/authentication/reset-password/reset-password.component';
+import { FollowListComponent } from './pages/campaign/follow-list/follow-list.component';
 
 
 export const routes: Routes = [
@@ -65,6 +66,10 @@ export const routes: Routes = [
       {
         path: 'reset-password',
         component: ResetPasswordComponent
+      },
+      {
+        path: 'follow-list',
+        component: FollowListComponent
       },
       {
         path: 'list-partner',

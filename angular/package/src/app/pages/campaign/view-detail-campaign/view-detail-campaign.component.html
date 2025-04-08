@@ -29,6 +29,9 @@
       </div>
     </div>
 
+
+
+
     <!-- Cột bên phải: Thông tin quyên góp -->
     <div class="col-md-4">
       <div class="donation-info p-4 rounded shadow bg-white">
@@ -86,6 +89,16 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Nút theo dõi -->
+  <button 
+  (click)="toggleFollow()" 
+  class="btn btn-lg shadow-sm rounded-pill px-4"
+  [ngClass]="isFollowing ? 'btn-outline-danger' : 'btn-outline-primary'">
+  {{ isFollowing ? 'Bỏ theo dõi' : 'Theo dõi chiến dịch' }}
+</button>
+
 
   <!-- Phần mô tả chi tiết -->
   <div class="row mt-5">
